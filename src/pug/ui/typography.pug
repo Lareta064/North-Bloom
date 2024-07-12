@@ -12,7 +12,47 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
-
+		style.
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}			
+			@font-face {
+				font-family: 'Suisse Intl';
+				src: url(../fonts/suisse-intl-regular.woff2) format("woff2");
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Roboto Serif';
+				src: url(../fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+				font-style: normal;
+				font-display: swap;
+			}
 	body.body-dashboard
 
 		include ui-navigation.pug
@@ -22,5 +62,35 @@ html(lang="ru")
 				h2 Типографика
 
 				.container-dashboard__content
-					ul
-						li
+					.h1 Headline H1 40
+					pre.
+						.h1 Headline H1 40
+					hr
+					.h1-serif Headline H1 40
+					pre.
+						.h1-serif Headline H1 40
+					hr
+					.title Вход
+					pre.
+						.title Вход
+					hr
+					.txt-24 Regular 24
+					pre.
+						.txt-24 Regular 24
+					hr
+					.txt-20 Regular 20
+					pre.
+						.txt-20 Regular 20
+					hr
+					.txt-18 Regular 18
+					pre.
+						.txt-18 Regular 18
+					hr
+					.semi-16 Semi bold 16
+					pre.
+						.semi-16 Semi bold 16
+					hr
+					.txt-14 Regular 14
+					pre.
+						.txt-14 Regular 14
+					hr
