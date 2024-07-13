@@ -79,7 +79,21 @@ html(lang="ru")
 
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="text", name="select-category")
-							
+					pre.
+						.form-item
+							label Название поля
+							.dropdown
+								button.dropdown__button 
+									span Выбрать город
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
+										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
+
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="text", name="select-category")
 					hr
 					div.dark-bg(style="padding:30px;")
 						.form-item
@@ -92,7 +106,7 @@ html(lang="ru")
 							.form-input
 								input(type="text" name="name" placeholder="Пример заполнения")
 					hr
-					h3 Невалидное поле
+					h3 Невалидное поле. Подсказка по наведению
 					div
 						.form-item
 							//===error text tooltip====
@@ -123,6 +137,7 @@ html(lang="ru")
 									span.input-icon
 										+svg-icon-ui('eye')
 									input.error(type="text" name="name" placeholder="Пример заполнения")
+					hr
 					div
 						.form-item(style="width:400px")
 							//===error text tooltip====
@@ -146,14 +161,16 @@ html(lang="ru")
 										+svg-icon('eye')
 									input.error(type="text" name="name" placeholder="Пример заполнения")
 		
+					hr
 					div
-						form.form-light
-							.form-item
-								label Введите пароль
-								//====input====
-								.form-input.form-input--pass
-									span.input-icon
-									input(type="password" name="pass" placeholder="Пример заполнения")
+					h3 Показать / скрыть пароль
+					form.form-light
+						.form-item
+							label Введите пароль
+							//====input====
+							.form-input.form-input--pass
+								span.input-icon
+								input(type="password" name="pass" placeholder="Пример заполнения")
 		//=============== jquery ===================
 		script(src="../libs/jquery/jquery-3.0.0.min.js")
 		//- script(src="../libs/scroll/scroll.min.js")
