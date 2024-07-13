@@ -1,0 +1,47 @@
+mixin select(plh="Пример заполнения", inpName = 'input_name')
+	.form-item&attributes(attributes)
+		label Название поля
+		.dropdown
+			button.dropdown__button 
+				span #{plh}
+			.dropdown__list
+				ul
+					li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
+					li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+					li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+					li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
+
+			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+			input.dropdown__input-hidden(type="text", name=""+ input_name)
+
+mixin form-item(error, tltSide, label="Введите логин", inpName="name", pass)
+	.form-item
+		if error !=='' && tltSide!=='left'
+			//===error text tooltip====
+			.tooltip
+				.tooltip-icon
+					+svg-icon-ui('info')
+				.tooltip-box
+					p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
+		if error !=='' && tltSide!=='right'
+			//===error text tooltip====
+			.tooltip.tooltip--right
+				.tooltip-icon
+					+svg-icon-ui('info')
+				.tooltip-box
+					p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
+		
+		//====input label====
+		label #{label}
+		//====input====
+		if error !==''
+			.form-input
+				input.error(type="text" name=""+ inpName placeholder="Пример заполнения")
+		if  pass !==''
+			.form-input.form-input--pass
+				span.input-icon
+					+svg-icon-ui('eye')
+				input(type="password" name="user_pass" placeholder="Введите пароль")
+		else
+			.form-input
+				input(type="text" name=""+ inpName placeholder="Пример заполнения")

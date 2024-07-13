@@ -65,112 +65,36 @@ html(lang="ru")
 				.container-dashboard__content
 					h3 Custom select
 					div.dark-bg(style="padding:30px;")
-						.form-item
-							label Название поля
-							.dropdown
-								button.dropdown__button 
-									span Выбрать город
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
-										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
-										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
-										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
-
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="text", name="select-category")
+						+select(plh="Пример заполнения", inpName = 'input_name')
 					pre.
-						.form-item
-							label Название поля
-							.dropdown
-								button.dropdown__button 
-									span Выбрать город
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
-										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
-										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
-										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
-
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="text", name="select-category")
+						+select(plh="Пример заполнения", inpName = 'input_name')
+					hr
+					h3 Миксин элемента формы 
+					pre.
+						+form-item(error, tltSide, label="Введите логин", inpName="name", pass)
 					hr
 					div.dark-bg(style="padding:30px;")
-						.form-item
-							label Введите логин
-							.form-input
-								input(type="text" name="name" placeholder="Пример заполнения")
+						
+						+form-item('', '', "Введите имя", "name", '')
 					pre.
-						.form-item
-							label Введите логин
-							.form-input
-								input(type="text" name="name" placeholder="Пример заполнения")
+						+form-item('', '', "Введите имя", "name", '')
 					hr
 					h3 Невалидное поле. Подсказка по наведению
 					div
-						.form-item
-							//===error text tooltip====
-							.tooltip
-								.tooltip-icon
-									+svg-icon-ui('info')
-								.tooltip-box
-									p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
-							//====input label====
-							label Введите логин
-							//====input====
-							.form-input
-								span.input-icon
-									+svg-icon-ui('eye')
-								input.error(type="text" name="name" placeholder="Пример заполнения")
+						+form-item('error', 'left', "Введите имя", "name", '')
 						pre.
-							.form-item
-								//===error text tooltip====
-								.tooltip
-									.tooltip-icon
-										+svg-icon-ui('info')
-									.tooltip-box
-										p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
-								//====input label====
-								label Введите логин
-								//====input====
-								.form-input
-									span.input-icon
-										+svg-icon-ui('eye')
-									input.error(type="text" name="name" placeholder="Пример заполнения")
+							+form-item('error', 'left', "Введите имя", "name", '')
 					hr
 					div
-						.form-item(style="width:400px")
-							//===error text tooltip====
-							.tooltip.tooltip--right
-								.tooltip-icon
-									+svg-icon-ui('info')
-								.tooltip-box
-									p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
-							//====input label====
-							label Введите логин
-							//====input====
-							.form-input
-								span.input-icon
-									+svg-icon-ui('eye')
-								input.error(type="text" name="name" placeholder="Пример заполнения")
+						+form-item('error', 'right', "Введите имя", "name", '')
 						pre.
-							.form-item
-								label Введите логин
-								.form-input
-									span.input-icon
-										+svg-icon('eye')
-									input.error(type="text" name="name" placeholder="Пример заполнения")
+							+form-item('error', 'right', "Введите имя", "name", '')
 		
 					hr
 					div
 					h3 Показать / скрыть пароль
 					form.form-light
-						.form-item
-							label Введите пароль
-							//====input====
-							.form-input.form-input--pass
-								span.input-icon
-								input(type="password" name="pass" placeholder="Пример заполнения")
+						+form-item('', '', "Введите пароль", "pass", 'pass')
 		//=============== jquery ===================
 		script(src="../libs/jquery/jquery-3.0.0.min.js")
 		//- script(src="../libs/scroll/scroll.min.js")
