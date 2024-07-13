@@ -1,0 +1,19 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper
+		.preloader.flx-center-column#preloader
+			//====logo====
+			.logo
+				+svg-icon('logo')
+			//====line====
+			.preloader-line
+				span
+		
+		include ../sections/_header
+		main.main
+		footer.footer
+			.txt-center FOOTER
+
+block variables
+	-var title = "Главная";

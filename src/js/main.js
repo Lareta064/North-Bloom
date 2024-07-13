@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function (){
+	/*=== заполнение шкалы прелоадера==== */
+	const preloader = document.getElementById('preloader');
+	if(preloader){
+		setTimeout(()=>{
+			preloader.classList.add('preloader-hide');
+		}, 3500);
+	}
 	
 	/*=====custom select===== */
 	// Полифилл для метода forEach для NodeList

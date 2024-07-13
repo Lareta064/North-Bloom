@@ -62,3 +62,15 @@
 	font-size: 14px;
 	line-height: 1.40;
 }
+*.txt-accent{
+	color: var(--accent);
+}
+*.txt-center{text-align: center;}
+.flx-center,.flx-center-column{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flx-center-column{
+	flex-direction: column;
+}

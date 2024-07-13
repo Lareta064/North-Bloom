@@ -3,10 +3,14 @@
 	width: 199px;
 	height: 40px;
 }
-.logo-white .svg-logo{
-	color: $white;
-	width: 398px;
-	height: 80px;
+.logo.logo--white .svg-logo{
+	color: var(--white);
+	
+}
+.preloader .svg-logo{
+	color: var(--white);
+	width: 420px;
+	height: 90px;
 }
 .svg-bar, .svg-check{
 	color: var(--fill-icon);
