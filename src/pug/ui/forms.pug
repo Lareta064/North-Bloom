@@ -10,6 +10,7 @@ html(lang="ru")
 
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
+		//- link(rel="styesheet", href="../libs/scroll/scroll.css")
 		link(rel="stylesheet", href="../css/main.css")
 
 		title UI-KIT
@@ -61,7 +62,6 @@ html(lang="ru")
 		block content
 			.container-dashboard
 				h2 Форма
-
 				.container-dashboard__content
 					h3 Custom select
 					div.dark-bg(style="padding:30px;")
@@ -71,6 +71,14 @@ html(lang="ru")
 									span Выбрать город
 								.dropdown__list
 									ul
+										li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
+										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
+										li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
+										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
 										li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
 										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
 										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
@@ -137,7 +145,7 @@ html(lang="ru")
 									input.error(type="text" name="name" placeholder="Пример заполнения")
 		//=============== jquery ===================
 		script(src="../libs/jquery/jquery-3.0.0.min.js")
-		
+		//- script(src="../libs/scroll/scroll.min.js")
 				
 		//=============== мои скрипты ===================
 		

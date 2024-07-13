@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (){
+	
 	/*=====custom select===== */
 	// Полифилл для метода forEach для NodeList
 	if (window.NodeList && !NodeList.prototype.forEach) {
