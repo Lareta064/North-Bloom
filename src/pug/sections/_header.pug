@@ -1,12 +1,27 @@
+//====== HEADER=====
 header.header
 	.header-container
+		//===LOGO====
 		a(href="#!").logo.logo--white
 			+svg-icon('logo')
+		//=== MENU WRAPPER =====
 		.header-menu-wrapper
 			.header-menu
-				ul.menu-list
-					li.menu-list 
+				ul.menu-list.flx-center
+					li.menu-list-item 
 						a(href="#!") Для мужчин
-						ul
+						ul.menu-list-child.bx
 							li
-								a(href="#!")
+								a(href="#!") Коллекция Мужcкая Весна 2024
+							li
+								a(href="#!") Коллекция Мужcкая Лето 2024
+					li.menu-list-item 
+						a(href="#!") Для женщин
+						ul.menu-list-child.bx
+							li
+								a(href="#!") Коллекция Женская Весна 2024
+							li
+								a(href="#!") Коллекция Женская Лето 2024
+					li.menu-list-item 
+						a(href="#!") Где купить
+					

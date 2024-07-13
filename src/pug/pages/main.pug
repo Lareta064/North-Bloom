@@ -2,15 +2,12 @@ extends ../layouts/layout.pug
 
 block content
 	.page-wrapper
-		.preloader.flx-center-column#preloader
-			//====logo====
-			.logo
-				+svg-icon('logo')
-			//====line====
-			.preloader-line
-				span
+
+		//- include ../blocks/_preloader
 		
 		include ../sections/_header
+		include ../sections/_main-hero
+
 		main.main
 		footer.footer
 			.txt-center FOOTER
