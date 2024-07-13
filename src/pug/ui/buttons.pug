@@ -12,7 +12,47 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
-
+		style.
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(../fonts/Inter-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}			
+			@font-face {
+				font-family: 'SuisseIntl-Regular';
+				src: url(../fonts/SuisseIntl-Regular.woff2) format("woff2");
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Roboto Serif';
+				src: url(../fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+				font-style: normal;
+				font-display: swap;
+			}
 	body.body-dashboard
 
 		include ui-navigation.pug
@@ -22,3 +62,30 @@ html(lang="ru")
 				h2 Кнопки
 
 				.container-dashboard__content
+					a(href="#!").btn Написать вопрос директору
+					pre.
+						a(href="#!").btn Написать вопрос директору
+					
+					a(href="#!").btn-accent Написать вопрос директору
+					pre.
+						a(href="#!").btn-accent Написать вопрос директору
+						
+					input(type="submit" value="Написать вопрос").btn
+					pre.
+						input(type="submit" value="Написать вопрос").btn
+						
+					input(type="submit" value="Написать вопрос ").btn-accent 
+					pre.
+						input(type="submit" value="Написать вопрос ").btn-accent 
+						
+					button.btn Написать вопрос директору
+					pre.
+						button.btn Написать вопрос директору
+						
+					button.btn-accent Написать вопрос директору
+					pre.
+						button.btn-accent Написать вопрос директору
+					button.btn-accent(disabled) Написать вопрос директору
+					pre.
+						button.btn-accent((disabled)) Написать вопрос директору
+	

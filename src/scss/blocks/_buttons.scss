@@ -1,0 +1,40 @@
+.btn, .btn-accent{
+	display: inline-block;
+	text-align: center;
+	cursor:pointer;
+	height: 64px;
+	padding-inline: 24px;
+	line-height: 64px;
+	font-size: 18px;
+	letter-spacing: -0.02em;
+	color: var(--style);
+	background-color: var(--black-button);
+	width: 290px;
+	transition: .3s; 
+	@media (max-width: 767px) {
+	   height: 56px;
+	   font-size: 16px;
+	  
+	}
+	&[disabled]{
+		 color: var(--text-grey);
+		 background-color: var(--button-disabled);
+		 cursor:default;
+		 pointer-events: none;
+		 &:hover{
+			color: var(--text-grey);
+			background-color: var(--button-disabled);
+		 }
+	}
+}
+.btn{
+	&:hover{
+		background-color: var(--button-hover);
+	}
+}
+.btn-accent{
+	background-color: var(--button-accent);
+	&:hover{
+		background-color: var(--button-accent-hover);
+	}
+}
