@@ -7,8 +7,8 @@
 	--style: #fff;
 	--text-white: #fff;
 	--text-black: #222;
-	--text-grey-text: #929292;
-	--text-grey-text-imput: #b2b2b2;
+	--text-grey: #929292;
+	--text-grey-input: #b2b2b2;
 	--button-black-button: #222;
 	--button-hover: #313131;
 	--black-button: #313131;
@@ -85,10 +85,10 @@ img {
 
 input,
 button,
-textarea,
+textarea,select,
 button:focus,
 input:focus,
-textarea:focus {
+textarea:focus, select:focus {
 	outline: none;
 	border: none;
 }
