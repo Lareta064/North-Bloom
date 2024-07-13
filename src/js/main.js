@@ -52,5 +52,27 @@ document.addEventListener("DOMContentLoaded", function (){
 				dropDownList.classList.remove('dropdown__list--visible');
 			}
 		});
-	});	
 	});
+  	/*====input show-pass ===== */
+	const passInputs = document.querySelectorAll('.form-input--pass');
+	if(passInputs.length > 0){
+		for(let item of passInputs){
+			const passInputsIcon = item.querySelector('.input-icon');
+			const passInputField = item.querySelector('input');
+			 passInputsIcon.addEventListener('click', ()=>{
+				if(item.classList.contains('active')){
+					item.classList.remove('active');
+					passInputField.setAttribute('type','password');
+				}else{
+					item.classList.add('active');
+					passInputField.setAttribute('type','text');
+				}
+			 })
+		}
+	}
+
+
+
+
+
+});

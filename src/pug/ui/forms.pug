@@ -110,10 +110,18 @@ html(lang="ru")
 								input.error(type="text" name="name" placeholder="Пример заполнения")
 						pre.
 							.form-item
+								//===error text tooltip====
+								.tooltip
+									.tooltip-icon
+										+svg-icon-ui('info')
+									.tooltip-box
+										p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
+								//====input label====
 								label Введите логин
+								//====input====
 								.form-input
 									span.input-icon
-										+svg-icon('eye')
+										+svg-icon-ui('eye')
 									input.error(type="text" name="name" placeholder="Пример заполнения")
 					div
 						.form-item(style="width:400px")
@@ -137,6 +145,15 @@ html(lang="ru")
 									span.input-icon
 										+svg-icon('eye')
 									input.error(type="text" name="name" placeholder="Пример заполнения")
+		
+					div
+						form.form-light
+							.form-item
+								label Введите пароль
+								//====input====
+								.form-input.form-input--pass
+									span.input-icon
+									input(type="password" name="pass" placeholder="Пример заполнения")
 		//=============== jquery ===================
 		script(src="../libs/jquery/jquery-3.0.0.min.js")
 		//- script(src="../libs/scroll/scroll.min.js")
