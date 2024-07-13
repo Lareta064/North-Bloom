@@ -11,3 +11,30 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
    box-shadow: 0 0 0px 1000px #fff inset;
 }
+input,
+textarea {
+  width: 100%;
+  display: block;
+  color: var(--text-black);
+  font-size: 18px;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--text-grey-text-imput);
+    opacity: .6;
+  }
+}
+.form-item{
+  input, textarea{
+    height: 64px;
+    padding-inline: 16px;
+    background-color: var(--style);
+  }
+  label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color:var(--style);
+  }
+}

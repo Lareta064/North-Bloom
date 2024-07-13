@@ -1,17 +1,21 @@
-include ../layouts/_mixins-links.pug
+include _mixins-links.pug
+
 block variables
 
-<!DOCTYPE html>
+doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-
-		//====убрать синий цвет у ссылок в сафари ========
+		
+		
+		
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet", href="../css/main.css")
-		title UI-KIT
+		
+		title !{title}
 		style.
 			@font-face {
 				font-family: 'Inter';
@@ -52,34 +56,15 @@ html(lang="ru")
 				src: url(../fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
 				font-style: normal;
 				font-display: swap;
-			}
-	body.body-dashboard
-
-		include ui-navigation.pug
-
+			}		
+	body(class=(bodyCl !=="" ? bodyCl : ''))
+		include ../ui/ui-navigation.pug
 		block content
-			.container-dashboard
-				h2 Форма
-
-				.container-dashboard__content
-					div.dark-bg(style="padding:30px;")
-						.form-item
-							label Введите логин
-							.form-input
-								input(type="text" name="name" placeholder="Пример заполнения")
-					pre.
-						.form-item
-							label Введите логин
-							.form-input
-								input(type="text" name="name" placeholder="Пример заполнения")
-					hr
-						h3 Невалидное поле
-						div.dark-bg(style="padding:30px;")
-							.form-item
-								label Введите логин
-								.form-input
-									.form-input-icon
-										svg.svg-info
-											use(href='./img/sprite.svg#svg-info')
-									input(type="text" name="name" placeholder="Пример заполнения")
-					
+			
+		
+		//=============== jquery ===================
+		script(src="../libs/jquery/jquery-3.0.0.min.js")
+				
+		//=============== мои скрипты ===================
+		
+		script(src="../js/main.js")
