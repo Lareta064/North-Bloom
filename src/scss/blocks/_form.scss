@@ -26,15 +26,97 @@ textarea {
   }
 }
 .form-item{
+  position: relative;
+  
   input, textarea{
     height: 64px;
     padding-inline: 16px;
     background-color: var(--style);
+    border: 1px solid var(--style);
+    &.error{
+      border-color: var(--error);
+    }
+    textarea{
+      resize: none;
+      height: 128px;
+      @media (max-width: 767px) {
+        height: 96px;
+      }
+    }
   }
   label{
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
     color:var(--style);
+    
+  }
+  .svg-info { color: var(--error); }
+}
+.form-input{
+  position: relative;
+  input{padding-right: 36px;}
+ .input-icon{
+    position: absolute;
+    right: 16px;
+    z-index: 2;
+    top:50%;
+    transform: translateY(-50%);
+   
+  }
+}
+.tooltip{
+  position:absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  &-icon{
+    width: 24px;
+    height: 24px;
+  }
+  &-box{
+    width: 270px;
+    padding: 6px 8px;
+    position: absolute;
+    color: var(--style);
+    background-color: var(--black-button);
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: $suisse;
+    top: 50%;
+    left: -7px;
+    transform: translate(-100%, -50%);
+  }
+  &-box:after{
+    content: '';
+    width: 7px;
+    height: 10px;
+    display: block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 5L7 10L7 0L0 5Z' fill='%23313131' /%3e%3c/svg%3e");
+    position: absolute;
+    right: -7px;
+    top:50%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &.tooltip--right{
+    .tooltip-box{
+      left: auto;
+      right:-7px;
+      transform: translate(100%, -50%);
+      &:after{
+       display: none;
+      }
+      &:before{
+        content:'';
+        display: block;
+        width: 7px;
+        height: 10px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 5L7 10L7 0L0 5Z' fill='%23313131' /%3e%3c/svg%3e");
+        position: absolute;
+        top: 50%;
+        left: -7px;
+        transform: translateY(-50%);
+      }
+    }
   }
 }

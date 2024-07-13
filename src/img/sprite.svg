@@ -247,6 +247,10 @@
 			<circle cx="12" cy="12" r="9" stroke="currentColor" />
 		</g>
 	</symbol>
-
+	<symbol id="svg-corner" viewBox="0 0 14 7">
+		<g>
+			<path d="M0 5L7 10L7 0L0 5Z" fill="#313131" />
+		</g>
+	</symbol>
 
 </svg>

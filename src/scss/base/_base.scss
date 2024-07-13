@@ -10,7 +10,8 @@
 	--text-grey-text: #929292;
 	--text-grey-text-imput: #b2b2b2;
 	--button-black-button: #222;
-	--button-hover-black-button: #313131;
+	--button-hover: #313131;
+	--black-button: #313131;
 	--button-grey-default-button: #e0e0e0;
 	--button-add-color-green: #93ab42;
 	--accent: #93ab42;
@@ -23,6 +24,7 @@
 
 *, *:after, *:before {
 	box-sizing: border-box;
+	background-repeat: no-repeat;
 }
 
 html {
@@ -78,12 +80,15 @@ img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: middle;
+	object-fit: cover;
 }
 
 input,
 button,
+textarea,
 button:focus,
-input:focus {
+input:focus,
+textarea:focus {
 	outline: none;
 	border: none;
 }

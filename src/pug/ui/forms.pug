@@ -42,8 +42,8 @@ html(lang="ru")
 				font-display: swap;
 			}			
 			@font-face {
-				font-family: 'Suisse Intl';
-				src: url(../fonts/suisse-intl-regular.woff2) format("woff2");
+				font-family: 'SuisseIntl-Regular';
+				src: url(../fonts/SuisseIntl-Regular.woff2) format("woff2");
 				font-style: normal;
 				font-display: swap;
 			}
@@ -74,12 +74,47 @@ html(lang="ru")
 								input(type="text" name="name" placeholder="Пример заполнения")
 					hr
 					h3 Невалидное поле
-					div.dark-bg(style="padding:30px;")
+					div
 						.form-item
+							//===error text tooltip====
+							.tooltip
+								.tooltip-icon
+									+svg-icon-ui('info')
+								.tooltip-box
+									p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
+							//====input label====
 							label Введите логин
+							//====input====
 							.form-input
-								.form-input-icon
-									svg.svg-info
-										use(href='./img/sprite.svg#svg-info')
-								input(type="text" name="name" placeholder="Пример заполнения")
-					
+								span.input-icon
+									+svg-icon-ui('eye')
+								input.error(type="text" name="name" placeholder="Пример заполнения")
+						pre.
+							.form-item
+								label Введите логин
+								.form-input
+									span.input-icon
+										+svg-icon('eye')
+									input.error(type="text" name="name" placeholder="Пример заполнения")
+					div
+						.form-item(style="width:400px")
+							//===error text tooltip====
+							.tooltip.tooltip--right
+								.tooltip-icon
+									+svg-icon-ui('info')
+								.tooltip-box
+									p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
+							//====input label====
+							label Введите логин
+							//====input====
+							.form-input
+								span.input-icon
+									+svg-icon-ui('eye')
+								input.error(type="text" name="name" placeholder="Пример заполнения")
+						pre.
+							.form-item
+								label Введите логин
+								.form-input
+									span.input-icon
+										+svg-icon('eye')
+									input.error(type="text" name="name" placeholder="Пример заполнения")
