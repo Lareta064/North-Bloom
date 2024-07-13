@@ -73,6 +73,7 @@ textarea, select {
   &-icon{
     width: 24px;
     height: 24px;
+    cursor:pointer;
   }
   &-box{
     width: 270px;
@@ -85,7 +86,8 @@ textarea, select {
     font-family: $suisse;
     top: 50%;
     left: -7px;
-    transform: translate(-100%, -50%);
+    transition: .1s; 
+    transform: translate(-100%, -50%) scale(0);
   }
   &-box:after{
     content: '';
@@ -102,7 +104,7 @@ textarea, select {
     .tooltip-box{
       left: auto;
       right:-7px;
-      transform: translate(100%, -50%);
+      transform: translate(100%, -50%) scale(0);
       &:after{
        display: none;
       }
@@ -118,6 +120,12 @@ textarea, select {
         transform: translateY(-50%);
       }
     }
+        &:hover .tooltip-box {
+          transform: translate(100%, -50%) scale(1);
+        }
+  }
+  &:hover .tooltip-box{
+    transform: translate(-100%, -50%) scale(1);
   }
 }
 /*custom select*/
