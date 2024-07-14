@@ -10,14 +10,14 @@ header.header
 		.header-menu-wrapper
 			.header-menu
 				ul.menu-list.flx-center
-					li.menu-list-item 
+					li.menu-list-item.menu-item-submenu 
 						a(href="#!") Для мужчин
 						ul.menu-list-child.bx-sh
 							li
 								a(href="#!") Коллекция Мужcкая Весна 2024
 							li
 								a(href="#!") Коллекция Мужcкая Лето 2024
-					li.menu-list-item 
+					li.menu-list-item.menu-item-submenu 
 						a(href="#!") Для женщин
 						ul.menu-list-child.bx-sh
 							li
@@ -26,7 +26,9 @@ header.header
 								a(href="#!") Коллекция Женская Лето 2024
 					li.menu-list-item 
 						a(href="#!") Где купить
-		
+					
+					li.menu-list-item.d-none.d-md-block
+						a(href="#!") Оптовикам	
 		//=====right column====
 		.header-right-col
 			button.btn-toggle-search#search-btn
@@ -34,3 +36,8 @@ header.header
 					use(href='./img/sprite.svg#svg-search')
 			
 			a(href="#!").link-item Оптовикам
+			//=====mobile menu-toggle===
+			button(type="button").menu-toggle.txt-18#menu-toggle
+				span Меню
+				svg.svg-close
+					use(href='./img/sprite.svg#svg-close')
