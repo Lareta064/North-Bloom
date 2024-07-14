@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	const openSearchForm = document.querySelector('#search-btn');
 	const searchFormPopup = document.querySelector('#search-form');
 
-	// const menuToggle = document.querySelector('#menu-toggle');
-	// const mobileMenu = document.querySelector('#mobile-menu');
+	const menuToggle = document.querySelector('#menu-toggle');
+	const mobileMenu = document.querySelector('#menu');
 	
 
 	function hideSerchForm(formBlock){
@@ -32,9 +32,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(searchFormPopup.classList.contains('active')){
 				hideSerchForm(searchFormPopup);
 			}else{
-				/*положение нижнего края меню */
-				// const topPosition = headerEl.getBoundingClientRect().bottom;
-				// resetActiveMenu();
+				
+				resetActiveMenu();
 				searchFormPopup.classList.add('active');
 				bodyEl.classList.add('lock');
 			}
@@ -45,9 +44,37 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(!searchFormPopup.contains(e.target) && !openSearchForm.contains(e.target)){
 				searchFormPopup.classList.remove('active');
 				bodyEl.classList.remove('lock');
+				
 			}
 		});
 	}
+	/*===============MOBILE MENU ==================*/
+	if (menuToggle) {
+		
+		/*   клик по иконке гамбургер*/  
+		menuToggle.addEventListener('click', ()=> {
+			hideSerchForm(searchFormPopup);
+			if (menuToggle.classList.contains('active')) {
+				resetActiveMenu();
+				bodyEl.classList.remove('lock');
+				
+			
+			} else {
+				menuToggle.classList.add('active');
+			    mobileMenu.classList.add('active');
+				bodyEl.classList.add('lock');
+				
+				
+			}
+		});
+		mobileMenu.addEventListener('click', (e)=>{
+			if(e.target == e.currentTarget){
+				mobileMenu.classList.remove('active');
+				menuToggle.classList.remove('active');
+				bodyEl.classList.remove('lock');
+			}
+		});
+	}	
 	/*=====КАСТОМНЫЙ SELECT===== */
 	// Полифилл для метода forEach для NodeList
 	if (window.NodeList && !NodeList.prototype.forEach) {

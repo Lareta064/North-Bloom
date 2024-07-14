@@ -52,6 +52,9 @@
 		background-color: rgba(46, 57, 77, .5);
 		display: flex;
 		justify-content: flex-end;
+		transform: translateX(120%);
+		transition: .4s;
+		&.active{transform: translateX(0);}
 		.header-menu{
 			width: 100%;
 			max-width: 375px;
@@ -96,7 +99,7 @@
 	@media (max-width: 1023px) {
 		display: flex;
 		&.active{
-			svg {display: inline-block;}
+			svg {display: inline-block; color: var(--style)!important}
 			span{display: none;}
 		}
 	}

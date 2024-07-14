@@ -19,10 +19,17 @@
 		line-height: 1.45;
 	}
 }
-.logo.logo--white{
+.header.active{
+	.header-container{background-color: #fff;}
+	*{color: var(--text-black)!important;}
+}
+.logo{
 	width: 199px;
 	.svg-logo{
 		width: 100%;
+	}
+	@media (max-width: 767px) {
+	width: 147px;
 	}
 }
 

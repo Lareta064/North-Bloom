@@ -7,7 +7,7 @@ header.header
 			a(href="#!").logo.logo--white
 				+svg-icon('logo')
 		//=== MENU WRAPPER =====
-		.header-menu-wrapper
+		.header-menu-wrapper#menu
 			.header-menu
 				ul.menu-list.flx-center
 					li.menu-list-item.menu-item-submenu 
@@ -32,10 +32,14 @@ header.header
 				//====блок для моб версии ====
 				.header-menu-block.d-none.d-md-block
 					.social-block
-						a(href="#!") 11
-						a(href="#!") 11
-						a(href="#!") 11
-						a(href="#!") 11
+						a(href="#!")
+							img(src="./img/svg-social/vk2.svg" alt="vk")
+						a(href="#!")
+							img(src="./img/svg-social/vc2.svg" alt="vc")
+						a(href="#!")
+							img(src="./img/svg-social/dzen2.svg" alt="dzen")
+						a(href="#!")
+							img(src="./img/svg-social/tg2.svg" alt="tg")
 
 					p &copy;NorthBloom  1997 - 2024 г.
 		//=====right column====
