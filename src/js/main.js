@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", function (){
 	const bodyEl = document.body;
-	/*=== ШКАЛА ПРЕЛОАДЕР==== */
+	/*=== preloader==== */
 	const preloader = document.getElementById('preloader');
 	if(preloader){
 		setTimeout(()=>{
 			preloader.classList.add('preloader-hide');
 		}, 3500);
 	}
-	/*======= КЛИК ПО ЛУПЕ В ШАПКЕ======= */
-	
+	/*======= header search form======= */
 	const headerEl = document.querySelector('header');
 	const openSearchForm = document.querySelector('#search-btn');
 	const searchFormPopup = document.querySelector('#search-form');
@@ -20,11 +19,13 @@ document.addEventListener("DOMContentLoaded", function (){
 	function hideSerchForm(formBlock){
 		formBlock.classList.remove('active');
 		bodyEl.classList.remove('lock');
+		
 	}
 	function resetActiveMenu(){
-		mobileMenu.querySelector('.active')?.classList.remove('active'); 
+		// mobileMenu.querySelector('.active')?.classList.remove('active'); 
 		mobileMenu.classList.remove('active');
 		menuToggle.classList.remove('active');
+		
 	}
 	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
@@ -36,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function (){
 				resetActiveMenu();
 				searchFormPopup.classList.add('active');
 				bodyEl.classList.add('lock');
+				
 			}
 		});
 		/*====== click for overlay ====*/
 		bodyEl.addEventListener('click', (e)=>{
-			
 			if(!searchFormPopup.contains(e.target) && !openSearchForm.contains(e.target)){
 				searchFormPopup.classList.remove('active');
 				bodyEl.classList.remove('lock');
@@ -48,22 +49,26 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
+	/*====change header bg for active menu==== */
+	bodyEl.addEventListener('click', (e)=>{
+		if(mobileMenu.classList.contains('active') || searchFormPopup.classList.contains('active')){
+			headerEl.classList.add('active');
+		}else{
+			headerEl.classList.remove('active');
+		}
+	});
 	/*===============MOBILE MENU ==================*/
 	if (menuToggle) {
-		
-		/*   клик по иконке гамбургер*/  
 		menuToggle.addEventListener('click', ()=> {
 			hideSerchForm(searchFormPopup);
 			if (menuToggle.classList.contains('active')) {
 				resetActiveMenu();
 				bodyEl.classList.remove('lock');
-				
 			
 			} else {
 				menuToggle.classList.add('active');
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
-				
 				
 			}
 		});
@@ -75,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}	
-	/*=====КАСТОМНЫЙ SELECT===== */
-	// Полифилл для метода forEach для NodeList
+	/*=====CUSTOM SELECT===== */
+	// polyfill for forEach для NodeList
 	if (window.NodeList && !NodeList.prototype.forEach) {
 		NodeList.prototype.forEach = function (callback, thisArg) {
 			thisArg = thisArg || window;
