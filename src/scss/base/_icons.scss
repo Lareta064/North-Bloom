@@ -17,6 +17,10 @@
 	height: 24px;
 	color: var(--fill-icon);
 }
+.svg-close{
+	transition: .3s;
+	&:hover {color: black;}
+}
 .svg-fleur{
 	width: 26px;
 	height: 24px;

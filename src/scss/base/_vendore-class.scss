@@ -1,0 +1,8 @@
+.bx-sh {
+	box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.16);
+	padding: 24px;
+
+	@media (max-width: 767px) {
+		padding: 16px;
+	}
+}

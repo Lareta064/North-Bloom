@@ -89,6 +89,13 @@ textarea, select {
     }
   }
 }
+.form-item.form-item--border{
+  input, textarea{
+    background-color: transparent;
+    border:0;
+    border-bottom: 1px solid var(--text-grey-input);
+  }
+}
 /*******************/
 .tooltip{
   position:absolute;

@@ -1,12 +1,11 @@
 //==== HEADER SEARCH BLOCK ====
-.header-search-wrapper.bx-sh
+.header-search-wrapper.bx-sh.flx-center
 	.container
-		.row
-			.col-3.col-lg-6.col-sm-12
-				h1 text
-			.col-3.col-lg-6.col-sm-12
-				h1 text
-			.col-3.col-lg-6.col-sm-12
-				h1 text
-			.col-3.col-lg-6.col-sm-12
-				h1 text
+		form.search-form
+			.form-item.form-item--border
+				.form-input
+					input(type="search" name="search_input" placeholder="Что Вы ищите?")
+					//===== кнопка reset ====
+					button.btn-clear.flx-center(type="reset")
+						svg.svg-close
+							use(href='./img/sprite.svg#svg-close')
