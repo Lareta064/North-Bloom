@@ -21,7 +21,6 @@
 				border-bottom: 1px solid currentColor;
 			}
 		}
-
 	}
 
 	&-child {
@@ -31,14 +30,30 @@
 		z-index: 3;
 		display: none;
 		background-color: var(--bg-bg-grey);
-
+		transform: translateY(20px);
 		a {
 			color: var(--fill-icon);
 			white-space: nowrap;
 			padding-block: 8px;
-
+			&:hover{color: var(--text-grey);}
 		}
 
+	}
+	@media(min-width:1200px){
+		.menu-item-submenu:hover{
+			.menu-list-child{
+				display: block;
+				animation:showSubmenu;
+				animation-duration: .3s;
+				animation-timing-function: linear;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+}
+@keyframes showSubmenu{
+	to{
+		transform: translateY(0);
 	}
 }
 .header-menu-wrapper{

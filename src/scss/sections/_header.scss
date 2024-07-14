@@ -5,7 +5,6 @@
 		justify-content: space-between;	
 		background-color: #2e394d;
 		position: relative;
-		// color: var(--style);
 		
 	}
 	.header-left-col,.header-right-col{
@@ -29,7 +28,7 @@
 		width: 100%;
 	}
 	@media (max-width: 767px) {
-	width: 147px;
+		width: 147px;
 	}
 }
 
