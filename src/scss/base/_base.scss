@@ -143,6 +143,17 @@ input[type="submit"] {
 	width: 100%;
 	max-width: 1896px;
 	margin-inline: auto;
-
+}
+.social-block, .social-block a{
+	display: flex;
+	align-items: center;
+}
+.social-block{column-gap:10px;}
+.social-block	a{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: var(--bg-bg-grey);
+	color: var(--fill-icon);
 }
 
