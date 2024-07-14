@@ -6,3 +6,13 @@
 		padding: 16px;
 	}
 }
+.flx-center,.btn-toggle-search,
+.btn-clear,.flx-center-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flx-center-column {
+	flex-direction: column;
+}

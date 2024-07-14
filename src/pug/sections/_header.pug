@@ -1,10 +1,11 @@
 //====== HEADER=====
 header.header
 	include ../blocks/_header-search
-	.header-container
+	.header-container.d-flex
 		//===LOGO====
-		a(href="#!").logo.logo--white
-			+svg-icon('logo')
+		.header-left-col
+			a(href="#!").logo.logo--white
+				+svg-icon('logo')
 		//=== MENU WRAPPER =====
 		.header-menu-wrapper
 			.header-menu
@@ -25,4 +26,11 @@ header.header
 								a(href="#!") Коллекция Женская Лето 2024
 					li.menu-list-item 
 						a(href="#!") Где купить
-					
+		
+		//=====right column====
+		.header-right-col
+			button.btn-toggle-search
+				svg.svg-search
+					use(href='./img/sprite.svg#svg-search')
+			
+			a(href="#!").link-item Оптовикам

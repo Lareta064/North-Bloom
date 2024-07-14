@@ -38,3 +38,8 @@
 		background-color: var(--button-accent-hover);
 	}
 }
+.btn-toggle-search{
+	width: 24px;
+	height: 24px;
+	.svg-search{color: var(--style)}
+}
