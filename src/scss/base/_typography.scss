@@ -70,6 +70,7 @@
 	transition: .3s;
 	padding-block: 2px;
 	border-bottom:1px solid transparent;
+	display: inline;
 	&:hover{
 		border-bottom: 1px solid currentColor;
 	}

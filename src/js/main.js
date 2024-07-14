@@ -1,13 +1,54 @@
 document.addEventListener("DOMContentLoaded", function (){
-	/*=== заполнение шкалы прелоадера==== */
+	const bodyEl = document.body;
+	/*=== ШКАЛА ПРЕЛОАДЕР==== */
 	const preloader = document.getElementById('preloader');
 	if(preloader){
 		setTimeout(()=>{
 			preloader.classList.add('preloader-hide');
 		}, 3500);
 	}
+	/*======= КЛИК ПО ЛУПЕ В ШАПКЕ======= */
 	
-	/*=====custom select===== */
+	const headerEl = document.querySelector('header');
+	const openSearchForm = document.querySelector('#search-btn');
+	const searchFormPopup = document.querySelector('#search-form');
+
+	// const menuToggle = document.querySelector('#menu-toggle');
+	// const mobileMenu = document.querySelector('#mobile-menu');
+	
+
+	function hideSerchForm(formBlock){
+		formBlock.classList.remove('active');
+		bodyEl.classList.remove('lock');
+	}
+	function resetActiveMenu(){
+		mobileMenu.querySelector('.active')?.classList.remove('active'); 
+		mobileMenu.classList.remove('active');
+		menuToggle.classList.remove('active');
+	}
+	if(openSearchForm){
+		openSearchForm.addEventListener('click', ()=>{
+			
+			if(searchFormPopup.classList.contains('active')){
+				hideSerchForm(searchFormPopup);
+			}else{
+				/*положение нижнего края меню */
+				// const topPosition = headerEl.getBoundingClientRect().bottom;
+				// resetActiveMenu();
+				searchFormPopup.classList.add('active');
+				bodyEl.classList.add('lock');
+			}
+		});
+		/*====== click for overlay ====*/
+		bodyEl.addEventListener('click', (e)=>{
+			
+			if(!searchFormPopup.contains(e.target) && !openSearchForm.contains(e.target)){
+				searchFormPopup.classList.remove('active');
+				bodyEl.classList.remove('lock');
+			}
+		});
+	}
+	/*=====КАСТОМНЫЙ SELECT===== */
 	// Полифилл для метода forEach для NodeList
 	if (window.NodeList && !NodeList.prototype.forEach) {
 		NodeList.prototype.forEach = function (callback, thisArg) {

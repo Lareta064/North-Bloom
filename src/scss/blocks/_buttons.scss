@@ -41,5 +41,5 @@
 .btn-toggle-search{
 	width: 24px;
 	height: 24px;
-	.svg-search{color: var(--style)}
+	.svg-search{color: var(--style); pointer-events: none;}
 }

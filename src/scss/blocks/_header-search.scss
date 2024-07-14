@@ -4,17 +4,21 @@
 	left: 0;
 	right: 0;
 	z-index: 9;
-	height: 220px;
+	transition: .3s; 
+	height: 0;
+	overflow: hidden;
 	background: var(--bg-bg-grey);
+	padding: 0;
+	&.active{height: 220px;}
 	@media (max-width: 1199px) {
-	height: 160px;
+		&.active {height: 160px;}
 	}
 }
 
 .search-form{
-	max-width: 924px;
+	max-width: 972px;
 	margin-inline: auto;
-	
+	padding: 24px;
 	.btn-clear{
 		position: absolute;
 		z-index: 2;
@@ -33,9 +37,8 @@
 	}
 	input[type="search"]::-webkit-search-cancel-button{display: none;}
 	@media (max-width: 1199px) {
-	  max-width: 800px;
+	  max-width: 832px;
+	  padding: 16px;
 	}
-	@media (max-width: 767px) {
 	
-	}
 }
