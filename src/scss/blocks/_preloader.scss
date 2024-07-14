@@ -2,7 +2,7 @@
 	position: fixed;
 	inset:0;
 	z-index: 99;
-	background-color: var(--bg-blue);
+	
 	row-gap:87px;
 	animation: scale;
 	animation-delay: var(--preloaderHideDelay);
@@ -10,7 +10,7 @@
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
 	padding-bottom: 24px;
-	color: var(--style);
+	
 	&-bottom{
 		position: absolute;
 		bottom: 24px;

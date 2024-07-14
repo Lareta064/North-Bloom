@@ -106,6 +106,9 @@
 		}
 		.social-block{margin-bottom: 8px;}
 	}
+	@media (max-width: 767px) {
+	top:56px;
+	}
 }
 .menu-toggle{
 	color: var(--style);

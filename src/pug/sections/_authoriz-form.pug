@@ -1,0 +1,20 @@
+.form-wrapper
+	//====title group====
+	.title-group.txt-center
+		h1.title Вход
+		.subtitle
+			p Ещё нет аккаунта? 
+				a(href="partners-form.html").txt-accent.link-item Стать нашим партнером
+	
+	//====form====	
+	form.authoriz-form(action="" method="method")
+		+form-item('', '', "Введите логин", "name", '')
+		+form-item('', '', "Введите пароль", "pass", 'pass')
+		.form-btn
+			button(type="submit").btn-accent.w-100 Войти
+		.form-item
+			.txt-14.txt-center Забыли пароль? 
+				a(href="password-form.html").txt-accent.link-item Восстановить
+
+
+		

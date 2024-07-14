@@ -9,6 +9,10 @@
 .bg-grey{
 	background: var(--bg-bg-grey);
 }
+.bg-blue{
+	background-color: var(--bg-blue);
+	color: var(--style);
+}
 .flx-center,.btn-toggle-search,
 .btn-clear,.flx-center-column {
 	display: flex;
@@ -19,3 +23,4 @@
 .flx-center-column {
 	flex-direction: column;
 }
+.w-100{width: 100%!important;}
