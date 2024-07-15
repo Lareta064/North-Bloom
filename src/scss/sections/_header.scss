@@ -6,6 +6,7 @@
 	right: 0;
 	height: 64px;
 	z-index: 5;
+	transition: .3s; 
 	.header-container{
 		height: 100%;
 		align-items: center;
@@ -29,6 +30,10 @@
 .header.active{
 	background-color: var(--style);
 	*{color: var(--text-black)!important;}
+}
+.header:hover{
+	background-color: var(--style);
+	* {color: var(--text-black) !important;}
 }
 .logo{
 	width: 199px;

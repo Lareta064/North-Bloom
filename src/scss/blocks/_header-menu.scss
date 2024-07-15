@@ -31,11 +31,13 @@
 		display: none;
 		background-color: var(--bg-bg-grey);
 		transform: translateY(20px);
+		&.menu-list-child--right {right: auto; left: 0;}
 		a {
 			color: var(--fill-icon);
 			white-space: nowrap;
 			padding-block: 8px;
-			&:hover{color: var(--text-grey);}
+			transition: .3s; 
+			&:hover{color: var(--text-grey)!important;}
 		}
 
 	}
@@ -48,6 +50,7 @@
 				animation-timing-function: linear;
 				animation-fill-mode: forwards;
 			}
+			
 		}
 	}
 }

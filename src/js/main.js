@@ -155,11 +155,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	   slidesPerView: 1,
 	   speed: 1000,
 	   loop: true,
-	//    effect: "fade",
+	   lazy: true,
+	    parallax: true,
+		effect: "fade",
         pagination: {
         	el: ".swiper-pagination",
 			clickable: true,
       	},
+	autoplay:{
+		duration: 1000,
+		delay:3000
+	}
     });
 
 
