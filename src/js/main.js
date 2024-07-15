@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function (){
 			preloader.classList.add('preloader-hide');
 		}, 3500);
 	}
+	/*====cooki popup remove=====*/
+	const cookiPopup = document.querySelector('.cooki-popup');
+	if(cookiPopup){
+		cookiPopup.querySelector('.btn-close').addEventListener('click',()=>{
+			cookiPopup.remove();
+		});
+	}
+	
 	/*======= header search form======= */
 	const headerEl = document.getElementById('header');
 	const openSearchForm = document.querySelector('#search-btn');
