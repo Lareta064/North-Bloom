@@ -1,15 +1,16 @@
 .header{
-	
+	background-color: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 64px;
+	z-index: 5;
 	.header-container{
-		height: 64px;
+		height: 100%;
 		align-items: center;
 		justify-content: space-between;	
-		background-color: #2e394d;
 		position: relative;
-		@media (max-width: 767px) {
-			height: 56px;
-		}
-		
 	}
 	.header-left-col,.header-right-col{
 		display: flex;
@@ -21,9 +22,12 @@
 		color: var(--style);
 		line-height: 1.45;
 	}
+	@media (max-width: 767px) {
+		height: 56px;
+	}
 }
 .header.active{
-	.header-container{background-color: #fff;}
+	background-color: var(--style);
 	*{color: var(--text-black)!important;}
 }
 .logo{

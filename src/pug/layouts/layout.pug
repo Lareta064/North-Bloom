@@ -19,7 +19,9 @@ html(lang="ru")
 		meta(name="theme-color", content="#ffffff")
 		//====убрать перевод цифр в номер телефона на ios  ======
 		meta(name="format-detection" content="telephone=no")
-		
+		//======= swiper slider ======
+		link(rel="stylesheet", href="./libs/swiper/swiper.min.css")
+		//======= main styles ======
 		link(rel="stylesheet", href="./css/main.css")
 		
 
@@ -69,11 +71,11 @@ html(lang="ru")
 	body(class=(bodyCl !=="" ? bodyCl : ''))
 		
 		block content
-			
 		
 		//=============== jquery ===================
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
 		
-		//=============== мои скрипты ===================
-		
+		//=============== swiper js ===================
+		script(src="./libs/swiper/swiper.js")
+		//=============== main js ===================
 		script(src="./js/main.js")

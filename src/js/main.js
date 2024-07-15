@@ -150,8 +150,17 @@ document.addEventListener("DOMContentLoaded", function (){
 			 })
 		}
 	}
-
-
+	//======== swiper sliders ==========
+	var heroSlider = new Swiper(".main-hero-slider", {
+	   slidesPerView: 1,
+	   speed: 1000,
+	   loop: true,
+	//    effect: "fade",
+        pagination: {
+        	el: ".swiper-pagination",
+			clickable: true,
+      	},
+    });
 
 
 
