@@ -34,6 +34,10 @@
 .header:hover{
 	background-color: var(--style);
 	* {color: var(--text-black) !important;}
+	.menu-toggle span, .menu-toggle span:before,.menu-toggle span:after {
+		background-color: var(--text-black);
+		
+	}
 }
 .logo{
 	width: 199px;

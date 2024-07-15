@@ -162,10 +162,10 @@ document.addEventListener("DOMContentLoaded", function (){
         	el: ".swiper-pagination",
 			clickable: true,
       	},
-	autoplay:{
-		duration: 1000,
-		delay:3000
-	}
+		autoplay:{
+			duration: 1000,
+			delay:3000
+		}
     });
 
 
