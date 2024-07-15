@@ -3,10 +3,22 @@
 	padding-block:24px;
 	color: var(--text-black);
 	.logo{width: 167px;}
+	&-bottom{margin-top: 80px;}
+	&-copiryght{
+		display: flex;
+		align-items: center;
+	}
 }
 .menu-nav{
+	column-gap:74px;
+	@media (max-width: 1439px) {
+		column-gap: 40px;
+	}
+}
+.menu-nav-block{
 	display: flex;
 	flex-direction: column;
 	row-gap:8px;
+	a{white-space:nowrap ;}
 	a{transition: .3s; &:hover{color: var(--text-grey);}}
 }
