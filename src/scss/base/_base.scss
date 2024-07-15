@@ -60,6 +60,10 @@ body {
 body.lock{
 	height: 100vh;
 	overflow: hidden;
+	padding-left: 17px;
+	@media (max-width: 1199px) {
+		padding-left: 0;
+	}
 }
 a,
 a:hover {

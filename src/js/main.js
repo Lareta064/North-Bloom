@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}, 3500);
 	}
 	/*======= header search form======= */
-	const headerEl = document.querySelector('header');
+	const headerEl = document.getElementById('header');
 	const openSearchForm = document.querySelector('#search-btn');
 	const searchFormPopup = document.querySelector('#search-form');
 
@@ -168,6 +168,14 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
     });
 
-
+  /********WINDOW SCROLL EVENTS********* */
+  window.addEventListener('scroll', (e)=>{
+	if(window.scrollY > 10){
+		headerEl.classList.add('active');
+	}else{
+		headerEl.classList.remove('active');
+	}
+	
+  })
 
 });
