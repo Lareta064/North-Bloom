@@ -65,6 +65,7 @@ body.lock{
 		padding-right: 0;
 	}
 }
+a, button{display: inline-block;}
 a,
 a:hover {
 	text-decoration: none;
@@ -138,17 +139,12 @@ input[type="submit"] {
 	}
 	&>main{flex-grow: 1;}
 }
-.header-container{
-	width: 100%;
-	max-width: 1920px;
+.container, .header-container{
+	width: min( 1920px, 100%);
 	padding-inline: 24px;
 	margin-inline: auto;
 }
-.container{
-	width: 100%;
-	max-width: 1896px;
-	margin-inline: auto;
-}
+
 .social-block, .social-block a{
 	display: flex;
 	align-items: center;

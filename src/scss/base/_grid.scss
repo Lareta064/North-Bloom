@@ -1,14 +1,14 @@
 .row {
-	--bs-gutter-x: 24px;
-	--bs-gutter-y: 24px;
+	--bs-gutter-x: 16px;
+	--bs-gutter-y: 16px;
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: calc(var(--bs-gutter-y) * -1);
 	margin-right: calc(var(--bs-gutter-x) * -.5);
 	margin-left: calc(var(--bs-gutter-x) * -.5);
 	@media (max-width: 1439px) {
-		--bs-gutter-x: 24px;
-		--bs-gutter-y: 24px
+		--bs-gutter-x: 16px;
+		--bs-gutter-y: 16px
 	}
 	@media (max-width: 1023px) {
 		--bs-gutter-x: 8px;

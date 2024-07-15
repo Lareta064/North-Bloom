@@ -1,4 +1,12 @@
 .footer{
-	 background: var(--bg-bg-grey);
-	 height: 288px;
+	background: var(--bg-bg-grey);
+	padding-block:24px;
+	color: var(--text-black);
+	.logo{width: 167px;}
+}
+.menu-nav{
+	display: flex;
+	flex-direction: column;
+	row-gap:8px;
+	a{transition: .3s; &:hover{color: var(--text-grey);}}
 }
