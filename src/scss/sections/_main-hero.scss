@@ -33,7 +33,16 @@
 		.svg-chevron-right{
 			color: var(--style);
 		}
-		.center-group{column-gap:70px}
+		.center-group{
+			column-gap:70px;
+			.chevron-link{white-space: nowrap;}
+			@media (max-width: 1199px) {
+			column-gap: 60px;
+			}
+			@media (max-width: 767px) {
+			column-gap: 30px;
+			}
+		}
 	}
 
 }
