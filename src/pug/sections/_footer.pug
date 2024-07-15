@@ -2,11 +2,11 @@ footer.footer
 	.container
 		//======FOOTER ROW====
 		.row.footer-top
-			.col-2
+			.col-2.col-lg-4.col-md-12
 				.footer-logo
 					a(href="#!").logo
 						+svg-icon('logo')
-			.col-4.col-xl-6.ofs-2.ofs-xl-0
+			.col-4.col-xxl-5.col-xl-6.col-lg-4.col-md-6.ofs-2.ofs-xxl-1.ofs-xl-0
 				nav.menu-nav.d-flex
 					//=====block====
 					.menu-nav-block
@@ -19,7 +19,7 @@ footer.footer
 						a(href="#!") Весна 2024  Женская коллекция
 						a(href="#!") Зима 2024 Женская коллекция
 			
-			.col-3.col-xl-4.ofs-1.ofs-xl-0
+			.col-3.col-xxl-4.col-lg-4.col-md-6.col-sm-12.ofs-1.ofs-xxl-0
 				nav.menu-nav.d-flex
 					//=====block====
 					.menu-nav-block
@@ -35,11 +35,11 @@ footer.footer
 						a(href="#!") Уход за изделеем
 
 		//======FOOTER ROW====
-		.row.footer-bottom
-			.col-2.footer-copiryght
+		.footer-bottom.d-flex
+			.footer-copiryght
 				p &copy;NorthBloom  1997 - 2024 г.
 			
-			.col-2.ofs-6.ofs-xxl-4
+			.footer-bottom__right.d-flex
 				.social-block
 					a(href="#!")
 						img(src="./img/svg-social/vk2.svg" alt="vk")
@@ -49,7 +49,6 @@ footer.footer
 						img(src="./img/svg-social/dzen2.svg" alt="dzen")
 					a(href="#!")
 						img(src="./img/svg-social/tg2.svg" alt="tg")
-			.col-2
-				button(type="button").btn.btn--slim Написать вопрос директору
 				
-					
+				.footer-button
+					button(type="button").btn.btn--slim Написать вопрос директору
