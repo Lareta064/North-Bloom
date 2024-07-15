@@ -64,6 +64,9 @@
 }
 *.txt-accent{
 	color: var(--accent);
+	&:hover{
+		color: var(--accent-hover);
+	}
 }
 *.txt-center{text-align: center;}
 .link-item{

@@ -1,0 +1,12 @@
+.popup-wrapper{
+	padding: 48px 16px 32px;
+	background: var(--bg-bg-grey);
+	width: min(600px, 100%);
+
+}
+.cooki-popup{
+	position: fixed;
+	z-index: 10;
+	bottom: 24px;
+	right: 24px;
+}
