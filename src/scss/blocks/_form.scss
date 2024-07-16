@@ -290,6 +290,12 @@ textarea, select {
   display: none;
 }
 /*************fake-checkbox************/
+.color-item {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+}
 .fake-input-label{
   position: relative;
   display: flex;
@@ -303,16 +309,12 @@ textarea, select {
     position: absolute;
     top: 0;
     left: 0;
-    
     z-index: -1;
   }
-    .fake-span{
+    .color-item{
       width: 32px;
       height: 32px;
-      background-color: red;
-      position: relative;
-      display: block;
-      
+     
       &:after{
         content: '';
         position: absolute;

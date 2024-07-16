@@ -33,6 +33,11 @@
 		color: inherit;
 	}
 }
+.section-title,.gap-16{&>*+*{margin-top: 16px;}}
+
+.section-title{
+	width: min(924px, 100%);
+}
 .mt-8{
 	margin-top: 8px;
 }

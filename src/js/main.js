@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    parallax: true,
 		effect: "fade",
         pagination: {
-        	el: ".swiper-pagination",
+        	el: ".main-hero-pagination",
 			clickable: true,
       	},
 		autoplay:{
@@ -192,9 +192,12 @@ document.addEventListener("DOMContentLoaded", function (){
 			delay:3000
 		}
     });
-
-	
-	console.log(productColors);
+	var prodSlider = new Swiper('.slider1', {
+		pagination: {
+        	el: ".pagination1",
+			clickable: true,
+      	},
+	})
   /********WINDOW SCROLL EVENTS********* */
   window.addEventListener('scroll', (e)=>{
 	if(window.scrollY > 10){
