@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		/*====== click for overlay ====*/
 		bodyEl.addEventListener('click', (e)=>{
-			if(!searchFormPopup.contains(e.target) && !openSearchForm.contains(e.target)){
+			if(!menuToggle.contains(e.target) && !searchFormPopup.contains(e.target) && !openSearchForm.contains(e.target)){
 				searchFormPopup.classList.remove('active');
 				bodyEl.classList.remove('lock');
 				
@@ -92,6 +92,18 @@ document.addEventListener("DOMContentLoaded", function (){
 				bodyEl.classList.remove('lock');
 			}
 		});
+		function checkScreenSize() {
+			if (window.innerWidth > 1023) {
+				bodyEl.classList.remove('lock');
+				resetActiveMenu();
+			}
+		}
+
+		// Проверка размера экрана при загрузке страницы
+		checkScreenSize();
+
+		// Проверка размера экрана при изменении размера окна
+		window.addEventListener('resize', checkScreenSize);
 	}	
 	/*=====CUSTOM SELECT===== */
 	// polyfill for forEach для NodeList
