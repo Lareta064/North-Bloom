@@ -27,6 +27,12 @@ form{
   }
 }
 
+.form-wrapper.pt-128{
+  padding-top: calc(64px +64px);
+  @media (max-width: 1023px) {
+      padding-top: calc(32px +56px);
+    }
+}
 .form-wrapper.form-wrapper--large{
   width: min(960px, 100%);
 }

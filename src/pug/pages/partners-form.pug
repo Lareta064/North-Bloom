@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper.bg-blue
+		include ../sections/_header
+		main.main
+			include ../sections/_partners-form.pug
+
+
+block variables
+	-var title = "Авторизация";
