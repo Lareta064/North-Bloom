@@ -46,6 +46,10 @@
 		}
 	}
 }
+.footer-logo{
+	grid-column: span 4;
+	width: auto;
+}
 .menu-nav{
 	column-gap:74px;
 	@media (max-width: 1599px) {

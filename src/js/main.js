@@ -187,10 +187,10 @@ document.addEventListener("DOMContentLoaded", function (){
         	el: ".main-hero-pagination",
 			clickable: true,
       	},
-		autoplay:{
-			duration: 1000,
-			delay:3000
-		}
+		// autoplay:{
+		// 	duration: 1000,
+		// 	delay:3000
+		// }
     });
 	var prodSlider = new Swiper('.slider', {
 		pagination: {
