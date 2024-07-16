@@ -133,6 +133,13 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
+.inner-main{
+	background-color: #fff;
+	padding-top: 64px;
+	@media (max-width: 767px) {
+		padding-top: 56px;
+	}
+}
 .page-wrapper{
 	display: flex;
 	flex-direction: column;

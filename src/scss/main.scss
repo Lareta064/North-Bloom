@@ -13,13 +13,12 @@
 @import "blocks/_header-search.scss";
 
 @import "blocks/_cooki-popup.scss";
+@import "blocks/_product-card.scss";
 
+@import "sections/_header.scss";
+@import "sections/_main-hero.scss";
+@import "sections/_footer.scss";
 
-
- @import "sections/_header.scss";
- @import "sections/_main-hero.scss";
- @import "sections/_footer.scss";
-
- @import "pages/_partners-success.scss";
+@import "pages/_partners-success.scss";
   //ui
- @import "ui/_ui-navigation";
+@import "ui/_ui-navigation";

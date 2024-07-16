@@ -193,6 +193,8 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
     });
 
+	
+	console.log(productColors);
   /********WINDOW SCROLL EVENTS********* */
   window.addEventListener('scroll', (e)=>{
 	if(window.scrollY > 10){

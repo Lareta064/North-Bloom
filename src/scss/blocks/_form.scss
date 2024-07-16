@@ -289,3 +289,43 @@ textarea, select {
 .dropdown__input-hidden {
   display: none;
 }
+/*************fake-checkbox************/
+.fake-input-label{
+  position: relative;
+  display: flex;
+  flex-shrink:0;
+  cursor:pointer;
+  input[type="radio"],
+  input[type="checkbox"]{
+    width: 0.01em;
+    height: 0.01em;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    z-index: -1;
+  }
+    .fake-span{
+      width: 32px;
+      height: 32px;
+      background-color: red;
+      position: relative;
+      display: block;
+      
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 2px;
+        transition: .3s; 
+        background-color: transparent;
+      }
+    }
+    input:checked + .fake-span:after{
+      background-color: var(--text-grey);
+    }
+}

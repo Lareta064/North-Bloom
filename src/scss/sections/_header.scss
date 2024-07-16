@@ -41,6 +41,12 @@
 		
 	}
 }
+.page-wrapper.page-wrapper--white{
+	.header{
+		background-color: var(--style);
+		* {color: var(--text-black) !important;}
+	}
+}
 .logo{
 	width: 199px;
 	display: inline-block;
