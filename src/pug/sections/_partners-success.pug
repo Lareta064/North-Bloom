@@ -1,0 +1,14 @@
+//==== LEFT COLUMN ====
+.success-message__text.flx-center
+	.txt-center
+		h1.title Ваша заявка принята!
+		p.mt-16 В ближайшее время с Вами свяжется менеджер.
+
+
+//==== RIGHT COLUMN ====
+.success-message__banner
+	source(srcset="./img/img-w370@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+	source(srcset="./img/img-w370.webp", media="(max-width: 767px)")
+	source(srcset="./img/img@2x.webp", media="(min-resolution: 192dpi)")
+	source(srcset="./img/img.webp" type="image/webp")
+	img.lazy.img-cover(src="./img/img.webp", alt="img")

@@ -1,0 +1,38 @@
+.success-message{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 64px;
+	height: 100vh;
+	min-height: 768px;
+	
+	&__banner{
+		height: calc(100vh - 64px);
+		min-height: calc(768px - 64px);
+		img{
+			object-position: top;
+		}
+	}
+	@media (max-width: 1279px) {
+		grid-template-columns: 1fr;
+		&__text{
+			height: auto;
+			padding-top: 56px;
+			padding-bottom: 48px;
+		}
+		&__banner {
+			height: calc(100vh - 264px);
+			min-height: unset;
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 56px;
+		&__text {
+			padding-top: 16px;
+			padding-bottom: 32px;
+		}
+		&__banner {
+			height: auto;
+			min-height: 100vh;
+		}
+	}
+}
