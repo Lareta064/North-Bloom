@@ -10,9 +10,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	/*====cooki popup remove=====*/
 	const cookiPopup = document.querySelector('.cooki-popup');
 	if(cookiPopup){
-		cookiPopup.querySelector('.btn-close').addEventListener('click',()=>{
-			cookiPopup.remove();
-		});
+		const cookiCloseButtons = cookiPopup .querySelectorAll('button');
+		for(let btn of cookiCloseButtons){
+			btn.addEventListener('click',()=>{
+				cookiPopup.remove();
+			});
+		}
 	}
 	
 	/*======= header search form======= */
