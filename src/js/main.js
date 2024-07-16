@@ -192,12 +192,13 @@ document.addEventListener("DOMContentLoaded", function (){
 			delay:3000
 		}
     });
-	var prodSlider = new Swiper('.slider1', {
+	var prodSlider = new Swiper('.slider', {
 		pagination: {
-        	el: ".pagination1",
+        	el: ".slider-pagination",
 			clickable: true,
       	},
-	})
+	});
+	
   /********WINDOW SCROLL EVENTS********* */
   window.addEventListener('scroll', (e)=>{
 	if(window.scrollY > 10){

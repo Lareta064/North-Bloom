@@ -8,59 +8,29 @@ section.catalogy-content
 		.section-title
 			h1.h1-serif Весна 2024 для мужчин
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-		.catalogy-content-grid.row
-			.col-3
-				.prod-card
-					//====slider single product===
-					.slider1.swiper
-						.swiper-wrapper
-							//====slide====
-							.swiper-slide
-								.prod-card__img
-									img(src="../img/product.webp", width="370" height="560" alt="img")
-										
-							//====slide====
-							.swiper-slide
-								.prod-card__img
-									img(src="../img/product.webp", width="370" height="560" alt="img")
-										
-							//====slide====
-							.swiper-slide
-								.prod-card__img
-									img(src="../img/product.webp", width="370" height="560" alt="img")
-						//==== pagination===
-						.pagination1.swiper-pagination
-					//=====product info=====
-					.prod-card__footer.gap-16
-						.prod-card__title.d-flex
-							p.semi-16 Пуховик ЛАРС
-							.prod-card__price 45 000 ₽
-						.prod-colors
-							.color-item(style="background:#2E394D")
-							.color-item(style="background:#E3000F")
-							.color-item(style="background:#93AB42")
-			
-			.col-3
-				.product-slider1.swiper
-					.swiper-wrapper
-						//====slide====
-						.swiper-slide
-							.prod-card
-								.prod-card__img
-									img(src="../img/product.webp", width="370" height="560" alt="img")
-									
-						//====slide====
-						.swiper-slide
-							.prod-card
-								.prod-card__img
-									img(src="../img/product.webp", width="370" height="560" alt="img")
-									
-						//====slide====
-						.swiper-slide
-							.prod-card
-								.prod-card__img
-									img(src="../img/product.webp", width="370" height="560" alt="img")
-									
-					
-					.ps1-pagination.swiper-pagination
+		.container-wrapper
+			.catalogy-content.four-column
+				.col
+					+product('product')
+				.col
+					+product('product3')
+				.col
+					+product('product')
+				.col
+					+product('product3')
+				.col
+					+product('product')
+				.col
+					+product('product')
+				.col.stretch-card
+					img.img-cover.lazy(src="./img/img.webp", alt="")
+				.col
+					+product('product')
+				.col
+					+product('product')
+				.col
+					+product('product')
+				.col
+					+product('product')
+				.col
+					+product('product')

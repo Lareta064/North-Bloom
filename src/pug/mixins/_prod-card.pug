@@ -1,0 +1,28 @@
+mixin product(img)
+	.prod-card&attributes(attributes)
+		//====slider single product===
+		.swiper.slider
+			.swiper-wrapper
+				//====slide====
+				.swiper-slide
+					.prod-card__img
+						img.lazy(src="../img/"+ img +".webp", width="450" height="640" alt="img")
+				//====slide====
+				.swiper-slide
+					.prod-card__img
+						img.lazy(src="../img/"+ img +".webp", width="370" height="560" alt="img")
+				//====slide====
+				.swiper-slide
+					.prod-card__img
+						img.lazy(src="../img/"+ img +".webp", width="370" height="560" alt="img")
+			//==== pagination===
+			.swiper-pagination.slider-pagination
+		//=====product info=====
+		.prod-card__footer.gap-16
+			.prod-card__title.d-flex
+				p.semi-16 Пуховик ЛАРС
+				.prod-card__price 45 000 ₽
+			.prod-colors
+				.color-item(style="background:#2E394D")
+				.color-item(style="background:#E3000F")
+				.color-item(style="background:#93AB42")
