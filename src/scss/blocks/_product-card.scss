@@ -34,15 +34,7 @@
 }
 
 
-.four-column{
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	gap: 24px;
-	.col {
-		grid-column: span 3;
-		width: auto;
-	}
-	
+.catalogy-content.content-grid{
 	.stretch-card {
 		grid-column: span 6;
 		grid-row: span 2;
@@ -52,4 +44,3 @@
 		}
 	}
 }
-
