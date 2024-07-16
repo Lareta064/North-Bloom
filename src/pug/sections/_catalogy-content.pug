@@ -23,7 +23,15 @@ section.catalogy-content
 				.col
 					+product('product')
 				.col.stretch-card
-					img.img-cover.lazy(src="./img/img.webp", alt="")
+					picture
+						source(srcset="./img/hit-w370@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+						source(srcset="./img/hit-w370.webp", media="(max-width: 767px)")
+						source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+						source(srcset="https://likewot.ru/wp-content/uploads/1/b/b/1bb7a69f621d5c2122abb5eb441c801b.jpeg" type="image/jpg")
+							
+						img.img-cover.lazy(src="./img/hit.webp", alt="")
+						
+						
 				.col
 					+product('product')
 				.col

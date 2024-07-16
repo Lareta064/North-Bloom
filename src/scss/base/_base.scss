@@ -133,13 +133,14 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
-section{
-	padding-top: 16px;
-}
+
 .inner-main{
 	background-color: #fff;
 	padding-top: 64px;
 	padding-bottom: 80px;
+	section {
+			padding-top: 16px;
+		}
 	@media (max-width: 767px) {
 		padding-top: 56px;
 	}
