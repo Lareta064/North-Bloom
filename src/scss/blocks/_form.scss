@@ -327,7 +327,7 @@ textarea, select {
         background-color: transparent;
       }
     }
-    input:checked + .fake-span:after{
+    input:checked + .color-item:after{
       background-color: var(--text-grey);
     }
 }

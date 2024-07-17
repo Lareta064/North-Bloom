@@ -70,9 +70,9 @@ a, button{display: inline-block;}
 a,
 a:hover {
 	text-decoration: none;
-	color: inherit
+	
 }
-
+a{color: inherit}
 ul {
 	margin: 0;
 	padding: 0;
@@ -111,7 +111,8 @@ textarea:focus, select:focus {
 	outline: none;
 	border: none;
 }
-
+input,
+button{font-family: inherit; font-size: inherit;}
 button {
 	padding: 0;
 	background-color: transparent;
@@ -177,4 +178,15 @@ input[type="submit"] {
 	color: var(--fill-icon);
 	justify-content: center;
 }
-
+.basic-list{
+	li{
+		display: flex;
+		align-items: center;
+		column-gap:8px;
+		text-transform: uppercase;
+		span{color: var(--text-grey)}
+	}
+	li +li{
+		margin-top: 16px;
+	}
+}

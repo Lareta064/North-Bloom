@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	   loop: true,
 	   lazy: true,
 	    parallax: true,
-		grabCursor: true,
+		
        effect: "creative",
        creativeEffect: {
         prev: {

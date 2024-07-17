@@ -76,12 +76,21 @@
 	}
 }
 *.txt-center{text-align: center;}
-.link-item{
+.link-item,.link-text{
 	transition: .3s;
 	padding-block: 2px;
 	border-bottom:1px solid transparent;
 	display: inline;
 	&:hover{
 		border-bottom: 1px solid currentColor;
+	}
+}
+.size-table-link{
+	color: var(--text-grey);
+}
+.link-text{
+	border-bottom: 1px solid currentColor;
+	&:hover {
+		border-bottom: 1px solid transparent;
 	}
 }

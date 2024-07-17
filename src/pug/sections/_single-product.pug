@@ -1,8 +1,50 @@
 section.single-product
 	.container
-		.content-grid
-			.single-product__foto
-
+		.content-grid.single-product-grid
+			.single-product__gallery.content-grid 
+				//=====foto=====
+				.product-foto.product-foto--stretch
+					a(href="./img/laura@2x.webp")
+						picture
+							source(srcset="./img/laura-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+							source(srcset="./img/laura-w375.webp", media="(max-width: 767px)")
+							source(srcset="./img/laura@2x.webp", media="(min-resolution: 192dpi)")
+							source(srcset="./img/laura.webp" type="image/webp")
+							img(src="./img/laura.webp", width="924" alt="img")
+				//=====foto=====
+				.product-foto
+					picture
+						source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+						source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
+						source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+						source(srcset="./img/hit.webp" type="image/webp")
+						img(src="./img/hit.webp", width="450" alt="img")
+				//=====foto=====
+				.product-foto
+					picture
+						source(srcset="./img/laura-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+						source(srcset="./img/laura-w375.webp", media="(max-width: 767px)")
+						source(srcset="./img/laura@2x.webp", media="(min-resolution: 192dpi)")
+						source(srcset="./img/laura.webp" type="image/webp")
+						img(src="./img/laura.webp", width="450" alt="img")
+				//=====foto=====
+				.product-foto
+					picture
+						source(srcset="./img/laura-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+						source(srcset="./img/laura-w375.webp", media="(max-width: 767px)")
+						source(srcset="./img/laura@2x.webp", media="(min-resolution: 192dpi)")
+						source(srcset="./img/laura.webp" type="image/webp")
+						img(src="./img/laura.webp", width="450" alt="img")
+				//=====foto=====
+				.product-foto
+					picture
+						source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+						source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
+						source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+						source(srcset="./img/hit.webp" type="image/webp")
+						img(src="./img/hit.webp", width="450" alt="img")
+			
+			//====Правая колонка с описанием =====
 			.single-product__info
 				//===breadcrumbs====
 				.breadcrumbs
@@ -18,5 +60,48 @@ section.single-product
 							span Вернуться
 				
 				//===content====
-				.product-title
-					.title-24 Ge[jdbr]
+				.product-title.mb-32
+					.title-24 Пуховик ЛАРС
+					span.product-price 45 000 ₽
+				
+				.product-colors.mb-16 
+					label.fake-input-label
+						input(type="radio" name="color-item" checked)
+						span.color-item(style="background:#2E394D")
+
+					label.fake-input-label
+						input(type="radio" name="color-item")
+						span.color-item(style="background:#E3000F")
+
+					label.fake-input-label
+						input(type="radio" name="color-item")
+						span.color-item(style="background:#93AB42")
+				
+				//====== спецификация =====
+				.product-specifications.mb-32
+					ul.basic-list
+						li
+							span Размер:
+							p 46 - 64
+						li
+							span Вид ткани:
+							p Сахара
+						li
+							span Мех:
+							p Искусственный мех
+						li
+							span Длина изделия:
+							p 82
+						li
+							span Температурный диапазон:
+							p -5° -15°
+					
+					//===== таблица размеров =====
+					button.link-text.size-table-link Таблица размеров
+				//===== BUTTON =====
+				.mb-60
+					a(href="#!").btn.w-100 Где купить?
+				//===== text======
+				.product-description
+					.txt-20 Описание
+					p Стильная куртка (с системой Climate-Comfort) имеет два наружных кармана с  открытыми молн иями. Два нижних кармана с клапанами на магнитах.  Клапана, при необходимости, убираются в карманы. Модель имеет съемный  капюшон. Внутренняя отделка капюшона выполнена из искусственного меха.  Мех можно отстегнуть. В поясничной области есть внутренняя кулиса.Модель  с системой климат-комфорта, сглаживает температурные колебания и  уменьшает парниковый эффект, что позволяет чувствовать себя комфортно в  любых условиях. Трикотажные манжеты в рукавах и регулируемый капюшон сохранит ваш  комфорт. Куртка имеет 3 внутренних кармана на молниях,один из которых  большой (планшет,документы, блокноты и т.д.) Светоотражающие элементы на  куртке сделают вас более заметными в темное время суток (ваша  безопасность...)
