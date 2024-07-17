@@ -302,5 +302,30 @@ document.addEventListener("DOMContentLoaded", function (){
     	$('.accordion-group').simpleAccordion();
 	});
 
+	$('[data-fancybox="gallery"]').fancybox({
+		thumbs: {
+			autoStart: true, // автоматически отображать панель с миниатюрами
+			//axis: 'y'  вертикальное расположение
+		},
+		
+	});
+	
+	// Инициализация Fancybox с начальной настройкой axis: 'y'
+	$.fancybox.defaults.thumbs.axis = 'y';
+
+	// Функция для обновления настройки axis в зависимости от ширины экрана
+	function updateFancyboxAxis() {
+		if (window.innerWidth < 768) {
+			$.fancybox.defaults.thumbs.axis = 'x';
+		} else {
+			$.fancybox.defaults.thumbs.axis = 'y';
+		}
+	}
+
+	// Вызываем функцию при загрузке страницы
+	updateFancyboxAxis();
+
+	// Добавляем обработчик события изменения размера окна
+	window.addEventListener('resize', updateFancyboxAxis);
 
 });

@@ -1,0 +1,70 @@
+
+.fancybox-thumbs {
+	top: 40px;
+	right: 12vw;
+	width: 60px;
+	justify-content: center;
+	/* или любая другая ширина по вашему выбору */
+	bottom:40px;
+	background: transparent;
+	
+}
+
+.fancybox-show-thumbs .fancybox-inner {
+	right:60px;
+	/* должно соответствовать ширине .fancybox-thumbs */
+}
+.fancybox-thumbs__list{
+	display: flex;flex-direction: column;
+	justify-content: center;
+}
+.fancybox-thumbs__list a {
+	max-width: calc(100% - 4px);
+	width: 100%;
+	position: relative;
+	display: block;
+	&:after{
+		content:'';
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+	}
+	&:before{
+		border-color: transparent;
+	}
+	&.fancybox-thumbs-active:after{
+		background: rgba(0, 0, 0, 0);
+	}
+}
+@media (max-width: 767px) {
+
+	.fancybox-thumbs{
+		top: auto;
+		right: 0;
+		width: 100%;
+		justify-content: center;
+		bottom: 0px;
+		display: flex!important;
+		justify-content: center;
+		.fancybox-show-thumbs .fancybox-inner {
+			right:auto;
+			/* должно соответствовать ширине .fancybox-thumbs */
+		}
+	}
+	.fancybox-thumbs__list{flex-direction: row;}
+    .fancybox-thumbs__list a{
+		width: 60px;
+		height: 80px;
+		object-fit: cover;
+	}
+	.fancybox-inner .fancybox-image{height: 90%;}
+}
+.fancybox-toolbar .fancybox-button, .fancybox-infobar {
+	display: none;
+}
+
+/* Показать только иконку закрытия */
+.fancybox-toolbar .fancybox-button--close {
+	display: inline-block;
+}

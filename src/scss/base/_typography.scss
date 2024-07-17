@@ -78,7 +78,7 @@
 *.txt-center{text-align: center;}
 .link-item,.link-text{
 	transition: .3s;
-	padding-block: 2px;
+	padding-block: 1px;
 	border-bottom:1px solid transparent;
 	display: inline;
 	&:hover{
@@ -90,6 +90,7 @@
 }
 .link-text{
 	border-bottom: 1px solid currentColor;
+	
 	&:hover {
 		border-bottom: 1px solid transparent;
 	}
