@@ -182,7 +182,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	   loop: true,
 	   lazy: true,
 	    parallax: true,
-		effect: "fade",
+		grabCursor: true,
+       effect: "creative",
+       creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-20%", 0, -1],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
         pagination: {
         	el: ".main-hero-pagination",
 			clickable: true,
