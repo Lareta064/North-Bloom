@@ -27,9 +27,12 @@
 }
 .main-hero-slider.swiper{
 	.swiper-pagination-bullets {
-		bottom: 32px;
+		bottom: 32px!important;
+		@media (max-width: 1199px) {
+			bottom: 64px !important;
+		}
 		@media (max-width: 767px) {
-			bottom: 16px;
+			bottom: 48px!important;
 		}
 	}
 	.swiper-pagination {
