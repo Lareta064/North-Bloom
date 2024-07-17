@@ -178,15 +178,3 @@ input[type="submit"] {
 	color: var(--fill-icon);
 	justify-content: center;
 }
-.basic-list{
-	li{
-		display: flex;
-		align-items: center;
-		column-gap:8px;
-		text-transform: uppercase;
-		span{color: var(--text-grey)}
-	}
-	li +li{
-		margin-top: 16px;
-	}
-}

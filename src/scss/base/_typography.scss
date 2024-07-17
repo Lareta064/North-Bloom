@@ -94,3 +94,24 @@
 		border-bottom: 1px solid transparent;
 	}
 }
+.basic-list {
+	li {
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+		text-transform: uppercase;
+
+		span {
+			color: var(--text-grey)
+		}
+	}
+
+	li+li {
+		margin-top: 16px;
+	}
+}
+
+.circle-list {
+	list-style-type: disc;
+	margin-left: 16px;
+}
