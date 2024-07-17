@@ -181,7 +181,7 @@
 	position: absolute;
 	left: 0;
 	height: 2px;
-	background-color: var(--style);
+	background-color: inherit;
 	border-radius: 5px;
 	right: 0;
 	-webkit-transition: .2s;
@@ -217,4 +217,7 @@
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 	background-color: var(--fill-icon);
+}
+.active .menu-toggle span{
+	background-color: var(--text-black);
 }
