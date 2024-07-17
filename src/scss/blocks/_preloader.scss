@@ -18,6 +18,12 @@
 		transform: translateX(-50%);
 
 	}
+	.logo{
+		width: 420px;
+		@media (max-width: 1023px) {
+		width: 219px;
+		}
+	}
 	.svg-logo {
 		color: var(--white);
 		width: 420px;
