@@ -218,6 +218,6 @@
 	transform: rotate(-45deg);
 	background-color: var(--fill-icon);
 }
-.active .menu-toggle span{
+.page-wrapper--white .menu-toggle span, .active .menu-toggle span{
 	background-color: var(--text-black);
 }

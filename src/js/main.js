@@ -193,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
     });
 	var prodSlider = new Swiper('.slider', {
+		speed: 1000,
 		pagination: {
         	el: ".slider-pagination",
 			clickable: true,

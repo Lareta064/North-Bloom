@@ -159,6 +159,9 @@ input[type="submit"] {
 	width: min( 1920px, 100%);
 	padding-inline: 24px;
 	margin-inline: auto;
+	@media (max-width: 767px) {
+	padding-inline: 16px;
+	}
 }
 
 .social-block, .social-block a{

@@ -118,7 +118,7 @@ $column-width: calc($viewport / 12);
 		column-gap: 16px;
 	}
 	@media (max-width: 1023px) {
-		column-gap: 8;
+		column-gap: 8px;
 	}
 	.col-1 {
 		grid-column: span 1;
@@ -129,7 +129,7 @@ $column-width: calc($viewport / 12);
 		width: auto;
 	}
 
-	.col-3 {
+	.col-3{
 		grid-column: span 3;
 		width: auto;
 	}

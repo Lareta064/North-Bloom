@@ -1,4 +1,4 @@
-section.catalogy-content
+section.catalogy
 	.container
 		.breadcrumbs
 			a(href="#!") Главная
@@ -8,37 +8,35 @@ section.catalogy-content
 		.section-title
 			h1.h1-serif Весна 2024 для мужчин
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		.container-wrapper
-			.catalogy-content.content-grid
-				.col-3
-					+product('product')
-				.col-3
-					+product('product3')
-				.col-3
-					+product('product')
-				.col-3
-					+product('product3')
-				.col-3
-					+product('product')
-				.col-3
-					+product('product')
-				.col-3.stretch-card
-					picture
-						source(srcset="./img/hit-w370@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
-						source(srcset="./img/hit-w370.webp", media="(max-width: 767px)")
-						source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
-						source(srcset="https://likewot.ru/wp-content/uploads/1/b/b/1bb7a69f621d5c2122abb5eb441c801b.jpeg" type="image/jpg")
-							
-						img.img-cover.lazy(src="./img/hit.webp", alt="")
+		
+		.catalogy-content.content-grid
+			
+			+product('product')
+		
+			+product('product3')
+		
+			+product('product')
+		
+			+product('product3')
+		
+			+product('product')
+		
+			+product('product')
+			.stretch-card
+				picture
+					source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+					source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
+					source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+					source(srcset="https://likewot.ru/wp-content/uploads/1/b/b/1bb7a69f621d5c2122abb5eb441c801b.jpeg" type="image/jpg")
 						
-						
-				.col-3
-					+product('product')
-				.col-3
-					+product('product')
-				.col-3
-					+product('product')
-				.col-3
-					+product('product')
-				.col-3
-					+product('product')
+					img.img-cover.lazy(src="./img/hit.webp", alt="")
+			
+			+product('product')
+		
+			+product('product')
+		
+			+product('product')
+		
+			+product('product')
+		
+			+product('product')
