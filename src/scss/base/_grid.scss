@@ -120,59 +120,59 @@ $column-width: calc($viewport / 12);
 	@media (max-width: 1023px) {
 		column-gap: 8;
 	}
-	.col_1 {
+	.col-1 {
 		grid-column: span 1;
 		width: auto;
 	}
-	.col_2 {
+	.col-2 {
 		grid-column: span 2;
 		width: auto;
 	}
 
-	.col_3 {
+	.col-3 {
 		grid-column: span 3;
 		width: auto;
 	}
-	.col_4 {
+	.col-4 {
 		grid-column: span 4;
 		width: auto;
 	}
-	.col_5 {
+	.col-5 {
 		grid-column: span 5;
 		width: auto;
 	}
 
-	.col_6 {
+	.col-6 {
 		grid-column: span 6;
 		width: auto;
 	}
 
-	.col_7 {
+	.col-7 {
 		grid-column: span 7;
 		width: auto;
 	}
 
-	.col_8 {
+	.col-8 {
 		grid-column: span 8;
 		width: auto;
 	}
 
-	.col_9 {
+	.col-9 {
 		grid-column: span 9;
 		width: auto;
 	}
 
-	.col_10 {
+	.col-10 {
 		grid-column: span 10;
 		width: auto;
 	}
 
-	.col_11 {
+	.col-11 {
 		grid-column: span 11;
 		width: auto;
 	}
 
-	.col_12 {
+	.col-12 {
 		grid-column: span 12;
 		width: auto;
 	}

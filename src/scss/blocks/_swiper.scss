@@ -9,7 +9,7 @@
 		height: 2px;
 		width: 56px;
 		background-color: var(--grey-line);
-
+		
 		margin-left: 2px;
 		margin-right: 2px;
 		transition: .3s;
@@ -31,13 +31,41 @@
 	}
 	.swiper-pagination {
 		.swiper-pagination-bullet {
-			background-color: white;
-			opacity: .3;
+			opacity: unset;
+			background-color: rgba(255,255,255, .3);
+			
+			position: relative;
+			overflow: hidden;
+			&:before{
+				content: '';
+				position: absolute;
+				display: block;
+				width: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 2;
+				transition: width 4.5s; 
+			}
 		}
 
 		.swiper-pagination-bullet-active {
-			opacity: 1;
+			opacity: unset;
+			background-color: rgba(255, 255, 255, .3);
+			&:before {
+				width: 100%;
+				background-color: rgba(255, 255, 255, 1);
+				z-index: 10;
+				// animation-name:activeBullit;
+				// animation-duration:4.5s;
+				// animation-timing-function:linear;
+			}
 		}
 	}
 
 } 
+@keyframes activeBullit{
+to{
+	width: 100%;
+}
+}
