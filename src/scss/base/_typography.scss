@@ -31,13 +31,19 @@
 	line-height: 1.2;
 	}
 }
-.txt-24{
+.txt-24,.title-24{
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 1.25;
 	
 	@media (max-width: 767px) {
 	font-size: 18px;
+	}
+}
+.title-24{
+	font-weight: 500;
+	@media (max-width: 767px) {
+		font-size: 24px;
 	}
 }
 .txt-20{
