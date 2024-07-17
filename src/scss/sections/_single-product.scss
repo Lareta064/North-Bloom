@@ -6,6 +6,11 @@
 	position: sticky;
 	top:0;
 	height: auto;
+	@media (max-width: 767px) {
+		grid-column: span 12;
+		position: relative;
+		
+	}
 }
 .product-specifications{
 	position: relative;
@@ -30,6 +35,15 @@
 	position: sticky;
 	top: 0;
 	height: auto;
+	@media (max-width:1439px) {
+		grid-column: span 6;
+		margin-left: 0 !important;
+	}
+	@media (max-width: 767px) {
+		grid-column: span 12;
+		position: relative;
+		
+	}
 }
 .product-foto{
 	grid-column: span 6;

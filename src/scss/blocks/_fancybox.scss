@@ -47,11 +47,12 @@
 		bottom: 0px;
 		display: flex!important;
 		justify-content: center;
-		.fancybox-show-thumbs .fancybox-inner {
-			right:auto;
+		
+	}
+	.fancybox-show-thumbs .fancybox-inner {
+			right:0;
 			/* должно соответствовать ширине .fancybox-thumbs */
 		}
-	}
 	.fancybox-thumbs__list{flex-direction: row;}
     .fancybox-thumbs__list a{
 		width: 60px;

@@ -1,7 +1,30 @@
 section.single-product
 	.container
 		.content-grid.single-product-grid
-			.single-product__gallery.content-grid 
+			//=====slider на моб версии =======
+			.single-product__gallery.d-none.d-md-block
+				.swiper.slider
+					.swiper-wrapper
+						//====slide====
+						.swiper-slide
+							a(href="./img/laura@2x.webp" data-fancybox="gallery-mob").prod-card__img
+								img.lazy(src="./img/laura@2x.webp", width="450" height="640" alt="img")
+						//====slide====
+						a(href="./img/laura@2x.webp" data-fancybox="gallery-mob").swiper-slide
+							.prod-card__img
+								img.lazy(src="./img/laura@2x.webp", width="450" height="640" alt="img")
+						//====slide====
+						a(href="./img/laura@2x.webp" data-fancybox="gallery-mob").swiper-slide
+							.prod-card__img
+								img.lazy(src="./img/laura@2x.webp", width="450" height="640" alt="img")
+						//====slide====
+						a(href="./img/laura@2x.webp" data-fancybox="gallery-mob").swiper-slide
+							.prod-card__img
+								img.lazy(src="./img/laura@2x.webp", width="450" height="640" alt="img")
+					//==== pagination===
+					.swiper-pagination.slider-pagination
+			//=====сетка на экранах от 768 версии =======
+			.single-product__gallery.content-grid.d-grid.d-md-none
 				//=====foto=====
 				.product-foto.product-foto--stretch
 					a(href="./img/laura@2x.webp" data-fancybox="gallery")
@@ -56,12 +79,7 @@ section.single-product
 					a(href="#!") Главная
 					a(href="#!") Весна 2024 для женщин
 					a(href="#!") Пуховик
-					//===== этот пункт хлебных крошек отображается на экранах до 1024px
-					p
-						a(href="index.html").txt-24.chevron-link
-							svg.svg-chevron-left
-								use(href='../img/sprite.svg#svg-chevron-left')
-							span Вернуться
+					
 				
 				//===content====
 				.product-title.mb-32

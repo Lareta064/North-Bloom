@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function (){
     	$('.accordion-group').simpleAccordion();
 	});
 
-	$('[data-fancybox="gallery"]').fancybox({
+	$('[data-fancybox]').fancybox({
 		thumbs: {
 			autoStart: true, // автоматически отображать панель с миниатюрами
 			//axis: 'y'  вертикальное расположение
