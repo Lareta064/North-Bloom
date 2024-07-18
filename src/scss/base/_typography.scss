@@ -76,7 +76,7 @@
 	}
 }
 *.txt-center{text-align: center;}
-.link-item,.link-text{
+.link-item{
 	transition: .3s;
 	padding-block: 1px;
 	border-bottom:1px solid transparent;
@@ -89,12 +89,15 @@
 	color: var(--text-grey);
 }
 .link-text{
-	border-bottom: 1px solid currentColor;
+	display: inline;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
 	
 	&:hover {
 		border-bottom: 1px solid transparent;
 	}
 }
+
 .basic-list {
 	li {
 		display: flex;
