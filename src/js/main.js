@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			headerEl.classList.remove('active');
 		}
 	});
-	/*===============Menu for tablet ============= */
 	
 	/*===============MOBILE MENU ==================*/
 	if (menuToggle) {

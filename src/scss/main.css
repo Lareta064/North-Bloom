@@ -1778,18 +1778,15 @@ textarea::placeholder, select::placeholder {
   background: var(--bg-bg-grey);
   width: min(600px, 100%);
 }
-.popup-wrapper .btn-close {
+.popup-wrapper .btn-close, .modal-wrapper .btn-close {
   position: absolute;
   top: 16px;
   right: 16px;
   z-index: 3;
 }
-.popup-wrapper .btn-close svg {
-  transition: 0.3s;
-}
-.popup-wrapper .btn-close:hover svg {
-  transform: scale(1.2);
-}
+.popup-wrapper .btn-close svg, .modal-wrapper .btn-close svg { transition: 0.3s;}
+
+.popup-wrapper .btn-close:hover svg , .modal-wrapper .btn-close:hover svg{ transform: scale(1.2);}
 
 .cooki-popup {
   position: fixed;
