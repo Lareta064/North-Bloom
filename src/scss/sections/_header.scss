@@ -28,6 +28,11 @@
 		height: 56px;
 	}
 }
+.header.header--special:not( .active){
+	@media (max-width: 767px) {
+		background-color: transparent;
+	}
+}
 .header.active{
 	background-color: var(--style);
 
