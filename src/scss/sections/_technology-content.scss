@@ -30,6 +30,15 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		z-index: 3;
+	}
+	.video-poster{
+		position: absolute;
+		inset: 0;
 		z-index: 2;
+	}
+	&.active{
+		.btn-play{display: none}
+		.video-poster{display: none;}
 	}
 }
