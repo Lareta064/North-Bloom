@@ -157,18 +157,6 @@ section.single-product.pt-md-0
 					.accordion-body
 						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
 
-//- mixin tr
-//- 	- var n=44
-//- 	- var k=88
-//- 	- var l=68
-//- 	- var m=96
-//- 	while n < 69 && k < 137 && l < 124 && m < 145
-//- 		tr
-//- 			th n + = 4
-//- 			th 164 - 172
-//- 			th k + =4
-//- 			th l + =4
-//- 			th m + =4
 
 mixin tableRows(values, numRows)
 	if values.length !== 5
@@ -191,18 +179,19 @@ mixin tableRows(values, numRows)
 			svg.svg-close
 				use(href='./img/sprite.svg#svg-close')
 		//==== title-block ====	
-		.section-title
+		.section-title.mb-48
 			.h1-serif Таблицы размеров
 			p Размерная сетка курток NorthBloom соответствует российским стандартным размерам одежды.
 			p Предложенные таблицы помогут Вам подобрать куртку подходящего размера.
-
-		table.size-table(cellspacing="0")
-			thead
-				tr
-					th Размер
-					th Рост
-					th Обхват груди
-					th Обхват талии
-					th Обхват бёдер
-			+tableRows([44, 88, 88, 68, 96], 13)
+		.h2.mb-24 Женщины
+		.size-table-inner.ss-container(ss-container)
+			table.size-table(cellspacing="0")
+				thead
+					tr
+						th Размер
+						th Рост
+						th Обхват груди
+						th Обхват талии
+						th Обхват бёдер
+				+tableRows([44, 88, 88, 68, 96], 13)
 				

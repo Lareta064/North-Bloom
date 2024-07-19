@@ -17,18 +17,7 @@
 		background: var(--style);
 		@media (max-width: 767px) {
 			width:100%;
+			padding: 48px 14px;
 		}
-	}
-}
-.size-table{
-	
-	th{text-align: left;font-weight: 400;}
-	
-	th, td{
-		width: 200px;
-		font-size: 16px;
-		line-height: 1.50;
-		border: 1px solid var(--grey-line);
-		padding: 4px 20px;	
 	}
 }
