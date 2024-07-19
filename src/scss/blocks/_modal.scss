@@ -9,6 +9,8 @@
 	align-items: center;
 	background: rgba(0, 0, 0, 0.4);
 	z-index: 10;
+	display: none;
+	&.active{display: flex;}
 	.modal-body{
 		position: relative;
 		padding: 48px 24px;
@@ -20,4 +22,5 @@
 			padding: 48px 14px;
 		}
 	}
+	
 }

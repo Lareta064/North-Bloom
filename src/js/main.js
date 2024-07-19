@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		headerEl.classList.remove('active');
 	}	
   });
- /*============== ACORDION ========== */
+   /*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
 		"use strict";
 		var pluginName = 'simpleAccordion',
@@ -300,13 +300,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	$(function() {
     	$('.accordion-group').simpleAccordion();
 	});
-
+    //========= fancybox==========
 	$('[data-fancybox]').fancybox({
 		thumbs: {
 			autoStart: true, // автоматически отображать панель с миниатюрами
 			//axis: 'y'  вертикальное расположение
-		},
-		
+		},		
 	});
 	
 	// Инициализация Fancybox с начальной настройкой axis: 'y'
@@ -326,5 +325,33 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	// Добавляем обработчик события изменения размера окна
 	window.addEventListener('resize', updateFancyboxAxis);
+
+	//======= modal wrapper ========
+	const modals = document.querySelectorAll('[data-modal]');
+	if(modals.length > 0){
+		const modalOpenButtons = document.querySelectorAll('[data-target]');
+		const modalCloseButtons = document.querySelectorAll('[data-role]');
+		for(let item of modalOpenButtons){
+			for(let modalItem of modals){
+				modalItem.classList.remove('active');
+			}
+			item.addEventListener('click', (e)=>{
+				const itemDataValue = item.getAttribute('data-target');
+				for(let modalItem of modals ){
+					const modalItemData = modalItem.getAttribute('data-modal');
+					if(modalItemData == itemDataValue){
+						modalItem.classList.add('active');
+						bodyEl.classList.add('lock');
+					}
+				}
+			});
+		}
+		for(let modalClose of modalCloseButtons){
+			modalClose.addEventListener('click', (e)=>{
+				modalClose.closest('[data-modal]').classList.remove('active');
+				bodyEl.classList.remove('lock');
+			})
+		}
+	}
 
 });
