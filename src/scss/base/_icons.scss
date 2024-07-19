@@ -37,3 +37,17 @@
 	height: 24px;
 	fill: transparent;
 }
+.btn-play{
+	width: 90px;
+	height: 90px;
+	background-color: var(--text-grey);
+	border-radius: 50%;
+	background-image: url(../img/icons/play.svg);
+	background-size: 21px 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: .3s; 
+	&:hover{
+		background-color: var(--text-grey-input);
+	}
+}

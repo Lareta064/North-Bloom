@@ -85,6 +85,12 @@
 		border-bottom: 1px solid currentColor;
 	}
 }
+.accent-link{
+	color: var(--link);
+}
+.link-group{
+	&>*+*{margin-top: 8px;}
+}
 .size-table-link{
 	color: var(--text-grey);
 }
