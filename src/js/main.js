@@ -54,8 +54,12 @@ document.addEventListener("DOMContentLoaded", function (){
 		/*====== click for overlay ====*/
 		bodyEl.addEventListener('click', (e)=>{
 			if(!menuToggle.contains(e.target) && !searchFormPopup.contains(e.target) && !openSearchForm.contains(e.target)){
-				searchFormPopup.classList.remove('active');
-				bodyEl.classList.remove('lock');
+				if(searchFormPopup.classList.contains('active')){
+
+					searchFormPopup.classList.remove('active');
+					bodyEl.classList.remove('lock');
+					console.log('111');
+				}
 				
 			}
 		});
