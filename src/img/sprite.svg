@@ -102,6 +102,15 @@
 				stroke-linejoin="round" />
 		</g>
 	</symbol>
+	<symbol id="svg-burger" viewBox="0 0 24 24">
+		<g>
+			
+			<path d="M5 7H19" stroke="curentColor" stroke-linecap="round" />
+			<path d="M7 12H17" stroke="curentColor" stroke-linecap="round" />
+			<path d="M5 17H19" stroke="curentColor" stroke-linecap="round" />
+			
+		</g>
+	</symbol>
 	<!--  -->
 	<symbol id="svg-dry" viewBox="0 0 24 24">
 		<g>

@@ -1,2 +1,11 @@
 //==== HEADER SEARCH BLOCK ====
-.header-search-wrapper.bx-sh
+.header-search-wrapper.flx-center#search-form
+	.container
+		form.search-form
+			.form-item.form-item--border
+				.form-input
+					input(type="search" name="search_input" placeholder="Что Вы ищите?")
+					//===== кнопка reset ====
+					button.btn-clear(type="reset")
+						svg.svg-close
+							use(href='./img/sprite.svg#svg-close')

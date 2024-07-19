@@ -1,18 +1,37 @@
 @import "base/_var";
 @import "base/_base";
+@import "base/_grid";
 // @import "base/_scroll";
 @import "base/_typography.scss";
 @import "base/_icons.scss";
+@import "base/_vendore-class.scss";
 
+@import "blocks/_breadcrumb.scss";
 @import "blocks/_preloader.scss";
 @import "blocks/_buttons.scss";
 @import "blocks/_form.scss";
+@import "blocks/_header-menu.scss";
 @import "blocks/_header-search.scss";
+@import "blocks/_swiper.scss";
+@import "blocks/_modal.scss";
+
+
+@import "blocks/_cooki-popup.scss";
+@import "blocks/_product-card.scss";
+
+@import "sections/_header.scss";
+@import "sections/_main-hero.scss";
+
+@import "sections/_single-product.scss";
+@import "blocks/_acordeon.scss";
+@import "blocks/_fancybox.scss";
+@import "blocks/_size-table.scss";
+
+@import "sections/_footer.scss";
 
 
 
- @import "sections/_header.scss";
- @import "sections/_main-hero.scss";
- @import "sections/_footer.scss";
+
+@import "pages/_partners-success.scss";
   //ui
- @import "ui/_ui-navigation";
+@import "ui/_ui-navigation";

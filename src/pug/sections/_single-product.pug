@@ -1,0 +1,197 @@
+section.single-product.pt-md-0
+	//=====slider на моб версии =======
+	.single-product__gallery.d-none.d-sm-block
+		.swiper.slider
+			.swiper-wrapper
+				//====slide====
+				.swiper-slide
+					a(href="./img/laura-w375@2x.webp" data-fancybox="gallery-mob").swiper-gallery__img
+						img.lazy(src="./img/laura-w375@2x.webp", width="450" height="640" alt="img")
+				//====slide====
+				.swiper-slide
+					a(href="./img/hit-w375@2x.webp" data-fancybox="gallery-mob").swiper-gallery__img
+						img.lazy(src="./img/hit-w375@2x.webp", width="450" height="640" alt="img")
+				//====slide====
+				.swiper-slide
+					a(href="./img/laura-w375@2x.webp" data-fancybox="gallery-mob").swiper-gallery__img
+						img.lazy(src="./img/laura-w375@2x.webp", width="450" height="640" alt="img")
+				//====slide====
+				.swiper-slide
+					a(href="./img/hit-w375@2x.webp" data-fancybox="gallery-mob").swiper-gallery__img
+						img.lazy(src="./img/hit-w375@2x.webp", width="450" height="640" alt="img")
+			
+			//==== pagination===
+			.swiper-pagination.slider-pagination
+	
+	.container
+		.content-grid.single-product-grid
+			//=====галерея товаров на экранах от 768 версии =======
+			.single-product__gallery.content-grid.d-grid.d-sm-none
+				//=====foto=====
+				.product-foto.product-foto--stretch
+					a(href="./img/laura@2x.webp" data-fancybox="gallery")
+						picture
+							source(srcset="./img/laura-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+							source(srcset="./img/laura-w375.webp", media="(max-width: 767px)")
+							source(srcset="./img/laura@2x.webp", media="(min-resolution: 192dpi)")
+							source(srcset="./img/laura.webp" type="image/webp")
+							img(src="./img/laura.webp", width="924" alt="img")
+				//=====foto=====
+				.product-foto
+					a(href="./img/hit.webp" data-fancybox="gallery")
+						picture
+							source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+							source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
+							source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+							source(srcset="./img/hit.webp" type="image/webp")
+							img(src="./img/hit.webp", width="450" alt="img")
+				//=====foto=====
+				.product-foto
+					a(href="./img/laura.webp" data-fancybox="gallery")
+						picture
+							source(srcset="./img/laura-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+							source(srcset="./img/laura-w375.webp", media="(max-width: 767px)")
+							source(srcset="./img/laura@2x.webp", media="(min-resolution: 192dpi)")
+							source(srcset="./img/laura.webp" type="image/webp")
+							img(src="./img/laura.webp", width="450" alt="img")
+				//=====foto=====
+				.product-foto
+					a(href="./img/laura.webp" data-fancybox="gallery")
+						picture
+							source(srcset="./img/laura-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+							source(srcset="./img/laura-w375.webp", media="(max-width: 767px)")
+							source(srcset="./img/laura@2x.webp", media="(min-resolution: 192dpi)")
+							source(srcset="./img/laura.webp" type="image/webp")
+							img(src="./img/laura.webp", width="450" alt="img")
+				//=====foto=====
+				.product-foto
+					a(href="./img/hit.webp" data-fancybox="gallery")
+						picture
+							source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+							source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
+							source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+							source(srcset="./img/hit.webp" type="image/webp")
+							img(src="./img/hit.webp", width="450" alt="img")
+			
+			//====Правая колонка с описанием =====
+			.single-product__info
+				//===breadcrumbs====
+				.breadcrumbs.d-md-none
+					//===ссылки отображаются на десктоп версии и скрываются на < 1024px
+					a(href="index.html") Главная
+					a(href="catalogy.html") Весна 2024 для женщин
+					a(href="#!") Пуховик
+					
+				
+				//===content====
+				.product-title.mb-32
+					.title-24 Пуховик ЛАРС
+					span.product-price 45 000 ₽
+				
+				.product-colors.mb-16 
+					label.fake-input-label
+						input(type="radio" name="color-item" checked)
+						span.color-item(style="background:#2E394D")
+
+					label.fake-input-label
+						input(type="radio" name="color-item")
+						span.color-item(style="background:#E3000F")
+
+					label.fake-input-label
+						input(type="radio" name="color-item")
+						span.color-item(style="background:#93AB42")
+				
+				//====== спецификация =====
+				.product-specifications.mb-32
+					ul.basic-list
+						li
+							span Размер:
+							p 46 - 64
+						li
+							span Вид ткани:
+							p Сахара
+						li
+							span Мех:
+							p Искусственный мех
+						li
+							span Длина изделия:
+							p 82
+						li
+							span Температурный диапазон:
+							p -5° -15°
+					
+					//===== таблица размеров =====
+					button.link-text.size-table-link(data-target="size-table") Таблица размеров
+				//===== BUTTON =====
+				.mb-60
+					a(href="#!").btn.w-100 Где купить?
+				//===== text======
+				.product-description.mb-32
+					.txt-20 Описание
+					p Стильная куртка (с системой Climate-Comfort) имеет два наружных кармана с  открытыми молн иями. Два нижних кармана с клапанами на магнитах.  Клапана, при необходимости, убираются в карманы. Модель имеет съемный  капюшон. Внутренняя отделка капюшона выполнена из искусственного меха.  Мех можно отстегнуть. В поясничной области есть внутренняя кулиса.Модель  с системой климат-комфорта, сглаживает температурные колебания и  уменьшает парниковый эффект, что позволяет чувствовать себя комфортно в  любых условиях. Трикотажные манжеты в рукавах и регулируемый капюшон сохранит ваш  комфорт. Куртка имеет 3 внутренних кармана на молниях,один из которых  большой (планшет,документы, блокноты и т.д.) Светоотражающие элементы на  куртке сделают вас более заметными в темное время суток (ваша  безопасность...)
+				//====== DETAILS LIST ====
+				.product-details.mb-48
+					.semi-16 Детали
+					ul.circle-list
+						li Влаго-ветро защитный капюшон
+						li Ветрозащитная молния
+						li Скрытый карман
+						li Список 4
+						li Список 5
+
+				//=========acordion========
+				.accordion-group
+					//=======single item =====
+					.accordion-header.txt-20 Технологии и материалы
+					.accordion-body
+						a(href="#!").link-text Climate-Comfort
+						a(href="#!").link-text Светоотражающие элементы (дизайн NorthBloom)
+						a(href="#!").link-text Local Thermo
+						a(href="#!").link-text Утеплитель Valtherm (Италия)
+						a(href="#!").link-text Молния YKK (Япония)
+						a(href="#!").link-text Air Breathing
+						a(href="#!").link-text Внутренний карман Big Box
+						
+					//=======single item =====	
+					.accordion-header.txt-20 Вы работаете только с гражданами РФ?
+					.accordion-body
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!
+
+
+mixin tableRows(values, numRows)
+	if values.length !== 5
+		throw new Error('The array must contain exactly 5 numbers')
+	tbody
+		each rowIndex in [...Array(numRows).keys()]
+			tr
+				each value, index in values
+					- const cellValue = index === 1 ? ' 164 - 172' : value + rowIndex * 4
+					td= cellValue
+
+		
+	
+.modal-wrapper.size-table-wrapper(data-modal="size-table")
+	
+	.modal-body
+		
+		//===btn close popup ===
+		button(type="button" data-role="modal-close").btn-close
+			svg.svg-close
+				use(href='./img/sprite.svg#svg-close')
+		//==== title-block ====	
+		.section-title.mb-48
+			.h1-serif Таблицы размеров
+			p Размерная сетка курток NorthBloom соответствует российским стандартным размерам одежды.
+			p Предложенные таблицы помогут Вам подобрать куртку подходящего размера.
+		.h2.mb-24 Женщины
+		.size-table-inner.ss-container(ss-container)
+			table.size-table(cellspacing="0")
+				thead
+					tr
+						th Размер
+						th Рост
+						th Обхват груди
+						th Обхват талии
+						th Обхват бёдер
+				+tableRows([44, 88, 88, 68, 96], 13)
+				

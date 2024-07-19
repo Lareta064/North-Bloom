@@ -20,6 +20,14 @@ html(lang="ru")
 		//====убрать перевод цифр в номер телефона на ios  ======
 		meta(name="format-detection" content="telephone=no")
 		
+		//======= swiper slider ======
+		link(rel="stylesheet", href="./libs/swiper/swiper.min.css")
+		//======= custom scroll ======
+		link(rel="stylesheet", href="./libs/scroll/scroll.css")
+		//============ fancybox =============
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css")
+		
+		//======= main styles ======
 		link(rel="stylesheet", href="./css/main.css")
 		
 
@@ -69,11 +77,15 @@ html(lang="ru")
 	body(class=(bodyCl !=="" ? bodyCl : ''))
 		
 		block content
-			
 		
-		//=============== jquery ===================
+		//=============== jquery ==================
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
 		
-		//=============== мои скрипты ===================
-		
+		//=============== swiper js ===============
+		script(src="./libs/swiper/swiper.js")
+		//===============  custom scroll ===============
+		script(src="./libs/scroll/scroll.min.js")
+		//============fancybox====================
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js")
+		//=============== main js ===================
 		script(src="./js/main.js")

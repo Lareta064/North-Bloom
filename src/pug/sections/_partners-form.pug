@@ -1,0 +1,22 @@
+.form-wrapper.mx-auto.pt-128
+	//====title group====
+	.title-group.txt-center
+		h1.title Стать партнером
+		
+	//====form====	
+	form.partners-form(action="" method="method")
+		+form-item('', '', "Введите имя", "name", '')
+		+form-item('', '', "Введите город", "city", '')
+		+form-item('', '', "Введите ИНН", "text", '')
+		+form-item('', '', "Введите телефон", "text", '')
+		+form-item('', '', "Введите email", "text", '')
+
+		.form-btn
+			button(type="submit").btn-accent.w-100 Зарегистрироваться
+		.form-item.txt-center
+			.txt-14.txt-center Нажимая кнопку «Зарегистрироваться», вы принимаете <br> условия пользовательского соглашения
+			.txt-14.mt-16 Уже зарегистрирован. 
+				a(href="authorization.html").txt-accent.link-item Вернуться 
+
+
+		

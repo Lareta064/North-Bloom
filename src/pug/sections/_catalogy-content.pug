@@ -1,0 +1,47 @@
+section.catalogy
+	.container
+		.breadcrumbs
+			//===ссылки отображаются на десктоп версии и скрываются на < 1024px
+			a(href="#!") Главная
+			a(href="#!") Весна 2024 для мужчин
+			//===== этот пункт хлебных крошек отображается на экранах до 1024px
+			p
+				a(href="index.html").txt-24.chevron-link
+					svg.svg-chevron-left
+						use(href='../img/sprite.svg#svg-chevron-left')
+					span Вернуться
+		.section-title
+			h1.h1-serif Весна 2024 для мужчин
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		
+		.catalogy-content.content-grid
+			
+			+product('product')
+		
+			+product('product3')
+		
+			+product('product')
+		
+			+product('product3')
+		
+			+product('product')
+		
+			+product('product')
+			.stretch-card
+				picture
+					source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+					source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
+					source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+					source(srcset="https://likewot.ru/wp-content/uploads/1/b/b/1bb7a69f621d5c2122abb5eb441c801b.jpeg" type="image/jpg")
+						
+					img.img-cover.lazy(src="./img/hit.webp", alt="")
+			
+			+product('product')
+		
+			+product('product')
+		
+			+product('product')
+		
+			+product('product')
+		
+			+product('product')

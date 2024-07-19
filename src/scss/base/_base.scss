@@ -17,6 +17,7 @@
 	--button-disabled: #e0e0e0;
 	--button-accent: #93ab42;
 	--button-accent-hover:#a9bc68;
+	--accent-hover: #a9bc68;
 	--accent: #93ab42;
 	--imput-imput-gray: #f8f8f8;
 	--imput-imput-white: #fff;
@@ -57,12 +58,21 @@ body {
 	letter-spacing: -0.02em;
 	-webkit-font-smoothing: antialiased;
 }
-
+body.lock{
+	height: 100vh;
+	overflow: hidden;
+	padding-right: 17px;
+	@media (max-width: 1199px) {
+		padding-right: 0;
+	}
+}
+a, button{display: inline-block;}
 a,
 a:hover {
 	text-decoration: none;
+	
 }
-
+a{color: inherit}
 ul {
 	margin: 0;
 	padding: 0;
@@ -88,7 +98,10 @@ img {
 	vertical-align: middle;
 	object-fit: cover;
 }
-
+.img-cover{
+	width: 100%;
+	height: 100%;
+}
 input,
 button,
 textarea,select,
@@ -98,7 +111,8 @@ textarea:focus, select:focus {
 	outline: none;
 	border: none;
 }
-
+input,
+button{font-family: inherit; font-size: inherit;}
 button {
 	padding: 0;
 	background-color: transparent;
@@ -120,6 +134,18 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
+
+.inner-main{
+	background-color: #fff;
+	padding-top: 64px;
+	padding-bottom: 80px;
+	section {
+			padding-top: 16px;
+		}
+	@media (max-width: 767px) {
+		padding-top: 56px;
+	}
+}
 .page-wrapper{
 	display: flex;
 	flex-direction: column;
@@ -130,9 +156,25 @@ input[type="submit"] {
 	}
 	&>main{flex-grow: 1;}
 }
-.header-container{
-	width: 100%;
-	max-width: 1920px;
+.container, .header-container{
+	width: min( 1920px, 100%);
 	padding-inline: 24px;
 	margin-inline: auto;
+	@media (max-width: 767px) {
+	padding-inline: 16px;
+	}
+}
+
+.social-block, .social-block a{
+	display: flex;
+	align-items: center;
+}
+.social-block{column-gap:10px;}
+.social-block	a{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: var(--style);
+	color: var(--fill-icon);
+	justify-content: center;
 }

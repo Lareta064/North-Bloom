@@ -11,11 +11,15 @@
 .svg-bar, .svg-check{
 	color: var(--fill-icon);
 }
-.svg-bar, .svg-check, .svg-chevron-down,.svg-chevron-up, .svg-chevron-left, .svg-chevron-right,.svg-close, .svg-dry, .svg-eye, .svg-eye-close, .svg-info, .svg-minus, .svg-paper, .svg-pin, .svg-plus, .svg-search, .svg-video{
+.svg-bar, .svg-check, .svg-chevron-down,.svg-chevron-up, .svg-chevron-left, .svg-chevron-right,.svg-close, .svg-dry, .svg-eye, .svg-eye-close, .svg-info, .svg-minus, .svg-paper, .svg-pin, .svg-plus, .svg-search, .svg-video,.svg-burger{
 	fill: transparent;
 	width: 24px;
 	height: 24px;
 	color: var(--fill-icon);
+}
+.svg-close{
+	transition: .3s;
+	&:hover {color: black;}
 }
 .svg-fleur{
 	width: 26px;

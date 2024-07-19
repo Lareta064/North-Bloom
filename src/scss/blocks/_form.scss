@@ -11,6 +11,31 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
    box-shadow: 0 0 0px 1000px #fff inset;
 }
+form{
+  &>*+*{margin-top: 16px;}
+}
+.form-wrapper,.form-wrapper.form-wrapper--large{
+  width:min(608px, 100%);
+  padding: 64px 40px;
+ 
+  .title-group{
+    margin-bottom: 40px;
+    &>*+*{margin-top: 16px;}
+  }
+  @media (max-width: 1023px) {
+    padding: 32px 16px;
+  }
+}
+
+.form-wrapper.pt-128{
+  padding-top: calc(64px + 64px);
+  @media (max-width: 1023px) {
+      padding-top: calc(32px + 56px);
+    }
+}
+.form-wrapper.form-wrapper--large{
+  width: min(960px, 100%);
+}
 input,
 textarea, select {
   width: 100%;
@@ -33,6 +58,9 @@ textarea, select {
     padding-inline: 16px;
     background-color: var(--style);
     border: 1px solid var(--style);
+    @media (max-width: 767px) {
+    height: 56px;
+    }
     &.error{
       border-color: var(--error);
     }
@@ -53,6 +81,7 @@ textarea, select {
   }
   .svg-info { color: var(--error); }
 }
+.form-btn{margin-top: 24px;}
 .form-input{
   position: relative;
   input{padding-right: 36px;}
@@ -87,6 +116,13 @@ textarea, select {
     input, textarea{
         background-color: var(--imput-imput-gray);;
     }
+  }
+}
+.form-item.form-item--border{
+  input, textarea{
+    background-color: transparent;
+    border:0;
+    border-bottom: 1px solid var(--text-grey-input);
   }
 }
 /*******************/
@@ -252,4 +288,46 @@ textarea, select {
 
 .dropdown__input-hidden {
   display: none;
+}
+/*************fake-checkbox************/
+.color-item {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+}
+.fake-input-label{
+  position: relative;
+  display: flex;
+  flex-shrink:0;
+  cursor:pointer;
+  input[type="radio"],
+  input[type="checkbox"]{
+    width: 0.01em;
+    height: 0.01em;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+    .color-item{
+      width: 32px;
+      height: 32px;
+     
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 2px;
+        transition: .3s; 
+        background-color: transparent;
+      }
+    }
+    input:checked + .color-item:after{
+      background-color: var(--text-grey);
+    }
 }

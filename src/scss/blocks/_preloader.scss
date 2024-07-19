@@ -2,7 +2,7 @@
 	position: fixed;
 	inset:0;
 	z-index: 99;
-	background-color: var(--bg-blue);
+	
 	row-gap:87px;
 	animation: scale;
 	animation-delay: var(--preloaderHideDelay);
@@ -10,13 +10,19 @@
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
 	padding-bottom: 24px;
-	color: var(--style);
+	
 	&-bottom{
 		position: absolute;
 		bottom: 24px;
 		left: 50%;
 		transform: translateX(-50%);
 
+	}
+	.logo{
+		width: 420px;
+		@media (max-width: 1023px) {
+		width: 219px;
+		}
 	}
 	.svg-logo {
 		color: var(--white);

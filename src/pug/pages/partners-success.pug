@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper.bg-blue
+		include ../sections/_header
+		main.success-message
+			include ../sections/_partners-success.pug
+
+
+block variables
+	-var title = "Заявка принята!";
