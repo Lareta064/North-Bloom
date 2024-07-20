@@ -1,0 +1,19 @@
+section.stores
+	.container
+		//====хлебные крошки===
+		.breadcrumbs
+			//===ссылки отображаются на десктоп версии и скрываются на < 1024px
+			a(href="index.html") Главная
+			a(href="#!")  Где купить
+		
+		.filters-block
+			.filters-block.flx-center
+				+select2("Название города", 'city_name')(class="filter-select")
+				+select2("Тип магазина", 'store_type')(class="filter-select")
+				.display-togggle.flx-center
+					.display-table.flx-center
+						+svg-icon('bar')
+						span Список
+					.display-map.flx-center
+						+svg-icon('pin')
+						span На карте

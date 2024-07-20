@@ -13,6 +13,20 @@ mixin select(plh="Пример заполнения", inpName = 'input_name', la
 
 			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 			input.dropdown__input-hidden(type="text", name=""+ input_name)
+mixin select2(plh="Пример заполнения", inpName = 'input_name')
+	.form-item&attributes(attributes)
+		.dropdown
+			button.dropdown__button(type="button")
+				span #{plh}
+			.dropdown__list
+				ul
+					li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
+					li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+					li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+					li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
+
+			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+			input.dropdown__input-hidden(type="text", name=""+ input_name)
 mixin form-item( label="Введите логин", inpName="name")
 	.form-item
 		label #{label}
