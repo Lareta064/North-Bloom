@@ -8,10 +8,10 @@
 		.txt-center.mb-48
 			.h2 Технолог швейного производства
 		form(action="" enctype="multipart/form-data").form-light.contact-form
-			+form-item('', '', "Введите Имя Фамилию Отчество", "name", '')
+			+form-item("Введите Имя Фамилию Отчество", "name")
 			.form-column-2
-				+form-item('error', '', "Введите Телефон", "phone", '')
-				+form-item('', '', "Введите Email", "emwil", '')
+				+form-item-error("Введите Телефон", "phone")
+				+form-item("Введите Email", "email")
 			.form-item
 				label Комментарии
 				textarea(name="message" placeholder="Пример заполнения")

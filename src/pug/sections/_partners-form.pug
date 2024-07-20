@@ -5,11 +5,11 @@
 		
 	//====form====	
 	form.partners-form(action="" method="method")
-		+form-item('', '', "Введите имя", "name", '')
-		+form-item('', '', "Введите город", "city", '')
-		+form-item('', '', "Введите ИНН", "text", '')
-		+form-item('', '', "Введите телефон", "text", '')
-		+form-item('', '', "Введите email", "text", '')
+		+form-item("Введите имя", "name")
+		+form-item("Введите город", "city")
+		+form-item("Введите ИНН", "user_inn")
+		+form-item("Введите телефон", "phone")
+		+form-item("Введите email", "email")
 
 		.form-btn
 			button(type="submit").btn-accent.w-100 Зарегистрироваться

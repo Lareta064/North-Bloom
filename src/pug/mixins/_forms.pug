@@ -13,36 +13,27 @@ mixin select(plh="Пример заполнения", inpName = 'input_name')
 
 			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 			input.dropdown__input-hidden(type="text", name=""+ input_name)
-
-mixin form-item(error, tltSide, label="Введите логин", inpName="name", pass)
+mixin form-item( label="Введите логин", inpName="name")
 	.form-item
-		if error !=='' && tltSide!=='left'
-			//===error text tooltip====
-			.tooltip
-				.tooltip-icon
-					+svg-icon-ui('info')
-				.tooltip-box
-					p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
-		if error !=='' && tltSide!=='right'
-			//===error text tooltip====
-			.tooltip.tooltip--right
-				.tooltip-icon
-					+svg-icon-ui('info')
-				.tooltip-box
-					p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
-		
-		//====input label====
 		label #{label}
-		//====input====
-		if error !==''
-			.form-input
-				input.error(type="text" name=""+ inpName placeholder="Пример заполнения")
-		else
-			if  pass !==''
-				.form-input.form-input--pass
-					span.input-icon
-						+svg-icon-ui('eye')
-					input(type="password" name="user_pass" placeholder="Введите пароль")
-			else
-				.form-input
-					input(type="text" name=""+ inpName placeholder="Пример заполнения")
+		.form-input
+			input(type="text" name=""+ inpName placeholder="Пример заполнения")
+
+mixin form-item-error( label="Введите логин", inpName="name")
+	.form-item
+		.tooltip
+			.tooltip-icon
+				+svg-icon-ui('info')
+			.tooltip-box
+				p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
+		label #{label}
+		.form-input
+			input.error(type="text" name=""+ inpName placeholder="Пример заполнения")
+
+mixin form-item-passw
+	.form-item
+		label Введите пароль
+		.form-input.form-input--pass
+			span.input-icon
+				+svg-icon-ui('eye')
+			input(type="password" name="user_pass" placeholder="Введите пароль")

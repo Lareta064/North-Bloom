@@ -70,51 +70,50 @@ html(lang="ru")
 						+select(plh="Пример заполнения", inpName = 'input_name')
 					hr
 					h3 Поле в форме поиска
-					.form-item.form-item--border
-						.form-input
-							input(type="search" name="search_input" placeholder="Что Вы ищите?")
-							//===== кнопка reset ====
-							button.btn-clear.flx-center(type="reset")
-								svg.svg-close
-									use(href='./img/sprite.svg#svg-close')
-					pre.
+					.search-form
 						.form-item.form-item--border
 							.form-input
 								input(type="search" name="search_input" placeholder="Что Вы ищите?")
 								//===== кнопка reset ====
 								button.btn-clear.flx-center(type="reset")
 									svg.svg-close
-										use(href='./img/sprite.svg#svg-close')
-					hr
-					h3 Миксин элемента формы 
+										use(href='../img/sprite.svg#svg-close')
 					pre.
-						+form-item(error, tltSide, label="Введите логин", inpName="name", pass)
+						.search-form
+							.form-item.form-item--border
+								.form-input
+									input(type="search" name="search_input" placeholder="Что Вы ищите?")
+									//===== кнопка reset ====
+									button.btn-clear.flx-center(type="reset")
+										svg.svg-close
+											use(href='./img/sprite.svg#svg-close')
+					hr
+					h3 Миксин элемента формы
+					pre.
+						+form-item( label="Введите логин", inpName="name")
 					hr
 					div.dark-bg(style="padding:30px;")
 						
-						+form-item('', '', "Введите имя", "name", '')
+						+form-item( 'Введите телефон', 'phone')
 					pre.
-						+form-item('', '', "Введите имя", "name", '')
+						+form-item( 'Введите телефон', 'phone')
 					hr
 					h3 Невалидное поле. Подсказка по наведению
 					div
-						+form-item('error', 'left', "Введите имя", "name", '')
+						+form-item-error( "Введите логин", "name")
 						pre.
-							+form-item('error', 'left', "Введите имя", "name", '')
-					hr
-					div
-						+form-item('error', 'right', "Введите имя", "name", '')
-						pre.
-							+form-item('error', 'right', "Введите имя", "name", '')
+							+form-item-error( "Введите логин", "name")
+					
+						
 		
 					hr
 					h3 Форма с серыми полями + Показать / скрыть пароль
 					form.form-light
-						+form-item('', '', "Введите пароль", "pass", 'pass')
+						+form-item-passw
 					pre.
 						У формы класс .form-light
 						form.form-light
-							+form-item('', '', "Введите пароль", "pass", 'pass')
+							+form-item-passw
 					hr
 					h3 Формы шириной 608пикс - обертка .form-wrapper
 					h3 Формы шириной 960пикс - обертка .form-wrapper.form-wrapper--large
