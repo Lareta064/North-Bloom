@@ -367,7 +367,7 @@ $(function() {
     });
 });
 
- document.querySelectorAll('.btn-play').forEach(button => {
+ document.querySelectorAll('.btn-play-wrapper').forEach(button => {
         button.addEventListener('click', function() {
             var videoWrapper = this.closest('.video-wrapper');
             var video = videoWrapper.querySelector('.video');
