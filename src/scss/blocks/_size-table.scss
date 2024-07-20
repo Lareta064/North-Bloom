@@ -4,7 +4,7 @@
 	height: 100%;
 	overflow-y: auto;
 	@media (max-width: 767px) {
-		padding-block: 56px 0;
+		padding-block: 0;
 		.ss-wrapper {
 			width: calc(50% + 50vw);
 		}
