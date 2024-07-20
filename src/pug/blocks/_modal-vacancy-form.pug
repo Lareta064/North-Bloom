@@ -5,12 +5,25 @@
 		button(type="button" data-role="modal-close").btn-close
 			svg.svg-close
 				use(href='./img/sprite.svg#svg-close')
-		.h2.txt-center Технолог швейного производства
-		form(action="").form-light.contact-form
+		.txt-center.mb-48
+			.h2 Технолог швейного производства
+		form(action="" enctype="multipart/form-data").form-light.contact-form
 			+form-item('', '', "Введите Имя Фамилию Отчество", "name", '')
 			.form-column-2
-				+form-item('', '', "Введите Телефон", "phone", '')
+				+form-item('error', '', "Введите Телефон", "phone", '')
 				+form-item('', '', "Введите Email", "emwil", '')
 			.form-item
 				label Комментарии
 				textarea(name="message" placeholder="Пример заполнения")
+			//===кастомный инпут выбора файла, есть к нему скрипт в файле main.js====
+			.form-item
+				.custom-file-input
+					input#file-input.file-input(type='file')
+					label.file-label(for='file-input')
+						span.file-text Прикрепить файл
+						+svg-icon('paper')
+			.form-btn
+				button(type="submit").btn-accent.w-100 Отправить
+			.form-item.txt-center
+				.txt-14.txt-center Нажимая кнопку «Зарегистрироваться», вы принимаете <br> условия пользовательского соглашения
+				

@@ -37,11 +37,12 @@ mixin form-item(error, tltSide, label="Введите логин", inpName="name
 		if error !==''
 			.form-input
 				input.error(type="text" name=""+ inpName placeholder="Пример заполнения")
-		if  pass !==''
-			.form-input.form-input--pass
-				span.input-icon
-					+svg-icon-ui('eye')
-				input(type="password" name="user_pass" placeholder="Введите пароль")
 		else
-			.form-input
-				input(type="text" name=""+ inpName placeholder="Пример заполнения")
+			if  pass !==''
+				.form-input.form-input--pass
+					span.input-icon
+						+svg-icon-ui('eye')
+					input(type="password" name="user_pass" placeholder="Введите пароль")
+			else
+				.form-input
+					input(type="text" name=""+ inpName placeholder="Пример заполнения")

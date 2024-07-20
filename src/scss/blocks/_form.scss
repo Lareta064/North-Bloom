@@ -130,7 +130,28 @@ textarea, select {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap:16px;
+  @media (max-width: 767px) {
+  grid-template-columns: 1fr;
+  row-gap:16px;
+  }
+}
+/* input type file*/
+.custom-file-input {
+  display: flex;
+  align-items: center;
 
+  .file-input {
+    display: none;
+    /* Прячем настоящий input */
+  }
+
+  .file-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    column-gap: 8px;
+  }
+  
 }
 /*******************/
 .tooltip{
