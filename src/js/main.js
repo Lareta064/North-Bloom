@@ -214,11 +214,14 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 	
   /********WINDOW SCROLL EVENTS********* */
+  const productPage = document.getElementById('product-page');
   window.addEventListener('scroll', (e)=>{
 	if(window.scrollY > 10){
 		headerEl.classList.add('active');
+		if(productPage){headerEl.classList.add('header-white-bg');}
 	}else{
 		headerEl.classList.remove('active');
+		if(productPage){headerEl.classList.remove('header-white-bg');}
 	}	
   });
    

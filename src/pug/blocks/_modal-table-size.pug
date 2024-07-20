@@ -1,0 +1,34 @@
+mixin tableRows(values, numRows)
+	if values.length !== 5
+		throw new Error('The array must contain exactly 5 numbers')
+	tbody
+		each rowIndex in [...Array(numRows).keys()]
+			tr
+				each value, index in values
+					- const cellValue = index === 1 ? ' 164 - 172' : value + rowIndex * 4
+					td= cellValue
+
+		
+//=======SIZE TABLE MODAL (открывается по клику на элемент с data-target="size-table")======	
+.modal-wrapper.size-table-wrapper(data-modal="size-table")
+	.modal-body
+		//===btn close popup ===
+		button(type="button" data-role="modal-close").btn-close
+			svg.svg-close
+				use(href='./img/sprite.svg#svg-close')
+		//==== title-block ====	
+		.section-title.mb-48
+			.h1-serif Таблицы размеров
+			p Размерная сетка курток NorthBloom соответствует российским стандартным размерам одежды.
+			p Предложенные таблицы помогут Вам подобрать куртку подходящего размера.
+		.h2.mb-24 Женщины
+		.size-table-inner.ss-container(ss-container)
+			table.size-table(cellspacing="0")
+				thead
+					tr
+						th Размер
+						th Рост
+						th Обхват груди
+						th Обхват талии
+						th Обхват бёдер
+				+tableRows([44, 88, 88, 68, 96], 13)
