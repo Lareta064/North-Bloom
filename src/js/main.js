@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 	}
 	function resetActiveMenu(){
-		// mobileMenu.querySelector('.active')?.classList.remove('active'); 
 		mobileMenu.classList.remove('active');
 		menuToggle.classList.remove('active');
 		
@@ -43,11 +42,18 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 			if(searchFormPopup.classList.contains('active')){
 				hideSerchForm(searchFormPopup);
+				if(!window.scrollY >0){
+					/* при закрытии формы поиска, только если не было скролла страницы,  удаляем у header класс active, который делает шапку белой */
+					headerEl.classList.remove('active');
+					console.log(window.scrollY);
+				}
+				
 			}else{
 				
 				resetActiveMenu();
 				searchFormPopup.classList.add('active');
 				bodyEl.classList.add('lock');
+				headerEl.classList.add('active');
 				
 			}
 		});
@@ -58,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 					searchFormPopup.classList.remove('active');
 					bodyEl.classList.remove('lock');
-					console.log('111');
+					console.log('line 67');
 				}
 				
 			}
@@ -66,11 +72,15 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	/*====change header bg for active menu==== */
 	bodyEl.addEventListener('click', (e)=>{
-		if(mobileMenu.classList.contains('active') || searchFormPopup.classList.contains('active')){
-			headerEl.classList.add('active');
-		}else{
-			headerEl.classList.remove('active');
-		}
+		
+			if(mobileMenu.classList.contains('active') || searchFormPopup.classList.contains('active')){
+				headerEl.classList.add('active');
+			}else{
+				/*удаляем класс acive  у шапки, если страница не скроллилась*/
+				if(window.scrollY == 0){headerEl.classList.remove('active');}
+				
+			}
+		
 	});
 	
 	/*===============MOBILE MENU ==================*/

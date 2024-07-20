@@ -31,6 +31,7 @@
 .header.header--special:not( .active){
 	@media (max-width: 767px) {
 		background-color: transparent;
+		&:hover{background-color: var(--style);}
 	}
 }
 .header.active{
