@@ -9,13 +9,12 @@ $white: #ffffff;
 $reg: 'Inter';
 $serif: 'Roboto Serif';
 $suisse: 'SuisseIntl-Regular';
-$viewport: 1872px;
-@media (max-width: 1919px) {
-	$viewport: calc(100vw - 16px);
-}
+
+
+$viewport: calc(100vw - 48px);
 
 @media (max-width: 767px) {
-	$viewport: calc(100vw - 16px);
+	$viewport: calc(100vw - 32px);
 }
 
 $column-width: calc($viewport / 12);

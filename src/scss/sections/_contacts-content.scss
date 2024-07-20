@@ -1,0 +1,30 @@
+.contacts-content{
+	@media (max-width: 767px) {
+		row-gap:48px;
+		
+		&__form, &__image{grid-column: span 12;}
+	}
+	&__form{
+		grid-column: span 4;
+		@media (max-width: 1799px) {
+			grid-column: span 6;
+		}
+		@media (max-width: 767px) {
+			order: 2;
+		}
+
+	}
+	&__image{
+		grid-column: span 7;
+		margin-left: calc($column-width * 1) !important;
+		width: 100%;
+		aspect-ratio: 27 / 19;
+		@media (max-width: 1799px) {
+			grid-column: span 6;
+			margin-left: 0 !important;
+		}
+		@media (max-width: 767px) {
+			order: 1;
+		}
+	}
+}

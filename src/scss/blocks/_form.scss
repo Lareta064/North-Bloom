@@ -114,7 +114,7 @@ textarea, select {
 .form-light{
   .form-item{
     label{color: var(--fill-icon);}
-    input, textarea{
+        .dropdown__button, input, textarea{
         background-color: var(--imput-imput-gray);;
     }
   }

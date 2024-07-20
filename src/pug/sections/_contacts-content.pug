@@ -1,0 +1,45 @@
+section.contacts
+	.container
+		//====хлебные крошки===
+		.breadcrumbs
+			//===ссылки отображаются на десктоп версии и скрываются на < 1024px
+			a(href="index.html") Главная
+			a(href="#!") Контакты
+			
+		
+		//====заголовок===
+		.section-title
+			h1.h1-serif Контакты
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+		
+		//====content grig ====
+		.contacts-content.content-grid
+			//=====LEFT COLUMN ====
+			.contacts-content__form
+				form(action="").form-light
+					+select('Пример заполнения', 'input_name', 'Кому')
+					+form-item('Введите Имя','name')
+					+form-item('Введите Фамилию','last_name')
+					+form-item('Введите Телефон','phone')
+					+form-item('Введите Email','email')
+					//===кастомный инпут выбора файла, есть к нему скрипт в файле main.js====
+					.form-item
+						.custom-file-input
+							input#file-input.file-input(type='file')
+							label.file-label(for='file-input')
+								span.file-text Прикрепить файл
+								+svg-icon('paper')
+					.form-btn
+						button(type="submit").btn-accent.w-100 Отправить
+					.form-item.txt-center
+						.txt-14.txt-center Нажимая кнопку «Зарегистрироваться», вы принимаете <br> условия пользовательского соглашения
+			
+			//=====RIGHT COLUMN ===
+			.contacts-content__image
+				picture
+					source(srcset="./img/contacts-w375.webp", media="(max-width: 767px)"  type="image/webp")
+					source(srcset="./img/contacts-w1024@2x.webp", media="(max-width: 1199px) and (min-resolution: 192dpi)"  type="image/webp")
+					source(srcset="./img/contacts-w1024.webp", media="(max-width: 1199px)"  type="image/webp")
+					source(srcset="./img/contacts@2x.webp", media="(min-resolution: 192dpi)"  type="image/webp")
+					
+					img.img-cover.lazy(src="./img/contacts.webp", width="1082" height="783" alt="img")

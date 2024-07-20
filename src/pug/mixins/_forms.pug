@@ -1,8 +1,8 @@
-mixin select(plh="Пример заполнения", inpName = 'input_name')
+mixin select(plh="Пример заполнения", inpName = 'input_name', label="Название поля")
 	.form-item&attributes(attributes)
-		label Название поля
+		label #{label}
 		.dropdown
-			button.dropdown__button 
+			button.dropdown__button(type="button")
 				span #{plh}
 			.dropdown__list
 				ul
