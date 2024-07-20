@@ -1,12 +1,29 @@
+.technology-content.content-grid{
+	@media (max-width: 1023px) {
+		row-gap:60px;
+	}
+}
 .technology-wrapper,.technology-acordion{
 	grid-column: span 5;
 	width: 100%;
+	.accordion-body {
+			padding-top: 8px;
+			padding-bottom: 40px;
+		}
 	@media(max-width:1799px) {
 		grid-column: span 6;
+	}
+	@media (max-width: 1023px) {
+		grid-column: span 12;
+		.accordion-body {padding-bottom: 24px;}
+		
+			
 	}
 }
 .technology-wrapper{
 	&>*+*{margin-top: 48px;}
+	@media (max-width: 1023px) {
+	&>*+* {margin-top: 24px;}}
 	
 }
 .technology-acordion{
@@ -20,8 +37,11 @@
 		text-overflow: ellipsis;
 	}
 	@media(max-width:1799px) {
-			margin-left: 0;
-		}
+		margin-left: 0!important;
+	}
+	@media (max-width: 1023px) {
+		grid-column: span 12;
+	}
 }
 .video-wrapper{
 	width: 100%;
