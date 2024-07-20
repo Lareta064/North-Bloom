@@ -125,7 +125,7 @@
 	list-style-type: disc;
 	margin-left: 16px;
 }
-.custom-text {
+.custom-text, *.custom-text {
 	&>*+*{margin-top: 32px!important;}
 	p+p{margin-top: 12px!important;}
 	ul{

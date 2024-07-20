@@ -4,4 +4,10 @@
 	.accordion-header{
 		color: var(--link);
 	}
+	@media (max-width: 1799px) {
+		grid-column: span 10;
+	}
+	@media (max-width: 1199px) {
+		grid-column: span 12;
+	}
 }

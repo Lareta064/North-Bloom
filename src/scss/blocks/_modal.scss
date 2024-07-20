@@ -15,11 +15,20 @@
 		position: relative;
 		padding: 48px 24px;
 		width: min(1248px, calc(100% - 48px));
-
 		background: var(--style);
+		@media (max-width: 1199px) {
+		max-height: calc(100vh - 80px);
+		overflow: hidden;
+			overflow-y: auto;
+			scrollbar-width: none;
+			&::-webkit-scrollbar{display: none;}
+		}
 		@media (max-width: 767px) {
 			width:100%;
 			padding: 48px 14px;
+			height: 100dvh;
+			max-height: 100dvh;;
+			
 		}
 	}
 	
