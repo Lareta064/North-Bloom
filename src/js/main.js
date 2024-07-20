@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 			if(mobileMenu.classList.contains('active') || searchFormPopup.classList.contains('active')){
 				headerEl.classList.add('active');
+				console.log('line 77');
 			}else{
 				/*удаляем класс acive  у шапки, если страница не скроллилась*/
 				if(window.scrollY == 0){headerEl.classList.remove('active');}
@@ -103,6 +104,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				mobileMenu.classList.remove('active');
 				menuToggle.classList.remove('active');
 				bodyEl.classList.remove('lock');
+				console.log('line-107');
+				if(window.scrollY == 0){headerEl.classList.remove('active');
+					console.log('line-109');
+				}
 			}
 		});
 		function checkScreenSize() {
