@@ -257,9 +257,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		const modalOpenButtons = document.querySelectorAll('[data-target]');
 		const modalCloseButtons = document.querySelectorAll('[data-role]');
 		for(let item of modalOpenButtons){
-			for(let modalItem of modals){
-				modalItem.classList.remove('active');
-			}
+			
 			item.addEventListener('click', (e)=>{
 				const itemDataValue = item.getAttribute('data-target');
 				for(let modalItem of modals ){

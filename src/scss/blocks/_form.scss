@@ -64,12 +64,13 @@ textarea, select {
     &.error{
       border-color: var(--error);
     }
-    textarea{
-      resize: none;
-      height: 128px;
-      @media (max-width: 767px) {
-        height: 96px;
-      }
+  }
+  textarea{
+    resize: none;
+    height: 128px;
+    padding: 16px;
+    @media (max-width: 767px) {
+      height: 96px;
     }
   }
   label{
@@ -124,6 +125,12 @@ textarea, select {
     border:0;
     border-bottom: 1px solid var(--text-grey-input);
   }
+}
+.form-column-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap:16px;
+
 }
 /*******************/
 .tooltip{

@@ -1,7 +1,16 @@
 //=========MODAL VACANCY FORM (открывается по клику на элемент с data-target="modal-vacancy")=======
-.modal-wrapper.size-table-wrapper(data-modal="modal-vacancy")
-	.modal-body
+.modal-wrapper.active(data-modal="modal-vacancy")
+	.modal-body.bg-grey.form-wrapper.form-wrapper--large
 		//===btn close popup ===
 		button(type="button" data-role="modal-close").btn-close
 			svg.svg-close
 				use(href='./img/sprite.svg#svg-close')
+		.h2.txt-center Технолог швейного производства
+		form(action="").form-light.contact-form
+			+form-item('', '', "Введите Имя Фамилию Отчество", "name", '')
+			.form-column-2
+				+form-item('', '', "Введите Телефон", "phone", '')
+				+form-item('', '', "Введите Email", "emwil", '')
+			.form-item
+				label Комментарии
+				textarea(name="message" placeholder="Пример заполнения")
