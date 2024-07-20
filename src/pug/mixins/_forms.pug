@@ -21,6 +21,7 @@ mixin form-item( label="Введите логин", inpName="name")
 
 mixin form-item-error( label="Введите логин", inpName="name")
 	.form-item
+		//======Если к классу tooltip добавить класс tooltip--right, то расположение подсказки будет с правой стороны от иконки======
 		.tooltip
 			.tooltip-icon
 				+svg-icon-ui('info')

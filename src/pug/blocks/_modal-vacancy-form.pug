@@ -10,6 +10,7 @@
 		form(action="" enctype="multipart/form-data").form-light.contact-form
 			+form-item("Введите Имя Фамилию Отчество", "name")
 			.form-column-2
+				//====== у невалидного поля внутри form-item  появляется див с классом tooltip , и так же самому инпуту добавляется класс error, при котором у него появляется красный бордер ====
 				+form-item-error("Введите Телефон", "phone")
 				+form-item("Введите Email", "email")
 			.form-item
