@@ -6,7 +6,12 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		&__content>*+*{margin-top: 40px;}
-		
+		&__content>*+*{margin-top: 20px;}
+		@media (max-width: 767px) {
+			height: calc(100dvh - 56px);
+			&__content>*+* {
+					margin-top: 8px;
+				}
+		}
 	}
 }

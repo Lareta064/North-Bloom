@@ -1,4 +1,5 @@
-//=========MODAL VACANCY FORM (открывается по клику на элемент с data-target="modal-vacancy")=======
+//=========MODAL VACANCY FORM (открывается по клику на элемент с data-target="modal-vacancy")======
+//=====Окно отображается добавлением через скрипт класса active. Скрипт прописан для компонентов с атрибутом  data-modal ===
 .modal-wrapper(data-modal="modal-vacancy")
 	.modal-body.bg-grey.form-wrapper.form-wrapper--large
 		//===btn close popup ===
@@ -24,7 +25,7 @@
 						span.file-text Прикрепить файл
 						+svg-icon('paper')
 			.form-btn
-				button(type="submit" data-target="modal-succes-form").btn-accent.w-100 Отправить
+				button(type="submit").btn-accent.w-100 Отправить
 			.form-item.txt-center
 				.txt-14.txt-center Нажимая кнопку «Зарегистрироваться», вы принимаете <br> условия пользовательского соглашения
 				
