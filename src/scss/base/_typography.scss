@@ -125,3 +125,16 @@
 	list-style-type: disc;
 	margin-left: 16px;
 }
+.custom-text {
+	ul{
+		padding-left: 16px;
+		list-style-type: disc;
+	}
+	h3+ ul{margin-top: 40px;}
+	h3, h4,h5,h6{
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.5;
+		margin-top: 32px;
+	}
+}
