@@ -26,10 +26,14 @@
 		@media (max-width: 767px) {
 			width:100%;
 			padding: 48px 14px;
-			height: 100dvh;
+			height: 100%;
 			max-height: 100dvh;;
 			
 		}
 	}
-	
+	@media (max-width: 767px) {
+	   top:56px;
+	   min-height: unset;
+	   bottom: 0;
+	}
 }

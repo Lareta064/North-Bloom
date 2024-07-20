@@ -1,0 +1,11 @@
+//=========MODAL SUCCESS SEND FORM =======
+.modal-wrapper.modal-wrapper--simple(data-modal="modal-succes-form")
+	.modal-body.bg-grey.form-wrapper
+		//===btn close popup ===
+		button(type="button" data-role="modal-close").btn-close
+			svg.svg-close
+				use(href='./img/sprite.svg#svg-close')
+		.modal-body__content
+			span
+				+svg-icon('check')(class="check--big")
+			.h1 Ваша заявка<br>принята!
