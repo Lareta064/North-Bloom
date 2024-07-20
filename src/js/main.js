@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function (){
   /********WINDOW SCROLL EVENTS********* */
   const productPage = document.getElementById('product-page');
   window.addEventListener('scroll', (e)=>{
-	if(window.scrollY > 10){
+	if(window.scrollY > 0){
 		headerEl.classList.add('active');
 		if(productPage){headerEl.classList.add('header-white-bg');}
 	}else{
