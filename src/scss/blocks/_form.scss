@@ -240,6 +240,9 @@ textarea, select {
     color: var(--text-grey-input);
     opacity: .6;
   }
+  @media (max-width: 767px) {
+    height: 56px;
+  }
 }
 
 .dropdown__button::after {
@@ -273,6 +276,9 @@ textarea, select {
   overflow: hidden;
   width: 100%;
   z-index: 1;
+  @media (max-width: 767px) {
+    top: 64px;
+  }
   
   ul{
     margin-block:10px; 
@@ -311,6 +317,10 @@ textarea, select {
   line-height: 1.5;
   transition: .3s; 
   cursor: pointer;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &:hover{color: var(--text-grey);}
 }
 

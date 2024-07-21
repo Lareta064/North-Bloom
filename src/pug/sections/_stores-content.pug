@@ -2,17 +2,189 @@ section.stores
 	.container
 		//====хлебные крошки===
 		.breadcrumbs
-			//===ссылки отображаются на десктоп версии и скрываются на < 1024px
 			a(href="index.html") Главная
 			a(href="#!")  Где купить
+			//===== этот пункт хлебных крошек отображается на экранах до 1024px
+			p
+				a(href="index.html").txt-24.chevron-link
+					svg.svg-chevron-left
+						use(href='./img/sprite.svg#svg-chevron-left')
+					span Вернуться
 		
+		h1.h1-serif.txt-center.mb-32 Где купить одежду NorthBloom
 		.filters-block.flx-center
 			+select2("Название города", 'city_name')(class="filter-select")
 			+select2("Тип магазина", 'store_type')(class="filter-select")
 			.display-togggle.flx-center.toggle-group
-				.display-table.toggle-item.active
+				
+				.display-table.toggle-item.active(data-display="stories-tables")
 					+svg-icon('bar')
 					span Список
-				.display-map.toggle-item
+				.display-map.toggle-item(data-display="stories-map")
 					+svg-icon('pin')
 					span На карте
+			
+	.stores-content.mt-48
+		//====== ОТОБРАЖЕНИЕ СПИСКОМ =====
+		.stories-tables.active(data-content="stories-tables")
+			//======блок для одного типа магазина ======
+			.stores-content__block
+				h2.h2.txt-center.mb-24  Фирменные магазины
+					//===== table =====
+				.stores-table
+					//===== table head =====
+					.stores-table__head.stores-table__row
+						//===  дополн обертка content-grid  необходима, что бы у строк чередовать серый фон на 100vw 
+						.content-grid
+							.cell-title
+								p Магазин
+							.cell-address
+								p Адрес
+							.cell-contact
+								p Телефон
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+									+svg-icon('fleur')
+									p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Сенная
+									span.dot-item м. Бульвар Адмирала Ушакова
+
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								+svg-icon('fleur')
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, м. Бутырская, Огородный пр., д.10
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Новокузнецкая
+									span.dot-item м. Белорусский вокзал
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								+svg-icon('fleur')
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, Волоколамское шоссе,3
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Ховрино
+									span.dot-item м. Речной порт
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								+svg-icon('fleur')
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Сенная
+									span.dot-item м. Бульвар Адмирала Ушакова
+
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								+svg-icon('fleur')
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Сенная
+									span.dot-item м. Бульвар Адмирала Ушакова
+
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23		
+			//======блок для одного типа магазина ======
+			.stores-content__block
+				h2.h2.txt-center.mb-24 Мультибрендовые магазин
+					//===== table =====
+				.stores-table
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Сенная
+									span.dot-item м. Бульвар Адмирала Ушакова
+
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, м. Бутырская, Огородный пр., д.10
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Новокузнецкая
+									span.dot-item м. Белорусский вокзал
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, Волоколамское шоссе,3
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Ховрино
+									span.dot-item м. Речной порт
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+					//===== table row =====
+					.stores-table__row
+						.content-grid
+							.cell-title
+								p Фирменный магазин "NorthBloom"
+							.cell-address
+								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+								.cell-row
+									span.store-name ТЦ “ПИК”
+									span.dot-item м. Сенная
+									span.dot-item м. Бульвар Адмирала Ушакова
+
+							.cell-contact
+								a(href="tel:+78121232323") +7 (812) 123-23-23
+		
+		.stores-content-map(data-content="stories-map")
+			.container
+				//====== ОТОБРАЖЕНИЕ НА КАРТЕ =====
+				.stories-map
+					iframe.lazy(src="https://yandex.ru/map-widget/v1/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&amp;source=constructor" frameborder="0")

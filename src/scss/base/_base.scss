@@ -156,7 +156,7 @@ input[type="submit"] {
 	}
 	&>main{flex-grow: 1;}
 }
-.container, .header-container{
+.container, .header-container, .stores-table__row .content-grid{
 	width: min( 1920px, 100%);
 	padding-inline: 24px;
 	margin-inline: auto;

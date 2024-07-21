@@ -450,4 +450,21 @@ $(function() {
 		}
 		toggleActiveClass('toggle-group', 'toggle-item');
 
+		/* Отображать карту или таблицы по клику на кнопки переключения */
+		const storiesDisplayToggle = document.querySelectorAll('[data-display]');
+		console.log(storiesDisplayToggle);
+		if(storiesDisplayToggle.length >0){
+			
+			const storiesDisplayContent = document.querySelectorAll('[data-content]');
+			storiesDisplayToggle[0].addEventListener('click',()=>{
+				console.log('444');
+				storiesDisplayContent[0].classList.add('active');
+				storiesDisplayContent[1].classList.remove('active');
+			});
+			storiesDisplayToggle[1].addEventListener('click',()=>{
+				storiesDisplayContent[0].classList.remove('active');
+				storiesDisplayContent[1].classList.add('active');
+			});
+		}
+
 });

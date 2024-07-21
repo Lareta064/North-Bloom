@@ -1,3 +1,113 @@
 .filters-block{
 	.filter-select{min-width: 292px;}
 }
+
+.stores-content{
+	.stories-tables, .stores-content-map{
+		display: none;
+		&.active{display: block;}
+	}
+}
+.stories-map{
+	width: 100%;
+	height: 800px;
+	display: block;
+	iframe{
+		width: 100%;
+		height: 100%;
+	}
+	@media (max-width: 767px) {
+	height: 600px;
+	}
+}
+.stories-tables >*+*{margin-top: 40px;}
+.stores-table{
+	width: 100%;
+	.content-grid{
+		@media (max-width: 767px) {row-gap:8px;}
+	}
+	&__row:nth-child(2n+3){
+		background: #f9f9f9;
+	}
+	&__row{
+		
+		padding-block:16px;
+		@media (max-width: 1919px) {column-gap: 16px;}
+		@media (max-width: 767px) {column-gap: 8px;}
+		.cell-title{
+			grid-column: span 4; font-weight: 600;
+			
+			svg{
+				vertical-align: middle;
+				margin-right: 8px;
+				width: 26px;
+				flex-shrink: 0;
+			}
+			@media (max-width: 1199px) {
+				grid-column: span 3;
+			}
+			@media (max-width: 767px) {
+				grid-column: span 12;
+			}
+		}
+		.cell-address{
+			grid-column: span 6;
+			ul{
+				display: inline-flex;
+				align-items: center;
+				column-gap: 16px;
+				flex-wrap: wrap;
+				li{white-space: nowrap;}
+
+			}
+			.cell-row {
+				span.store-name{white-space: nowrap; margin-right: 24px;}
+				.dot-item{
+					margin-inline: 8px;
+					white-space: nowrap;
+				}
+			}
+			@media (max-width: 1199px) {
+				grid-column: span 6;
+			}
+			@media (max-width: 767px) {
+				grid-column: span 12;
+			}
+		}
+		.cell-contact {
+			grid-column: span 2;
+			a{transition: .3s; white-space:nowrap;}
+			a:hover{
+				color: var(--text-grey);
+			}
+			@media (max-width: 1199px) {
+				grid-column: span 3;
+			}
+			@media (max-width: 767px) {
+				grid-column: span 12;
+			}
+		}
+		.cell-title, .cell-address,	.cell-contact 	{
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			&>*{width: 100%;}
+		}
+		.cell-title{
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items:center;
+		}
+	}
+	&__head{
+		.cell-title{font-weight: 400; padding-left: 0; }
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 1.40;
+		text-transform: uppercase;
+		color: var(--fill-icon);
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+}
