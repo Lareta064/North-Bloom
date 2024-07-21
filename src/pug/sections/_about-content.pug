@@ -14,15 +14,53 @@ section.about
 		h1.h1-serif.txt-center Производитель качественной верхней одежды "NorthBloom" из Санкт-Петербурга
 		.about-hero
 			picture
-				source(srcset="./img/about-w370@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+				source(srcset="./img/about-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
 				source(srcset="./img/about-w1024@2x.webp", media="(max-width: 1199px) and (min-resolution: 192dpi)")
 				source(srcset="./img/about-w1024.webp", media="(max-width: 1199px)")
-				source(srcset="./img/about@2x.webp")
+				source(srcset="./img/about@2x.webp"  media="(min-resolution: 192dpi)")
 				
-				img(src="./img/about.webp", width="1872" height="1248" alt="img")
+				img.lazy(src="./img/about.webp", width="1872" height="1248" alt="img")
 		
 		.about-description.custom-text
 			.about-description__title
 				p Наш лозунг
 				.title-96 NorthBloom – все дело в качестве!
 				span.brand-label Работаем с 1997
+			.container-slim
+				.about-description__img.mb-24
+					.brand-img
+						svg.brand-logo
+							use(href='./img/sprite.svg#brand-logo')
+					picture
+						source(srcset="./img/about2-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+						source(srcset="./img/about2-w375.webp", media="(max-width: 767px)")
+						source(srcset="./img/about2@2x.webp"  media="(min-resolution: 192dpi)")
+						img.lazy.img-cover(src="./img/about2.webp", width="923" height="1384" alt="img")
+				
+				.about-description__text
+					.grey-card
+						.h2 Наш опыт
+						p История компании NorthBloom началась в Санкт-Петербурге в 1997 году с небольшого производства, ориентированного на локальный рынок. Постепенно, увеличивая объем производства, компания расширяла границы  реализации продукции и укрепляла свои позиции на рынке верхней одежды. На сегодняшний день, бренд NorthBloom известен и любим потребителями по  всей России.
+					.grey-card
+						.h2 Кто мы
+						p Мы  - команда профессионалов, любящих свое дело и стремящихся достичь  наилучших результатов в создании комфортной и стильной верхней одежды.
+
+					.grey-card
+						.h2 Почему мы
+						p Наши несомненные преимущества:
+						ul
+							li Имеем собственный отдел новых разработок: наши сотрудники внимательно  отслеживают появление новых технологий в области пошива верхней одежды,  посещают международные выставки и показы новых коллекций;
+							li Комплексно внедряем новые технологии и разработки в области комфорта;
+							li Обладаем обширной наработанной базой лекал, ориентируемых на  российского потребителя. Отличительная особенность наших курток – это  хорошая «посадка»;
+							li Мы выбираем только самые лучшие материалы от известных мировых производителей;
+							li Создана собственная система контроля качества: начиная от тщательных закупок комплектующих, заканчивая готовым продуктом.
+				
+				.about-description__video
+					.video-wrapper
+						video.video.lazy(playsinline)
+							source(src="./video/video.mp4", type="video/mp4")
+						//==== btn play ====
+						button.btn-play-wrapper
+							span.btn-play
+						.video-poster
+							img.lazy.img-cover(src="./img/poster2.webp" alt="img" width="924" height="608")

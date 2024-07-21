@@ -9,10 +9,40 @@
 		padding-top: 120px;
 		padding-bottom: 120px;
 		@media (max-width: 767px) {
-		padding-top: 80px;
-		padding-bottom: 64px;
+			padding-top: 80px;
+			padding-bottom: 64px;
 		}
 
+	}
+	&-hero{
+		@media (max-width: 767px) {
+		margin-left: -16px;
+		margin-right: -16px;
+		}
+	}
+}
+.about-description__img{
+	position: relative;
+	width: 100%;
+	max-width: 923px;
+	aspect-ratio: 923 / 1384;
+	justify-content: center;
+	margin-inline: auto;
+	.brand-img{
+		position: absolute;
+		right: 0;
+		top: 16%;
+		transform: translateX(50%);
+		z-index: 3;
+		@media (max-width: 1279px) {
+		display: none;
+		}
+	}
+}
+.about-description__video{
+	padding-top: 60px;
+	@media (max-width: 767px) {
+	 padding-top: 40px;
 	}
 }
 .brand-label{
@@ -34,5 +64,23 @@
 		font-size: 16px;
 		padding-inline: 4px;
 		height: 27px;
+	}
+}
+.grey-card{
+	margin-top: 16px;
+	background: var(--bg-bg-grey);
+	padding: 32px 40px 48px;
+	&>*+*{margin-top: 16px;}
+	@media (max-width: 767px) {
+		padding-left: 16px;
+		padding-right: 16px;
+		
+	}
+}
+.about-description__text{
+	@media (max-width: 767px) {
+		
+		margin-left: -16px;
+		margin-right: -16px;
 	}
 }

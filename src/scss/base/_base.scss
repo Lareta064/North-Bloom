@@ -156,7 +156,7 @@ input[type="submit"] {
 	}
 	&>main{flex-grow: 1;}
 }
-.container, .header-container, .stores-table__row .content-grid{
+.container, .header-container, .stores-table__row .content-grid, .container-slim{
 	width: min( 1920px, 100%);
 	padding-inline: 24px;
 	margin-inline: auto;
@@ -164,7 +164,11 @@ input[type="submit"] {
 	padding-inline: 16px;
 	}
 }
-
+.container-slim{
+	width: min(924px, 100%);
+	padding-inline: 0!important;
+	
+}
 .social-block, .social-block a{
 	display: flex;
 	align-items: center;

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (){
+	$('.lazy').lazy();
 	const bodyEl = document.body;
 	/*=== preloader==== */
 	const preloader = document.getElementById('preloader');
