@@ -432,6 +432,22 @@ $(function() {
 			fileLabel.querySelector('.file-text').textContent = fileName;
 		});
 	}
-
+	/* toggle active class стр Магазины переключатель отображения */
+	
+		function toggleActiveClass(parentClass, childClass) {
+			const parents = document.querySelectorAll('.' + parentClass);
+			parents.forEach(parent => {
+				parent.addEventListener('click', function(e) {
+				
+					if (e.target.classList.contains(childClass)) {
+						parent.querySelectorAll('.' + childClass).forEach(child => {
+						child.classList.remove('active');
+						});
+						e.target.classList.add('active');
+					}
+				});
+			});
+		}
+		toggleActiveClass('toggle-group', 'toggle-item');
 
 });
