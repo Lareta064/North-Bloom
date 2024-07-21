@@ -1,4 +1,4 @@
-.h1, .h1-serif{
+.h1, .h1-serif, .title-96,.brand-label{
 	font-weight: 500;
 	font-size: 40px;
 	line-height: 1.2;
@@ -8,8 +8,18 @@
 		line-height: 1.25;
 	}
 }
-.h1-serif{
+.h1-serif, .title-96, .brand-label{
 	font-family: $serif;
+	
+}
+.title-96{
+	font-size: 96px;
+	@media (max-width: 1199px) {
+		font-size: 40px;
+	}
+	@media (max-width: 767px) {
+		font-size: 32px;
+	}
 }
 .h2{
 	font-weight: 500;

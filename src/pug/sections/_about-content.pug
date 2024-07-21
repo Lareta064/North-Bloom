@@ -1,0 +1,28 @@
+section.about
+	.container
+		//====хлебные крошки===
+		.breadcrumbs
+			a(href="index.html") Главная
+			a(href="#!")  О Бренде
+			//===== этот пункт хлебных крошек отображается на экранах до 1024px
+			p
+				a(href="index.html").txt-24.chevron-link
+					svg.svg-chevron-left
+						use(href='./img/sprite.svg#svg-chevron-left')
+					span Вернуться
+		
+		h1.h1-serif.txt-center Производитель качественной верхней одежды "NorthBloom" из Санкт-Петербурга
+		.about-hero
+			picture
+				source(srcset="./img/about-w370@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+				source(srcset="./img/about-w1024@2x.webp", media="(max-width: 1199px) and (min-resolution: 192dpi)")
+				source(srcset="./img/about-w1024.webp", media="(max-width: 1199px)")
+				source(srcset="./img/about@2x.webp")
+				
+				img(src="./img/about.webp", width="1872" height="1248" alt="img")
+		
+		.about-description.custom-text
+			.about-description__title
+				p Наш лозунг
+				.title-96 NorthBloom – все дело в качестве!
+				span.brand-label Работаем с 1997
