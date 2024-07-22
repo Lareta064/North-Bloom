@@ -9,9 +9,21 @@
 		flex-direction: column;
 		row-gap:16px;
 	}
+	.blue-card{
+		ol, ul
+		{margin-top: 60px;
+			li+li{margin-top: 24px;}
+		}
+	}
 	.manual-content__img{
 		position: sticky;
 		top:64px;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		@media (max-width: 1279px) {
+		aspect-ratio: 343 / 487;
+		}
 	}
 	@media (max-width: 767px) {
 	.grey-card, .blue-card{
@@ -22,4 +34,8 @@
 }
 .manual-symbols{
 	.h2{margin-bottom: 24px;}
+	svg[class^="svg-"]{
+		width: 48px;
+		height: 48px;
+	}
 }

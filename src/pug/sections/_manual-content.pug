@@ -53,9 +53,9 @@ section.manual
 							+svg-icon('iron')
 							p Гладить при температуре не выше 110°С
 			//=====video acordion====
-			.manual-content__img
-				picture
-					source(srcset="./img/manual-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
-					source(srcset="./img/manual-w375.webp", media="(max-width: 767px)")
-					source(srcset="./img/manual@2x.webp"  media="(min-resolution: 192dpi)")
-					img.lazy.img-cover(src="./img/manual.webp", width="923" height="1384" alt="img")
+			.manual-content__img(style="background-image: url('./img/manual.webp')")
+				//- picture
+				//- 	source(srcset="./img/manual-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+				//- 	source(srcset="./img/manual-w375.webp", media="(max-width: 767px)")
+				//- 	source(srcset="./img/manual@2x.webp"  media="(min-resolution: 192dpi)")
+				//- 	img.lazy.img-cover(src="./img/manual.webp", width="923" height="1384" alt="img")

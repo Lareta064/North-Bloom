@@ -51,8 +51,6 @@
 	}
 }
 
-
-
  .swiper-rect {
  	position: absolute;
  	top: 0;
@@ -61,7 +59,12 @@
 	background: linear-gradient(90deg,#E3000F 30%, #2e394d 30%, #2e394d 100%,);
  	z-index: 10;
  	display: none;
-	
+	@media (max-width: 1199px) {
+		width: 360px;
+	}
+	@media (max-width: 767px) {
+		width: 250px;
+	}
  }
 
  @keyframes slideRectForward {
@@ -69,7 +72,7 @@
  		transform: translateX(0);
 		
  	}
-	80%{
+	70%{
 		width: 360px;
 	}
  	100% {
@@ -85,7 +88,7 @@
  		transform: translateX(calc(100vw - 100%));
 		
  	}
-	80% {
+	70% {
 		width: 360px;
 	}
  	100%{
@@ -93,5 +96,79 @@
 		
 		width: 0;
  		/* Moving the entire width of the swiper */
+ 	}
+ }
+ @media (max-width: 1199px) {
+	@keyframes slideRectForward {
+			0% {
+				transform: translateX(0);
+
+			}
+
+			80% {
+				width: 260px;
+			}
+
+			100% {
+				transform: translateX(calc(100vw - 100%));
+
+				width: 0;
+				/* Moving the entire width of the swiper */
+			}
+		}
+
+		@keyframes slideRectBackward {
+			0% {
+				transform: translateX(calc(100vw - 100%));
+
+			}
+
+			80% {
+				width: 260px;
+			}
+
+			100% {
+				transform: translateX(0);
+
+				width: 0;
+				/* Moving the entire width of the swiper */
+			}
+		}
+ }
+ @media (max-width: 767px) {
+ 	@keyframes slideRectForward {
+ 		0% {
+ 			transform: translateX(0);
+
+ 		}
+
+ 		70% {
+ 			width: 100px;
+ 		}
+
+ 		100% {
+ 			transform: translateX(calc(100vw - 100%));
+
+ 			width: 0;
+ 			/* Moving the entire width of the swiper */
+ 		}
+ 	}
+
+ 	@keyframes slideRectBackward {
+ 		0% {
+ 			transform: translateX(calc(100vw - 100%));
+
+ 		}
+
+ 		70% {
+ 			width: 100px;
+ 		}
+
+ 		100% {
+ 			transform: translateX(0);
+
+ 			width: 0;
+ 			/* Moving the entire width of the swiper */
+ 		}
  	}
  }

@@ -199,16 +199,14 @@ document.addEventListener("DOMContentLoaded", function (){
 	var heroSlider = new Swiper(".main-hero-slider", {
 	   slidesPerView: 1,
 	   speed: TRANSITION,
-	   
+	   loop:true,
 	   lazy: true,
-	    parallax: true,
-		
+	   parallax: true,
        effect: "creative",
-	  allowTouchMove: false,  //Disable dragging with mouse or touch
+	   allowTouchMove: false,  //Disable dragging with mouse or touch
        creativeEffect: {
         prev: {
           shadow: true,
-        //   translate: ["-100%", 0, -1],
           translate: ["-20%", 0, -1],
         },
         next: {
@@ -236,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			clickable: true,
       	},
 		autoplay:{
-			duration: 4500,
+			duration: 5500,
 			delay:4500,
 			 disableOnInteraction: false,
 		}
