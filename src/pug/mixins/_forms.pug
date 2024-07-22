@@ -38,7 +38,7 @@ mixin form-item-error( label="Введите логин", inpName="name")
 		//======Если к классу tooltip добавить класс tooltip--right, то расположение подсказки будет с правой стороны от иконки======
 		.tooltip
 			.tooltip-icon
-				+svg-icon-ui('info')
+				+svg-icon('info')
 			.tooltip-box
 				p Текст ошибки в несколько строк, например, неправильный ввод E-mail.
 		label #{label}
@@ -50,5 +50,5 @@ mixin form-item-passw
 		label Введите пароль
 		.form-input.form-input--pass
 			span.input-icon
-				+svg-icon-ui('eye')
+				+svg-icon('eye')
 			input(type="password" name="user_pass" placeholder="Введите пароль")

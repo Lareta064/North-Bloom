@@ -8,7 +8,7 @@
 	
 }
 
-.svg-bar, .svg-check{
+.svg-bar, .svg-check, .brand-logo{
 	color: var(--fill-icon);
 }
 .svg-bar, .svg-check, .svg-chevron-down,.svg-chevron-up, .svg-chevron-left, .svg-chevron-right,.svg-close, .svg-dry, .svg-eye, .svg-eye-close, .svg-info, .svg-minus, .svg-paper, .svg-pin, .svg-plus, .svg-search, .svg-video,.svg-burger{
@@ -60,5 +60,5 @@
 .brand-logo{
 	width: 334px;
 	height: 318px;
-	color: var(--text-black);
+	opacity:0.2;
 }

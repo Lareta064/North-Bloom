@@ -1,0 +1,22 @@
+.page-404__content{
+	width: min(380px, 100%);
+	margin-inline: auto;
+	text-align: center;
+	.logo-404{
+		column-gap:10px;
+		margin-bottom: 48px;
+		.brand-logo{
+			opacity: 1;
+			width: 204px;
+			height: 198px;
+		}
+		span{
+			font-weight: 600;
+			font-size: 120px;
+			line-height: 0.83;
+			// letter-spacing: normal;
+			// font-family: "Inter", sans-serif;
+		}
+	}
+		
+}

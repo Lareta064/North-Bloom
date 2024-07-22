@@ -1,0 +1,65 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper.page-wrapper--white
+		include ../sections/_header
+		main.inner-main
+			section.page-404
+				//====хлебные крошки===
+				.breadcrumbs
+					//===ссылки отображаются на десктоп версии и скрываются на < 1024px
+					a(href="index.html") Главная
+					a(href="#!") 404
+					//===== этот пункт хлебных крошек отображается на экранах до 1024px
+					p
+						a(href="index.html").txt-24.chevron-link
+							svg.svg-chevron-left
+								use(href='./img/sprite.svg#svg-chevron-left')
+							span Вернуться
+				//====content ====
+				.page-404__content
+					.logo-404
+						span 4
+						svg.brand-logo
+							use(href='./img/sprite.svg#brand-logo')
+						span 4
+					.txt-24.mb-16  К сожалению, запрашиваемой страницы на сайте нет.
+					a(href="index.html").blue-link.mb-8 Главная страница
+					a(href="catalogy.html").blue-link Каталог товаров
+					a(href="#!" data-target="modal-support").blue-link.mt-40 Сообщить об ошибке
+
+		//=========MODAL SUPPORT (открывается по клику на элемент с data-target="modal-support")======
+		//=====Окно отображается добавлением через скрипт класса active. Скрипт прописан для компонентов с атрибутом  data-modal ===
+		.modal-wrapper.modal-support(data-modal="modal-support")
+			.modal-body.bg-grey.form-wrapper.form-wrapper--large
+				//===btn close popup ===
+				button(type="button" data-role="modal-close").btn-close
+					svg.svg-close
+						use(href='./img/sprite.svg#svg-close')
+				.txt-center.mb-48
+					.h2 Сообщить об ошибке
+				form(action="#" enctype="multipart/form-data").form-light.contact-form
+					
+					.form-column-2
+						+form-item("Введите имя", "name")
+						+form-item("Введите Email", "email")
+					.form-item
+						label Комментарии
+						textarea(name="message" placeholder="Пример заполнения")
+					//===кастомный инпут выбора файла, есть к нему скрипт в файле main.js====
+					.form-item
+						.custom-file-input
+							input#file-input.file-input(type='file')
+							label.file-label(for='file-input')
+								span.file-text Прикрепить файл
+								+svg-icon('paper')
+					.form-btn
+						button(type="submit").btn-accent.w-100 Отправить
+					.form-item.txt-center
+						.txt-14.txt-center Нажимая кнопку «Зарегистрироваться», вы принимаете <br> условия пользовательского соглашения
+		
+		include ../sections/_footer
+		
+
+block variables
+	-var title = "Контакты";

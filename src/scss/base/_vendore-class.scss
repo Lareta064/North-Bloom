@@ -14,13 +14,13 @@
 	color: var(--style);
 }
 .flx-center,.btn-toggle-search,.center-group,
-.btn-clear,.flx-center-column,.close-btn,.btn-play,.toggle-item {
+.btn-clear,.flx-center-column,.close-btn,.btn-play,.toggle-item,.logo-404, .page-404__content {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.flx-center-column {
+.flx-center-column, .page-404__content {
 	flex-direction: column;
 }
 

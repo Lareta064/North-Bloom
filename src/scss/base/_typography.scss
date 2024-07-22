@@ -95,13 +95,24 @@
 		border-bottom: 1px solid currentColor;
 	}
 }
-.accent-link{
+.accent-link, .blue-link{
 	color: var(--link);
+}
+.blue-link{
+	transition: .3s;
+	
+	border-bottom: 1px solid currentColor;
+	display: inline-block;
+	
+
+	&:hover {
+		opacity: .7;
+	}
 }
 .link-group{
 	&>*+*{margin-top: 8px;}
 }
-.size-table-link{
+.size-table-link, *.txt-grey{
 	color: var(--text-grey);
 }
 .link-text{
@@ -110,7 +121,7 @@
 	text-decoration-skip-ink: none;
 	
 	&:hover {
-		border-bottom: 1px solid transparent;
+		text-decoration: none;
 	}
 }
 
