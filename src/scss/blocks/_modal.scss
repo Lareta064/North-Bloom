@@ -37,3 +37,25 @@
 	//    bottom: 0;
 	}
 }
+.modal-wrapper--success {
+
+	.modal-body {
+		height: 476px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		&__content{max-width: 700px; margin-inline: auto;}	
+		&__content>*+* {
+			margin-top: 20px;
+		}
+
+		@media (max-width: 767px) {
+			height: calc(100dvh - 56px);
+
+			&__content>*+* {
+				margin-top: 8px;
+			}
+		}
+	}
+}
