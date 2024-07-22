@@ -195,24 +195,42 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	//======== swiper sliders ==========
+	const TRANSITION = 1300;
 	var heroSlider = new Swiper(".main-hero-slider", {
 	   slidesPerView: 1,
-	   speed: 1000,
-	   loop: true,
+	   speed: TRANSITION,
+	   
 	   lazy: true,
 	    parallax: true,
 		
        effect: "creative",
-	    allowTouchMove: false,  // Disable dragging with mouse or touch
+	  allowTouchMove: false,  //Disable dragging with mouse or touch
        creativeEffect: {
         prev: {
           shadow: true,
+        //   translate: ["-100%", 0, -1],
           translate: ["-20%", 0, -1],
         },
         next: {
           translate: ["100%", 0, 0],
         },
       },
+	  on: {
+        slideChangeTransitionStart: function () {
+          var swiperRect = document.querySelector('.swiper-rect');
+          swiperRect.style.display = 'block';
+			if (heroSlider.activeIndex < heroSlider.previousIndex) {
+            swiperRect.style.animation = `slideRectForward ${TRANSITION}ms `;
+          } else {
+            swiperRect.style.animation = `slideRectBackward ${TRANSITION}ms`;
+          }
+        },
+        slideChangeTransitionEnd: function () {
+          var swiperRect = document.querySelector('.swiper-rect');
+          swiperRect.style.display = 'none';
+          swiperRect.style.animation = 'none'; // Reset animation
+        },
+	},
         pagination: {
         	el: ".main-hero-pagination",
 			clickable: true,
