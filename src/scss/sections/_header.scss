@@ -52,6 +52,9 @@
 	.header{
 		background-color: var(--style);
 		* {color: var(--text-black) !important;}
+		.menu-list-child a:hover{
+			opacity: .7;
+		}
 	}
 }
 .logo{
