@@ -109,7 +109,8 @@
 		opacity: .7;
 	}
 }
-.link-group{
+.links-column{}
+.link-group, .links-column{
 	&>*+*{margin-top: 8px;}
 }
 .size-table-link, *.txt-grey{

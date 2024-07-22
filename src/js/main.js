@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	window.addEventListener('resize', updateFancyboxAxis);
 
 	//======= modal wrapper ========
-	const modals = document.querySelectorAll('[data-modal]');
+	const modals = document.querySelectorAll('.modal-wrapper');
 	if(modals.length > 0){
 		const modalOpenButtons = document.querySelectorAll('[data-target]');
 		const modalCloseButtons = document.querySelectorAll('[data-role]');
@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 		for(let modalClose of modalCloseButtons){
 			modalClose.addEventListener('click', (e)=>{
-				modalClose.closest('[data-modal]').classList.remove('active');
+				modalClose.closest('.modal-wrapper').classList.remove('active');
 				bodyEl.classList.remove('lock');
 			})
 		}

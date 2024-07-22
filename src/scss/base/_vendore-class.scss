@@ -14,14 +14,15 @@
 	color: var(--style);
 }
 .flx-center,.btn-toggle-search,.center-group,
-.btn-clear,.flx-center-column,.close-btn,.btn-play,.toggle-item,.logo-404, .page-404__content {
+.btn-clear,.flx-center-column,.close-btn,.btn-play,.toggle-item,.logo-404, .page-404__content,.links-column {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.flx-center-column, .page-404__content {
+.flx-center-column, .page-404__content,.links-column {
 	flex-direction: column;
+	
 }
 
 .w-100{width: 100%!important;}
