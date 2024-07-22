@@ -1,0 +1,9 @@
+mixin tableRows(values, numRows)
+	if values.length !== 5
+		throw new Error('The array must contain exactly 5 numbers')
+	tbody
+		each rowIndex in [...Array(numRows).keys()]
+			tr
+				each value, index in values
+					- const cellValue = index === 1 ? ' 164 - 172' : value + rowIndex * 4
+					td= cellValue

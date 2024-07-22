@@ -46,8 +46,14 @@
 	margin-bottom: 60px;
 }
 .scroll-wrapper{
-	width: 100%;
-	overflow: hidden;
+	
+	@media (max-width: 1039px) {
+		width: calc(50% + 50vw);
+		overflow: hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+	}
 	
 }
 
