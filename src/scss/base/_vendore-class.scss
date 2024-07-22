@@ -45,6 +45,10 @@
 	width: min(924px, 100%);
 	margin-bottom: 60px;
 }
+.section-title.section-title--center{
+	margin-inline: auto;
+	text-align: center;
+}
 .scroll-wrapper{
 	
 	@media (max-width: 1039px) {
@@ -55,6 +59,26 @@
 		&::-webkit-scrollbar{display: none;}
 	}
 	
+}
+.grey-card,
+.blue-card {
+	&+*{margin-top: 16px;}
+	background: var(--bg-bg-grey);
+	padding: 32px 40px 48px;
+
+	&>*+* {
+		margin-top: 16px;
+	}
+
+	@media (max-width: 767px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+.blue-card {
+	background-color: var(--bg-blue);
+	&>*{color: var(--style);}
 }
 
 .mt-8{

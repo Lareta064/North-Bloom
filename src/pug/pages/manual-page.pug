@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper.page-wrapper--white
+		include ../sections/_header
+		main.inner-main
+
+			include ../sections/_manual-content
+
+		include ../sections/_footer
+		
+
+block variables
+	-var title = "Руководство по уходу";

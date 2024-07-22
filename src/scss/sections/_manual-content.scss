@@ -1,0 +1,25 @@
+.manual{
+	
+	&-content__left, &-content__img{
+		grid-column:  span 6;
+		@media (max-width: 1279px) {grid-column: span 12;}
+	}
+	&-content__left{
+		display: flex;
+		flex-direction: column;
+		row-gap:16px;
+	}
+	.manual-content__img{
+		position: sticky;
+		top:64px;
+	}
+	@media (max-width: 767px) {
+	.grey-card, .blue-card{
+		margin-left: -16px;
+		margin-right: -16px;
+	}
+	}
+}
+.manual-symbols{
+	.h2{margin-bottom: 24px;}
+}

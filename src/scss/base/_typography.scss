@@ -145,6 +145,20 @@
 	list-style-type: disc;
 	margin-left: 16px;
 }
+.icons-list{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap:24px;
+	row-gap:16px;
+	li{
+		display: flex;
+		flex-direction: column;
+		row-gap:8px;
+	}
+	@media (max-width: 767px) {
+	grid-template-columns: 1fr;
+	}
+}
 .custom-text, *.custom-text {
 	&>*+*{margin-top: 32px!important;}
 	p+p{margin-top: 12px!important;}

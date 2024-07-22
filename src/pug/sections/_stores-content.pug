@@ -11,7 +11,8 @@ section.stores
 						use(href='./img/sprite.svg#svg-chevron-left')
 					span Вернуться
 		
-		h1.h1-serif.txt-center.mb-32 Где купить одежду NorthBloom
+		.section-title.section-title--center
+			h1.h1-serif Где купить одежду NorthBloom
 		.filters-block.flx-center
 			+select2("Название города", 'city_name')(class="filter-select")
 			+select2("Тип магазина", 'store_type')(class="filter-select")
