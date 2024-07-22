@@ -203,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    parallax: true,
 		
        effect: "creative",
+	    allowTouchMove: false,  // Disable dragging with mouse or touch
        creativeEffect: {
         prev: {
           shadow: true,
@@ -218,7 +219,8 @@ document.addEventListener("DOMContentLoaded", function (){
       	},
 		autoplay:{
 			duration: 4500,
-			delay:4500
+			delay:4500,
+			 disableOnInteraction: false,
 		}
     });
 	var prodSlider = new Swiper('.slider', {
