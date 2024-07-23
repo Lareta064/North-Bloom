@@ -30,7 +30,7 @@ section.stores
 		.stories-tables.active(data-content="stories-tables")
 			//======блок для одного типа магазина ======
 			.stores-content__block
-				h2.h2.txt-center.mb-24  Фирменные магазины
+				h2.h2  Фирменные магазины
 					//===== table =====
 				.stores-table
 					//===== table head =====
@@ -43,146 +43,148 @@ section.stores
 								p Адрес
 							.cell-contact
 								p Телефон
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
+					.stores-table__body
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+										+svg-icon('fleur')
+										p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Сенная
+										span.dot-item м. Бульвар Адмирала Ушакова
+
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
 									+svg-icon('fleur')
 									p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Сенная
-									span.dot-item м. Бульвар Адмирала Ушакова
+								.cell-address
+									p г. Москва, м. Бутырская, Огородный пр., д.10
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Новокузнецкая
+										span.dot-item м. Белорусский вокзал
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+									a(href="tel:+78121232323") +7 (812) 123-23-23
 
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+									+svg-icon('fleur')
+									p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, Волоколамское шоссе,3
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Ховрино
+										span.dot-item м. Речной порт
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+									+svg-icon('fleur')
+									p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Сенная
+										span.dot-item м. Бульвар Адмирала Ушакова
 
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								+svg-icon('fleur')
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, м. Бутырская, Огородный пр., д.10
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Новокузнецкая
-									span.dot-item м. Белорусский вокзал
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
-								a(href="tel:+78121232323") +7 (812) 123-23-23
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+									+svg-icon('fleur')
+									p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Сенная
+										span.dot-item м. Бульвар Адмирала Ушакова
 
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								+svg-icon('fleur')
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, Волоколамское шоссе,3
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Ховрино
-									span.dot-item м. Речной порт
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
-								a(href="tel:+78121232323") +7 (812) 123-23-23
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								+svg-icon('fleur')
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Сенная
-									span.dot-item м. Бульвар Адмирала Ушакова
-
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								+svg-icon('fleur')
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Сенная
-									span.dot-item м. Бульвар Адмирала Ушакова
-
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23		
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
 			//======блок для одного типа магазина ======
 			.stores-content__block
-				h2.h2.txt-center.mb-24 Мультибрендовые магазин
+				h2.h2 Мультибрендовые магазин
 					//===== table =====
 				.stores-table
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Сенная
-									span.dot-item м. Бульвар Адмирала Ушакова
+					.stores-table__body
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+									p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Сенная
+										span.dot-item м. Бульвар Адмирала Ушакова
 
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
 
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, м. Бутырская, Огородный пр., д.10
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Новокузнецкая
-									span.dot-item м. Белорусский вокзал
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
-								a(href="tel:+78121232323") +7 (812) 123-23-23
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+									p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, м. Бутырская, Огородный пр., д.10
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Новокузнецкая
+										span.dot-item м. Белорусский вокзал
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+									a(href="tel:+78121232323") +7 (812) 123-23-23
 
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, Волоколамское шоссе,3
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Ховрино
-									span.dot-item м. Речной порт
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
-								a(href="tel:+78121232323") +7 (812) 123-23-23
-					//===== table row =====
-					.stores-table__row
-						.content-grid
-							.cell-title
-								p Фирменный магазин "NorthBloom"
-							.cell-address
-								p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
-								.cell-row
-									span.store-name ТЦ “ПИК”
-									span.dot-item м. Сенная
-									span.dot-item м. Бульвар Адмирала Ушакова
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+									p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, Волоколамское шоссе,3
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Ховрино
+										span.dot-item м. Речной порт
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+									a(href="tel:+78121232323") +7 (812) 123-23-23
+						//===== table row =====
+						.stores-table__row
+							.content-grid
+								.cell-title
+									p Фирменный магазин "NorthBloom"
+								.cell-address
+									p г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32
+									.cell-row
+										span.store-name ТЦ “ПИК”
+										span.dot-item м. Сенная
+										span.dot-item м. Бульвар Адмирала Ушакова
 
-							.cell-contact
-								a(href="tel:+78121232323") +7 (812) 123-23-23
+								.cell-contact
+									a(href="tel:+78121232323") +7 (812) 123-23-23
 		
 		.stores-content-map(data-content="stories-map")
 			.container

@@ -1,5 +1,11 @@
 .filters-block{
 	.filter-select{min-width: 292px;}
+	.h2{
+		padding-inline: 24px;
+		@media (max-width: 1199px) {
+			padding-inline: 16px;
+		}
+	}
 }
 
 .stores-content{
@@ -27,7 +33,7 @@
 	.content-grid{
 		@media (max-width: 767px) {row-gap:8px;}
 	}
-	&__row:nth-child(2n+3){
+	&__body &__row:nth-child(2n){
 		background: #f9f9f9;
 	}
 	&__row{

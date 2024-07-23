@@ -5,29 +5,30 @@ block content
 		include ../sections/_header
 		main.inner-main
 			section.page-404
-				//====хлебные крошки===
-				.breadcrumbs
-					//===ссылки отображаются на десктоп версии и скрываются на < 1024px
-					a(href="index.html") Главная
-					a(href="#!") 404
-					//===== этот пункт хлебных крошек отображается на экранах до 1024px
-					p
-						a(href="index.html").txt-24.chevron-link
-							svg.svg-chevron-left
-								use(href='./img/sprite.svg#svg-chevron-left')
-							span Вернуться
-				//====content ====
-				.page-404__content
-					.logo-404
-						span 4
-						svg.brand-logo
-							use(href='./img/sprite.svg#brand-logo')
-						span 4
-					.txt-24.mb-16  К сожалению, запрашиваемой страницы на сайте нет.
-					.links-column
-						a(href="index.html").blue-link Главная страница
-						a(href="catalogy.html").blue-link Каталог товаров
-					a(href="#!" data-target="modal-support").blue-link.mt-40 Сообщить об ошибке
+				.container
+					//====хлебные крошки===
+					.breadcrumbs
+						//===ссылки отображаются на десктоп версии и скрываются на < 1024px
+						a(href="index.html") Главная
+						a(href="#!") 404
+						//===== этот пункт хлебных крошек отображается на экранах до 1024px
+						p
+							a(href="index.html").txt-24.chevron-link
+								svg.svg-chevron-left
+									use(href='./img/sprite.svg#svg-chevron-left')
+								span Вернуться
+					//====content ====
+					.page-404__content
+						.logo-404
+							span 4
+							svg.brand-logo
+								use(href='./img/sprite.svg#brand-logo')
+							span 4
+						.txt-24.mb-16  К сожалению, запрашиваемой страницы на сайте нет.
+						.links-column
+							a(href="index.html").blue-link Главная страница
+							a(href="catalogy.html").blue-link Каталог товаров
+						a(href="#!" data-target="modal-support").blue-link.mt-40 Сообщить об ошибке
 
 		//=========MODAL SUPPORT (открывается по клику на элемент с data-target="modal-support")======
 		//=====Окно отображается добавлением через скрипт класса active. Скрипт прописан для компонентов с атрибутом  data-modal ===

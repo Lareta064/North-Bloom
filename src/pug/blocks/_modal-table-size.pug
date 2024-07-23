@@ -7,10 +7,9 @@ mixin tableRows(values, numRows)
 				each value, index in values
 					- const cellValue = index === 1 ? ' 164 - 172' : value + rowIndex * 4
 					td= cellValue
-
-		
+	
 //=======SIZE TABLE MODAL (открывается по клику на элемент с data-target="size-table")======	
-.modal-wrapper.size-table-wrapper(data-modal="size-table")
+.modal-wrapper.size-table-wrapper.modal-wrapper--scroll(data-modal="size-table")
 	.modal-body
 		//===btn close popup ===
 		button(type="button" data-role="modal-close").btn-close

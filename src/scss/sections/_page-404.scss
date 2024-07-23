@@ -9,14 +9,22 @@
 			opacity: 1;
 			width: 204px;
 			height: 198px;
+			animation-name: scale;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			transform: rotate(-10deg);
 		}
 		span{
 			font-weight: 600;
 			font-size: 120px;
 			line-height: 0.83;
-			// letter-spacing: normal;
-			// font-family: "Inter", sans-serif;
+			
 		}
 	}
-		
+}
+@keyframes scale{
+	0%{
+		transform: rotate(10deg);
+	}
 }

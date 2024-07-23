@@ -1,0 +1,20 @@
+//=========MODAL Описание технологии (открывается по клику на элемент с data-target="modal-technology")======
+.modal-wrapper.modal-wrapper--scroll.modal-technology(data-modal="modal-technology")
+	.modal-body
+		//===btn close popup ===
+		button(type="button" data-role="modal-close").btn-close
+			svg.svg-close
+				use(href='./img/sprite.svg#svg-close')
+		//==== title-block ====	
+		.section-title.d-flex.mb-48
+			.h1-serif Утеплитель Valtherm
+			.technology-logo
+				img(src="./img/technology-logo.webp", width="134" height="41" alt="img")
+		p.mb-32 Для максимального и безопасного утепления курток, наша команда выбрала  гипоаллергенное полотно, имеющее структуру «сот», что способствует  отводу влаги от тела человека для сохранения комфортного микроклимата  внутри изделия. Утеплитель обладает прекрасной прочностью, лёгкостью и  воздухопроницаемостью. Он прекрасно восстанавливает форму после стирки и  быстро высыхает. Используется в качестве основного утеплителя различной  плотности (в зависимости от части тела, которую утепляет). Входит в  систему WarmSave.
+		.technology-picture
+			.semi-16.mb-16 Утеплитель Valtherm имеет европейский сертификат эко-безопасности Oeko-Tex Standard 100.
+			picture
+				source(srcset="./img/technology-img-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+				source(srcset="./img/technology-img-w375.webp", media="(max-width: 767px)")
+				source(srcset="./img/technology-img@2x.webp"  media="(min-resolution: 192dpi)")
+				img.lazy(src="./img/technology-img.webp", width="782" height="782" alt="img")

@@ -1,16 +1,3 @@
-.size-table-wrapper{
-	padding-block:3rem;
-	align-items: flex-start;
-	height: 100%;
-	overflow-y: auto;
-	@media (max-width: 767px) {
-		padding-block: 0;
-		.ss-wrapper {
-			width: calc(50% + 50vw);
-		}
-	}
-}
-
 .size-table{
 	table-layout: fixed;
 	width: auto;
