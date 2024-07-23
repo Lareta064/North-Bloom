@@ -247,19 +247,19 @@ document.addEventListener("DOMContentLoaded", function (){
       	},
 	});
 	
-  /********WINDOW SCROLL EVENTS********* */
-  const productPage = document.getElementById('product-page');
-  window.addEventListener('scroll', (e)=>{
-	if(window.scrollY > 0){
-		headerEl.classList.add('active');
-		if(productPage){headerEl.classList.add('header-white-bg');}
-	}else{
-		headerEl.classList.remove('active');
-		if(productPage){headerEl.classList.remove('header-white-bg');}
-	}	
-  });
-   
-    //========= fancybox==========
+	/********WINDOW SCROLL EVENTS********* */
+	const productPage = document.getElementById('product-page');
+	window.addEventListener('scroll', (e)=>{
+		if(window.scrollY > 0){
+			headerEl.classList.add('active');
+			if(productPage){headerEl.classList.add('header-white-bg');}
+		}else{
+			headerEl.classList.remove('active');
+			if(productPage){headerEl.classList.remove('header-white-bg');}
+		}	
+	});
+	
+	//========= fancybox==========
 	$('[data-fancybox]').fancybox({
 		thumbs: {
 			autoStart: true, // автоматически отображать панель с миниатюрами
@@ -302,107 +302,119 @@ document.addEventListener("DOMContentLoaded", function (){
 					}
 				}
 			});
+			
 		}
 		for(let modalClose of modalCloseButtons){
 			modalClose.addEventListener('click', (e)=>{
 				modalClose.closest('.modal-wrapper').classList.remove('active');
 				bodyEl.classList.remove('lock');
-			})
+			});
 		}
+		for(let modal of modals){
+			
+			modal.addEventListener('click', (e)=>{
+				if(e.target == e.currentTarget){
+					modal.classList.remove('active');
+					bodyEl.classList.remove('lock');
+				}
+			});
+		}
+
 	}
+	
 	;(function ($, window, document, undefined) {
-    "use strict";
-    var pluginName = 'simpleAccordion',
-    defaults = {
-        multiple: false,
-        speedOpen: 300,
-        speedClose: 150,
-        easingOpen: null,
-        easingClose: null,
-        headClass: 'accordion-header',
-        bodyClass: 'accordion-body',
-        openClass: 'open',
-        defaultOpenClass: 'default-open',
-        cbClose: null, //function (e, $this) {},
-        cbOpen: null //function (e, $this) {}
-    };
-    function Accordion(element, options) {
-        this.$el = $(element);
-        this.options = $.extend({}, defaults, options);
-        this._defaults = defaults;
-        this._name = pluginName;
-        if (typeof this.$el.data('multiple') !== 'undefined') {
-            this.options.multiple = this.$el.data('multiple');
-            } else {
-            this.options.multiple = this._defaults.multiple;
-        }
-        this.init();
-    }
-    Accordion.prototype = {
-        init: function () {
-            var o = this.options,
-            $headings = this.$el.children('.' + o.headClass);
-            $headings.on('click', {_t:this}, this.headingClick);
-            $headings.filter('.' + o.defaultOpenClass).first().click();
-        },
-        headingClick: function (e) {
-            var $this = $(this),
-            _t = e.data._t,
-            o = _t.options,
-            $headings = _t.$el.children('.' + o.headClass),
-            $currentOpen = $headings.filter('.' + o.openClass);
-            if (!$this.hasClass(o.openClass)) {
-                if ($currentOpen.length && o.multiple === false) {
-                    $currentOpen.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
-                        if ($.isFunction(o.cbClose)) {
-                            o.cbClose(e, $currentOpen);
-                        }
-                        $this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
-                            if ($.isFunction(o.cbOpen)) {
-                                o.cbOpen(e, $this);
-                            }
-                        });
-                    });
-                    } else {
-                    $this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
-                        $this.removeClass(o.defaultOpenClass);
-                        if ($.isFunction(o.cbOpen)) {
-                            o.cbOpen(e, $this);
-                        }
-                    });
-                }
-                } else {
-                $this.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
-                    if ($.isFunction(o.cbClose)) {
-                        o.cbClose(e, $this);
-                    }
-                });
-            }
-        }
-    };
-    $.fn[pluginName] = function (options) {
-        return this.each(function () {
-            if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName,
-                new Accordion(this, options));
-            }
-        });
-    };
-}(jQuery, window, document));
+	"use strict";
+	var pluginName = 'simpleAccordion',
+	defaults = {
+		multiple: false,
+		speedOpen: 300,
+		speedClose: 150,
+		easingOpen: null,
+		easingClose: null,
+		headClass: 'accordion-header',
+		bodyClass: 'accordion-body',
+		openClass: 'open',
+		defaultOpenClass: 'default-open',
+		cbClose: null, //function (e, $this) {},
+		cbOpen: null //function (e, $this) {}
+	};
+	function Accordion(element, options) {
+		this.$el = $(element);
+		this.options = $.extend({}, defaults, options);
+		this._defaults = defaults;
+		this._name = pluginName;
+		if (typeof this.$el.data('multiple') !== 'undefined') {
+			this.options.multiple = this.$el.data('multiple');
+			} else {
+			this.options.multiple = this._defaults.multiple;
+		}
+		this.init();
+	}
+	Accordion.prototype = {
+		init: function () {
+			var o = this.options,
+			$headings = this.$el.children('.' + o.headClass);
+			$headings.on('click', {_t:this}, this.headingClick);
+			$headings.filter('.' + o.defaultOpenClass).first().click();
+		},
+		headingClick: function (e) {
+			var $this = $(this),
+			_t = e.data._t,
+			o = _t.options,
+			$headings = _t.$el.children('.' + o.headClass),
+			$currentOpen = $headings.filter('.' + o.openClass);
+			if (!$this.hasClass(o.openClass)) {
+				if ($currentOpen.length && o.multiple === false) {
+					$currentOpen.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+						if ($.isFunction(o.cbClose)) {
+							o.cbClose(e, $currentOpen);
+						}
+						$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+							if ($.isFunction(o.cbOpen)) {
+								o.cbOpen(e, $this);
+							}
+						});
+					});
+					} else {
+					$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+						$this.removeClass(o.defaultOpenClass);
+						if ($.isFunction(o.cbOpen)) {
+							o.cbOpen(e, $this);
+						}
+					});
+				}
+				} else {
+				$this.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+					if ($.isFunction(o.cbClose)) {
+						o.cbClose(e, $this);
+					}
+				});
+			}
+		}
+	};
+	$.fn[pluginName] = function (options) {
+		return this.each(function () {
+			if (!$.data(this, 'plugin_' + pluginName)) {
+				$.data(this, 'plugin_' + pluginName,
+				new Accordion(this, options));
+			}
+		});
+	};
+	}(jQuery, window, document));
 
-$(function() {
-    $('.accordion-group').simpleAccordion({
-        cbClose: function(e, $header) {
-            var video = $header.next('.accordion-body').find('.video')[0];
-            if (video && !video.paused) {
-                video.pause();
-                $(video).parent().removeClass('active');
-            }
-        }
-    });
-});
+	$(function() {
+		$('.accordion-group').simpleAccordion({
+			cbClose: function(e, $header) {
+				var video = $header.next('.accordion-body').find('.video')[0];
+				if (video && !video.paused) {
+					video.pause();
+					$(video).parent().removeClass('active');
+				}
+			}
+		});
+	});
 
- document.querySelectorAll('.btn-play-wrapper').forEach(button => {
+ 	document.querySelectorAll('.btn-play-wrapper').forEach(button => {
         button.addEventListener('click', function() {
             var videoWrapper = this.closest('.video-wrapper');
             var video = videoWrapper.querySelector('.video');
@@ -471,7 +483,7 @@ $(function() {
 
 		/* Отображать карту или таблицы по клику на кнопки переключения */
 		const storiesDisplayToggle = document.querySelectorAll('[data-display]');
-		console.log(storiesDisplayToggle);
+		
 		if(storiesDisplayToggle.length >0){
 			
 			const storiesDisplayContent = document.querySelectorAll('[data-content]');

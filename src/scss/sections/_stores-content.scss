@@ -1,11 +1,6 @@
 .filters-block{
 	.filter-select{min-width: 292px;}
-	.h2{
-		padding-inline: 24px;
-		@media (max-width: 1199px) {
-			padding-inline: 16px;
-		}
-	}
+	
 }
 
 .stores-content{
@@ -28,6 +23,18 @@
 	}
 }
 .stories-tables >*+*{margin-top: 40px;}
+.stores-content__block{
+
+	.h2 {
+		padding-inline: 24px;
+		margin-bottom: 24px;
+		text-align: center;
+	
+		@media (max-width: 1199px) {
+			padding-inline: 16px;
+		}
+	}
+}
 .stores-table{
 	width: 100%;
 	.content-grid{

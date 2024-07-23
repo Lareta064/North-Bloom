@@ -6,7 +6,12 @@ section.vacacies
 			a(href="index.html") Главная
 			a(href="#!") о компании
 			a(href="#!") вакансии
-		
+			//===== этот пункт хлебных крошек отображается на экранах до 1024px
+			p
+				a(href="index.html").txt-24.chevron-link
+					svg.svg-chevron-left
+						use(href='./img/sprite.svg#svg-chevron-left')
+					span Вернуться
 		//====заголовок===
 		.section-title
 			h1.h1-serif Вакансии
