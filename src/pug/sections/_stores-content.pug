@@ -21,7 +21,7 @@ section.stores
 				.display-table.toggle-item.active(data-display="stories-tables")
 					+svg-icon('bar')
 					span Список
-				.display-map.toggle-item(data-display="stories-map")
+				.display-map.toggle-item#loadMapButton(data-display="stories-map")
 					+svg-icon('pin')
 					span На карте
 			
@@ -189,5 +189,4 @@ section.stores
 		.stores-content-map(data-content="stories-map")
 			.container
 				//====== ОТОБРАЖЕНИЕ НА КАРТЕ =====
-				.stories-map
-					iframe.lazy(src="https://yandex.ru/map-widget/v1/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&amp;source=constructor" )
+				.stories-map#map

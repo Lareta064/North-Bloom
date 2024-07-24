@@ -12,16 +12,23 @@
 .stories-map{
 	width: 100%;
 	height: 800px;
-	display: block;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	background-color: lightgray;
+	@media (max-width: 767px) {
+		height: 600px;
+	}
 	iframe{
 		width: 100%;
 		height: 100%;
 		border:0;
 	}
-	@media (max-width: 767px) {
-	height: 600px;
-	}
+	
 }
+
 .stories-tables >*+*{margin-top: 40px;}
 .stores-content__block{
 
