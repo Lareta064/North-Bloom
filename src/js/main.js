@@ -202,17 +202,18 @@ document.addEventListener("DOMContentLoaded", function (){
 	   loop:true,
 	   lazy: true,
 	   parallax: true,
-       effect: "creative",
+	   effect: "fade",
+    	// effect: "creative",
 	   allowTouchMove: false,  //Disable dragging with mouse or touch
-       creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: ["-20%", 0, -1],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      },
+    //    creativeEffect: {
+    //     prev: {
+    //       shadow: true,
+    //       translate: ["-20%", 0, -1],
+    //     },
+    //     next: {
+    //       translate: ["100%", 0, 0],
+    //     },
+    //   },
 	  on: {
         slideChangeTransitionStart: function () {
           var swiperRect = document.querySelector('.swiper-rect');

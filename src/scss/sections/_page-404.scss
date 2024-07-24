@@ -9,11 +9,11 @@
 			opacity: 1;
 			width: 204px;
 			height: 198px;
-			animation-name: scale;
-			animation-duration: 3s;
+			animation-name: rotate;
+			animation-duration: 5s;
 			animation-iteration-count: infinite;
-			animation-direction: alternate;
-			transform: rotate(-10deg);
+			// animation-direction: alternate;
+			// transform: rotate(-10deg);
 		}
 		span{
 			font-weight: 600;
@@ -23,8 +23,8 @@
 		}
 	}
 }
-@keyframes scale{
-	0%{
-		transform: rotate(10deg);
+@keyframes rotate{
+	100%{
+		transform: rotate(360deg);
 	}
 }
