@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	$('.lazy').lazy();
 	const bodyEl = document.body;
 	/*=== preloader==== */
-	const preloader = document.getElementById('preloader');
-	if(preloader){
-		setTimeout(()=>{
-			preloader.classList.add('preloader-hide');
-		}, 3500);
-	}
+	// const preloader = document.getElementById('preloader');
+	// if(preloader){
+	// 	setTimeout(()=>{
+	// 		preloader.classList.add('preloader-hide');
+	// 	}, 3500);
+	// }
 	/*====cooki popup remove=====*/
 	const cookiPopup = document.querySelector('.cooki-popup');
 	if(cookiPopup){

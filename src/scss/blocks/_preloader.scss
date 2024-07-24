@@ -2,15 +2,14 @@
 	position: fixed;
 	inset:0;
 	z-index: 99;
-	
 	row-gap:87px;
-	animation: scale;
-	animation-delay: var(--preloaderHideDelay);
+	animation: scaleHide;
+	animation-delay: var(--preloaderHideDelay);/*переменная, через это время прелоадер исчезает за счет применения css анимации по имени preloader*/
 	animation-duration: .3s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
 	padding-bottom: 24px;
-	&.preloader-hide{display: none;}
+	
 	&-bottom{
 		position: absolute;
 		bottom: 24px;
@@ -18,8 +17,37 @@
 		transform: translateX(-50%);
 
 	}
-	.logo{
-		width: 420px;
+	&-logo{
+		width: 419px;
+		transform: scale(0);
+		animation-name: scale;
+		animation-duration: 1.5s;
+		animation-fill-mode:forwards;
+		animation-delay:.3s;
+		.flx-center{
+			column-gap:16px;
+		}
+		.brand-logo{
+			width:56px;
+			height: 56px;
+			color: white;
+			opacity: 1;
+			animation-name: rotate;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+		.svg-logo-text{
+			width: 345px;
+			height: 38px;
+			
+			
+		}
+		.svg-logo-label{
+			width: 145px;
+			height: 27px;
+			margin-top: 8px;
+			margin-left: auto;
+		}
 		@media (max-width: 1023px) {
 		width: 219px;
 		}
@@ -57,23 +85,42 @@
 		width: 0;
 		background-color: var(--logo-red);
 		opacity: 1;
-		animation:preloader ;
+		animation:preloaderLine ;
 		animation-delay: .5s;
 		animation-duration: var(--preloaderFillDuration);
 		animation-fill-mode: forwards;
 		animation-timing-function: ease-in-out;
 	}
 }
-@keyframes preloader{
+@keyframes preloaderLine{
 	to{
 		width: 100%;
 	}
 }
-@keyframes scale {
+@keyframes scaleHide {
 	to {
 		transform: scale(0);
 		opacity: 0;
 		border-radius: 10%;
 		
+	}
+}
+@keyframes preloader {
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(0);
+		
+	}
+	50% {
+		transform: scale(1.1);
+
+	}
+	100%{
+		transform: scale(1);
 	}
 }

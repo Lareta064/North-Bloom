@@ -1,8 +1,13 @@
 //===заставка-прелоадер, анимирована при помощи css анимации. Длительность вынесена в переменные ===
 .preloader.bg-blue.flx-center-column#preloader
 	//====logo====
-	.logo
-		+svg-icon('logo')
+	.preloader-logo
+		.flx-center
+			svg.brand-logo
+				use(href='./img/sprite.svg#brand-logo')
+			+svg-icon('logo-text')
+		.d-flex
+			+svg-icon('logo-label')
 	//====line====
 	.preloader-line
 		span
