@@ -232,6 +232,14 @@ document.addEventListener("DOMContentLoaded", function (){
 			disableOnInteraction: false,
 		}
 	});
+	// Добавить класс active первому слайду при загрузке слайдера
+
+    var initialSlide = heroSlider.slides[heroSlider.activeIndex];
+    var initialText = initialSlide.querySelector('.hero-slide__text');
+    if (initialText) {
+        initialText.classList.add('active');
+    }
+
 	/*===single product slider=== */
 	var prodSlider = new Swiper('.slider', {
 		speed: 1000,
