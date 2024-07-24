@@ -1,6 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
+	include ../blocks/_preloader
 	.start-page
 		h1 North Bloom
 		.start-page__cards
@@ -36,7 +37,5 @@ block content
 				span Таблицы размеров
 			a(href="manual-page.html")
 				span Инструкция по уходу
-			a(href="preloader.html")
-				span Заставка
 block variables
 	-var title = "Start page";

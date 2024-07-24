@@ -30,7 +30,7 @@
 		z-index: 9;
 		display: none;
 		background-color: var(--bg-bg-grey);
-		transform: translateY(20px);
+		transform: translateY(-15px);
 		&.menu-list-child--right {right: auto; left: 0;}
 		a {
 			color: var(--fill-icon);
@@ -80,7 +80,8 @@
 }
 @keyframes showSubmenu{
 	to{
-		transform: translateY(0);
+		opacity: 1;
+		transform: translateY(1px);
 	}
 }
 .header-menu-wrapper{
