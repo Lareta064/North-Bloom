@@ -232,14 +232,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			disableOnInteraction: false,
 		}
 	});
+	const mainSlider = document.querySelector('.main-hero-slider');
 	// Добавить класс active первому слайду при загрузке слайдера
-
-    var initialSlide = heroSlider.slides[heroSlider.activeIndex];
-    var initialText = initialSlide.querySelector('.hero-slide__text');
-    if (initialText) {
-        initialText.classList.add('active');
-    }
-
+	if(mainSlider){
+		var initialSlide = heroSlider.slides[heroSlider.activeIndex];
+		var initialText = initialSlide.querySelector('.hero-slide__text');
+		if (initialText) {
+			initialText.classList.add('active');
+		}
+	}
 	/*===single product slider=== */
 	var prodSlider = new Swiper('.slider', {
 		speed: 1000,
