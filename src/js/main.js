@@ -192,8 +192,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	var heroSlider = new Swiper(".main-hero-slider", {
 		slidesPerView: 1,
 		speed: TRANSITION,
-		loop: true,
-		lazy: true,
+		// loop: true,
+		// lazy: true,
 		effect: "fade",
 		allowTouchMove: false, // Disable dragging with mouse or touch
 
