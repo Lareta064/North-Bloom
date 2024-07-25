@@ -26,12 +26,11 @@
 		z-index: 2;
 		bottom: 70px;
 		left: 50%;
-		opacity: 0;
-		transform: translateX(-50%) scale(0.8);
-		transition: opacity 0.3s, transform 0.3s;
+		transform: translateX(-50%);
+		// transition: opacity 0.3s, transform 0.3s;
 		color: white;
 		text-align: center;
-		
+		opacity: 0;
 		.svg-chevron-right{
 			color: var(--style);
 		}
@@ -53,11 +52,12 @@
 	}
 }
 .hero-slide__text.active {
-	opacity: 1;
-	transform:translateX(-50%) scale(1);
-	animation: textZoomIn var(--slideTitleAnimation) forwards;
+	// opacity:0;
+	// transform:translateX(-50%);
+	
 	animation-name: textZoomIn;
 	animation-duration:var(--slideTitleAnimation);
+	animation-duration: 5s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
 }
@@ -66,14 +66,14 @@
  	top: 0;
  	height: 100%;
  	width: 440px;
-	background: linear-gradient(90deg,#E3000F 140px, #2e394d 140px, #2e394d 300px);
+	background: linear-gradient(90deg,#E3000F 32%, #2e394d 32%, #2e394d 100%);
 	
  	z-index: 10;
  	display: none;
 	
 	@media (max-width: 767px) {
 		width: 180px;
-		background: linear-gradient(90deg, #E3000F 60px, #2e394d 60px, #2e394d 180px);
+		
 	}
  }
 @keyframes slideRectBackward {
@@ -82,21 +82,19 @@
 
 	}
 
-	70% {
-		width: 380px;
-		background: linear-gradient(90deg, #E3000F 90px, #2e394d 90px, #2e394d 380px);
+	80% {
+		width: 160px;
+		transform: translateX(0);
+		background: linear-gradient(90deg, #E3000F 32%, #2e394d 32%, #2e394d 100%);
 	}
-	80%{
-		width: 210px;
-		background: linear-gradient(90deg, #E3000F 70px, #2e394d 70px, #2e394d 210px);
-	}
-	90% {
-		width: 90px;
-		background: linear-gradient(90deg, #E3000F 30px, #2e394d 30px, #2e394d 90px);
+	85% {
+		width: 160px;
+		transform: translateX(0);
+		background: linear-gradient(90deg, #E3000F 32%, #2e394d 32%, #2e394d 100%);
 	}
 	100% {
-		transform: translateX(-10px);
-		width: 0;
+		transform: translateX(-100px);
+		width: 160px;
 
 	}
 }
@@ -127,15 +125,15 @@
 	@keyframes slideRectBackward {
 		0% {transform: translateX(98vw);}
 	
-			70% {
-				width: 90px;
-				background: linear-gradient(90deg, #E3000F 30px, #2e394d 30px, #2e394d 90px);
-			}
-			
-			100% {
-				transform: translateX(-10px);
-				width: 0;
-			}
+		70% {
+			width: 90px;
+		
+		}
+		
+		100% {
+			transform: translateX(-10px);
+			width: 0;
+		}
 	}
 	@keyframes slideRectForward {
 		0% {transform: translateX(0);}
@@ -159,20 +157,18 @@
 
  @keyframes textZoomIn {
  	0% {
- 		transform: translateX(-50%) scale(0.8);
+ 		
  		opacity: 0;
  	}
 
- 	20% {
- 		transform: translateX(-50%) scale(1);
+ 	30%, 70% {
+ 		
  		opacity: 1;
  	}
-	70% {
-		transform: translateX(-50%) scale(1);
-		opacity: 1;
-	}
+	
+	
 	100%{
-		transform: translateX(-50%) scale(0.8);
+		
 		opacity: 0;
 	}
  }
