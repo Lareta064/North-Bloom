@@ -241,13 +241,34 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	/*===single product slider=== */
-	var prodSlider = new Swiper('.slider', {
-		speed: 1000,
-		pagination: {
-        	el: ".slider-pagination",
-			clickable: true,
-      	},
-	});
+	const sliders = document.querySelectorAll('.slider');
+    sliders.forEach((slider) => {
+        const swiperInstance = new Swiper(slider, {
+            loop: true,
+			speed:1000,
+            pagination: {
+                el: slider.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+            autoplay: {
+                delay: 600,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Останавливаем автоплей по умолчанию
+        swiperInstance.autoplay.stop();
+
+        // Запускаем автоплей при наведении
+        slider.addEventListener('mouseenter', () => {
+            swiperInstance.autoplay.start();
+        });
+
+        // Останавливаем автоплей, когда курсор покидает область слайдера
+        slider.addEventListener('mouseleave', () => {
+            swiperInstance.autoplay.stop();
+        });
+    });
 	
 	/********WINDOW SCROLL EVENTS********* */
 	const productPage = document.getElementById('product-page');
