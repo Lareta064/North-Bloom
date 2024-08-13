@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function (){
 	function resetActiveMenu(){
 		mobileMenu.classList.remove('active');
 		menuToggle.classList.remove('active');
-		
 	}
 	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
