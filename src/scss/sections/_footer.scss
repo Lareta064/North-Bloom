@@ -104,6 +104,6 @@
 	display: flex;
 	flex-direction: column;
 	row-gap:8px;
-	a{white-space:nowrap ;}
+	// a{white-space:nowrap ;}
 	a{transition: .3s; &:hover{color: var(--text-grey);}}
 }

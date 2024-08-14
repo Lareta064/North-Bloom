@@ -29,7 +29,20 @@
 	--preloaderFillDuration:4s;
 	--slideTitleAnimation: 4.8s;
 }
+.body-animate{opacity: 0;}
+.body-animate.fade-in {
+	animation: fadeInAnimation 1s ease-in-out forwards;
+}
 
+@keyframes fadeInAnimation {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
 *, *:after, *:before {
 	box-sizing: border-box;
 	background-repeat: no-repeat;
@@ -58,7 +71,9 @@ body {
 	font-weight: 400;
 	letter-spacing: -0.02em;
 	-webkit-font-smoothing: antialiased;
+	
 }
+
 body.lock{
 	height: 100vh;
 	overflow: hidden;

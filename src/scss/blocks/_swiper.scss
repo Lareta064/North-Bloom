@@ -3,15 +3,33 @@
 
 	.swiper-pagination-bullets {
 		bottom: -5px!important;
+		line-height: 1;
+		font-size:0;
+		
 	}
-
-	.swiper-pagination-bullet {
+	.swiper-pagination-bullet{
+		position: relative;
+		height: 12px;
+		width: 56px;
+		margin-left: 2px;
+		margin-right: 2px;
+		border-radius: 0;
+		background-color: transparent;
+		opacity: 1;
+		cursor: pointer;
+		@media (max-width: 767px) {width: 40px;}
+	}
+	.swiper-pagination-bullet:after {
+		content:'';
+		display: block;
 		height: 2px;
 		width: 56px;
 		background-color: var(--grey-line);
 		
-		margin-left: 2px;
-		margin-right: 2px;
+		position: absolute;
+		top: 5px;
+		left: 0;
+		opacity: 1;
 		transition: .3s;
 		border-radius: 1px;
 		@media (max-width: 767px) {
@@ -19,7 +37,7 @@
 		}
 	}
 
-	.swiper-pagination-bullet-active {
+	.swiper-pagination-bullet-active:after {
 		background-color: #6f6f6f;
 	}
 
@@ -38,10 +56,13 @@
 	.swiper-pagination {
 		.swiper-pagination-bullet {
 			opacity: unset;
-			background-color: rgba(255,255,255, .3);
+			
 			
 			position: relative;
 			overflow: hidden;
+			&:after{
+			background-color: rgba(255,255,255, .3);	
+			}
 			&:before{
 				content: '';
 				position: absolute;
@@ -57,8 +78,8 @@
 
 		.swiper-pagination-bullet-active {
 			opacity: unset;
-			background-color: rgba(255, 255, 255, .3);
-			&:before {
+			// background-color: rgba(255, 255, 255, .3);
+			&:after {
 				width: 100%;
 				background-color: rgba(255, 255, 255, 1);
 				z-index: 10;

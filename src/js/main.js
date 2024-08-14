@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function (){
 	$('.lazy').lazy();
 	const bodyEl = document.body;
-	
+	const bodyAnimate = document.querySelector('.body-animate');
+	if(bodyAnimate)
+		bodyAnimate.classList.add("fade-in");
 	/*====cooki popup remove=====*/
 	const cookiPopup = document.querySelector('.cooki-popup');
 	if(cookiPopup){
