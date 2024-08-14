@@ -22,8 +22,8 @@
 		}
 		.swiper .swiper-pagination{
 			bottom: 40px!important;
-			.swiper-pagination-bullet{background: var(--text-black); opacity:1}
-			.swiper-pagination-bullet-active{background: #6f6f6f; }
+			.swiper-pagination-bullet:after{background: var(--text-black); opacity:1}
+			.swiper-pagination-bullet-active:after{background: #6f6f6f; }
 			
 		}
 		.swiper-gallery__img{
@@ -75,4 +75,7 @@
 }
 .product-foto.product-foto--stretch{
 	grid-column: span 12;
+	display: flex;
+	justify-content: center;
 }
+.single-product__gallery  .product-foto{text-align: center;}
