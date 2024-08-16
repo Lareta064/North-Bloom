@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function (){
 	function hideSerchForm(formBlock){
 		formBlock.classList.remove('active');
 		bodyEl.classList.remove('lock');
-		
 	}
 	function resetActiveMenu(){
 		mobileMenu.classList.remove('active');

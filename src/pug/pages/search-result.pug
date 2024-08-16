@@ -4,7 +4,7 @@ block content
 	.page-wrapper.page-wrapper--white
 		include ../sections/_header
 		main.inner-main
-			section.search-result.search-result--empty
+			section.search-result
 				.container
 					//====хлебные крошки===
 					.breadcrumbs
@@ -17,10 +17,10 @@ block content
 								svg.svg-chevron-left
 									use(href='./img/sprite.svg#svg-chevron-left')
 								span Куртки
-					//====content ====
-					.search-result__content.flx-center-column
+					//====сообщение, если  поиск не дал результатов ====
+					.search-result--empty
 						.txt-24.mb-16  К сожалению, запрашиваемой страницы на сайте нет.
-						p Мы предлагаем вам посмотреть наши новые модели одежды для #[a(href="index.html").blue-link мужчин] и #[a(href="index.html").blue-link женщин]
+						p Мы предлагаем вам посмотреть наши новые модели одежды для #[br.visible-mobile] #[a(href="index.html").blue-link мужчин] и #[a(href="index.html").blue-link женщин]
 							
 		include ../sections/_footer
 		
