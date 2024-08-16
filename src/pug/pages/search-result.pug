@@ -1,0 +1,29 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper.page-wrapper--white
+		include ../sections/_header
+		main.inner-main
+			section.search-result.search-result--empty
+				.container
+					//====хлебные крошки===
+					.breadcrumbs
+						//===ссылки отображаются на десктоп версии и скрываются на < 1024px
+						a(href="index.html") Главная
+						a(href="#!") Верхняя одежда
+						//===== этот пункт хлебных крошек отображается на экранах до 1024px
+						p
+							a(href="index.html").txt-24.chevron-link
+								svg.svg-chevron-left
+									use(href='./img/sprite.svg#svg-chevron-left')
+								span Куртки
+					//====content ====
+					.search-result__content.flx-center-column
+						.txt-24.mb-16  К сожалению, запрашиваемой страницы на сайте нет.
+						p Мы предлагаем вам посмотреть наши новые модели одежды для #[a(href="index.html").blue-link мужчин] и #[a(href="index.html").blue-link женщин]
+							
+		include ../sections/_footer
+		
+
+block variables
+	-var title = "Контакты";
