@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--====favicon ======-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!--====убрать перевод цифр в номер телефона на ios  ======-->
+  <meta name="format-detection" content="telephone=no">
+  <!--======= swiper slider ======-->
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+  <!--============ fancybox =============-->
+  <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
+  <!--======= main styles ======-->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Заявка принята!</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Regular.woff2) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Medium.woff2) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Bold.woff2) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SuisseIntl-Regular';
+      src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto Serif';
+      src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper bg-blue">
+    <!--====== HEADER=====-->
+    <header class="header header--special" id="header">
+      <!--==== HEADER SEARCH BLOCK ====-->
+      <div class="header-search-wrapper flx-center" id="search-form">
+        <div class="container">
+          <form class="search-form">
+            <div class="form-item form-item--border">
+              <div class="form-input">
+                <input type="search" name="search_input" placeholder="Что Вы ищите?">
+                <!--===== кнопка reset ====-->
+                <button class="btn-clear" type="reset">
+                  <svg class="svg-close">
+                    <use href="./img/sprite.svg#svg-close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="header-container d-flex">
+        <!--===LOGO====-->
+        <div class="header-left-col">
+          <a class="logo logo--white" href="index.html">
+            <svg class="svg-logo">
+              <use href="./img/sprite.svg#svg-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <!--=== MENU WRAPPER =====-->
+        <div class="header-menu-wrapper" id="menu">
+          <div class="header-menu">
+            <ul class="menu-list flx-center">
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для мужчин</a>
+                <div class="menu-list-child bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для женщин</a>
+                <div class="menu-list-child menu-list-child--right bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Женская Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Женская Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item">
+                <a href="stores.html">Где купить</a>
+              </li>
+              <!--====пункт виден в мобильном меню-->
+              <li class="menu-list-item d-none d-md-block">
+                <a href="#!">Оптовикам </a>
+              </li>
+            </ul>
+            <!--====блок для моб версии ====-->
+            <div class="header-menu-block d-none d-md-block">
+              <div class="social-block">
+                <a href="#!">
+                  <img src="./img/svg-social/vk2.svg" alt="vk">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/vc2.svg" alt="vc">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/dzen2.svg" alt="dzen">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/tg2.svg" alt="tg">
+                </a>
+              </div>
+              <p>&copy;NorthBloom  1997 - 2024 г.</p>
+            </div>
+          </div>
+        </div>
+        <!--=====right column====-->
+        <div class="header-right-col">
+          <button class="btn-toggle-search" id="search-btn">
+            <svg class="svg-search">
+              <use href="./img/sprite.svg#svg-search"></use>
+            </svg>
+          </button>
+          <!--====пункт виден на экранах от 1024 пикс ===-->
+          <a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
+          <!--=====mobile menu-toggle===-->
+          <button class="menu-toggle" type="button" id="menu-toggle">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="success-message">
+      <!--==== LEFT COLUMN ====-->
+      <div class="success-message__text flx-center">
+        <div class="txt-center">
+          <h1 class="title">Ваша заявка принята!</h1>
+          <p class="mt-16">В ближайшее время с Вами свяжется менеджер.</p>
+        </div>
+      </div>
+      <!--==== RIGHT COLUMN ====-->
+      <div class="success-message__banner">
+        <source srcset="./img/img-w370@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
+        <source srcset="./img/img-w370.webp" media="(max-width: 767px)">
+        <source srcset="./img/img@2x.webp" media="(min-resolution: 192dpi)">
+        <source srcset="./img/img.webp" type="image/webp">
+        <img class="lazy img-cover" src="./img/img.webp" alt="img">
+      </div>
+    </main>
+  </div>
+  <!--=============== jquery ==================-->
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <script src="./libs/jquery.lazy.min.js"></script>
+  <!--=============== swiper js ===============-->
+  <script src="./libs/swiper/swiper.js"></script>
+  <!--============fancybox====================-->
+  <script src="./libs/fancybox/fancybox.js"></script>
+  <!--=============== main js ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

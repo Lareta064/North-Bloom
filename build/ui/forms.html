@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--====убрать синий цвет у ссылок в сафари ========-->
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>UI-KIT</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url(../fonts/Inter-Regular.woff2) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(../fonts/Inter-Medium.woff2) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(../fonts/Inter-SemiBold.woff2) format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(../fonts/Inter-Bold.woff2) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SuisseIntl-Regular';
+      src: url(../fonts/SuisseIntl-Regular.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto Serif';
+      src: url(../fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body class="body-dashboard">
+  <div class="ui-panel">
+    <div class="ui-panel-block">
+      <div class="ui-panel-block__part">
+        <a class="back-index" href="http://localhost:3000/">На Главную</a>
+        <h3>Базовые компоненты</h3>
+        <ul>
+          <li>
+            <a href="colors.html">Цветовая схема</a>
+          </li>
+          <li>
+            <a href="grid.html">Grid </a>
+          </li>
+          <li>
+            <a href="typography.html">Типографика</a>
+          </li>
+          <li>
+            <a href="positions-classes.html">Классы</a>
+          </li>
+          <li>
+            <a href="icons.html">Иконки</a>
+          </li>
+          <li>
+            <a href="buttons.html">Кнопки</a>
+          </li>
+          <li>
+            <a href="forms.html">Форма</a>
+          </li>
+          <li>
+            <a href="components.html">Компоненты</a>
+          </li>
+          <li>
+            <a href="product-card.html">Карточка продукта</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Блоки</h3>
+        <ul>
+          <li>
+            <a href="#!">Блок</a>
+          </li>
+          <li>
+            <a href="#!">Блок</a>
+          </li>
+          <li>
+            <a href="#!">Блок</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Секции</h3>
+        <ul>
+          <li>
+            <a href="#!">Секции</a>
+          </li>
+          <li>
+            <a href="#!">Секции</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Страницы </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-dashboard">
+    <h2>Форма</h2>
+    <div class="container-dashboard__content">
+      <h3>Custom select</h3>
+      <div class="dark-bg" style="padding:30px;">
+        <div class="form-item" plh="Пример заполнения" inpName="input_name" Выбрать город="Выбрать город">
+          <label>Название поля</label>
+          <div class="dropdown">
+            <button class="dropdown__button" type="button">
+              <span>Пример заполнения</span>
+            </button>
+            <div class="dropdown__list">
+              <ul>
+                <li class="dropdown__list-item" data-value="Пример заполнения 1">Пример заполнения 1</li>
+                <li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
+                <li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
+                <li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
+              </ul>
+            </div>
+            <!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
+            <input class="dropdown__input-hidden" type="text" name="undefined" />
+          </div>
+        </div>
+      </div>
+      <pre>+select(plh="Пример заполнения", inpName = 'input_name', 'Выбрать город')</pre>
+      <hr />
+      <h3>Поле в форме поиска</h3>
+      <div class="search-form">
+        <div class="form-item form-item--border">
+          <div class="form-input">
+            <input type="search" name="search_input" placeholder="Что Вы ищите?" />
+            <!--===== кнопка reset ====-->
+            <button class="btn-clear flx-center" type="reset">
+              <svg class="svg-close">
+                <use href="../img/sprite.svg#svg-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <pre>.search-form
+	.form-item.form-item--border
+		.form-input
+			input(type="search" name="search_input" placeholder="Что Вы ищите?")
+			//===== кнопка reset ====
+			button.btn-clear.flx-center(type="reset")
+				svg.svg-close
+					use(href='./img/sprite.svg#svg-close')</pre>
+      <hr />
+      <h3>Миксин элемента формы</h3>
+      <pre>+form-item( label="Введите логин", inpName="name")</pre>
+      <hr />
+      <div class="dark-bg" style="padding:30px;">
+        <div class="form-item">
+          <label>Введите телефон</label>
+          <div class="form-input">
+            <input type="text" name="phone" placeholder="Пример заполнения" />
+          </div>
+        </div>
+      </div>
+      <pre>+form-item( 'Введите телефон', 'phone')</pre>
+      <hr />
+      <h3>Невалидное поле. Подсказка по наведению</h3>
+      <div>
+        <div class="form-item">
+          <!--======Если к классу tooltip добавить класс tooltip--right, то расположение подсказки будет с правой стороны от иконки======-->
+          <div class="tooltip">
+            <div class="tooltip-icon">
+              <svg class="svg-info">
+                <use href="./img/sprite.svg#svg-info"></use>
+              </svg>
+            </div>
+            <div class="tooltip-box">
+              <p>Текст ошибки в несколько строк, например, неправильный ввод E-mail.</p>
+            </div>
+          </div>
+          <label>Введите логин</label>
+          <div class="form-input">
+            <input class="error" type="text" name="name" placeholder="Пример заполнения" />
+          </div>
+        </div>
+        <pre>+form-item-error( "Введите логин", "name")
+
+
+</pre>
+      </div>
+      <hr />
+      <h3>Форма с серыми полями + Показать / скрыть пароль</h3>
+      <form class="form-light">
+        <div class="form-item">
+          <label>Введите пароль</label>
+          <div class="form-input form-input--pass">
+            <span class="input-icon">
+              <svg class="svg-eye">
+                <use href="./img/sprite.svg#svg-eye"></use>
+              </svg>
+            </span>
+            <input type="password" name="user_pass" placeholder="Введите пароль" />
+          </div>
+        </div>
+      </form>
+      <pre>У формы класс .form-light
+form.form-light
+	+form-item-passw</pre>
+      <hr />
+      <h3>Формы шириной 608пикс - обертка .form-wrapper</h3>
+      <h3>Формы шириной 960пикс - обертка .form-wrapper.form-wrapper--large</h3>
+    </div>
+  </div>
+  <!--=============== jquery ===================-->
+  <script src="../libs/jquery/jquery-3.0.0.min.js"></script>
+  <!--=============== мои скрипты ===================-->
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

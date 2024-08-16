@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	$('.lazy').lazy();
 	const bodyEl = document.body;
 	
+	const bodyAnimate = document.querySelector('.body-animate');
+	if(bodyAnimate)
+		bodyAnimate.classList.add("fade-in");
+	
 	/*====cooki popup remove=====*/
 	const cookiPopup = document.querySelector('.cooki-popup');
 	if(cookiPopup){
@@ -25,12 +29,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	function hideSerchForm(formBlock){
 		formBlock.classList.remove('active');
 		bodyEl.classList.remove('lock');
-		
 	}
 	function resetActiveMenu(){
 		mobileMenu.classList.remove('active');
 		menuToggle.classList.remove('active');
-		
 	}
 	if(openSearchForm){
 		openSearchForm.addEventListener('click', ()=>{
@@ -242,13 +244,34 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	/*===single product slider=== */
-	var prodSlider = new Swiper('.slider', {
-		speed: 1000,
-		pagination: {
-        	el: ".slider-pagination",
-			clickable: true,
-      	},
-	});
+	const sliders = document.querySelectorAll('.slider');
+    sliders.forEach((slider) => {
+        const swiperInstance = new Swiper(slider, {
+            loop: true,
+			speed:1000,
+            pagination: {
+                el: slider.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+            autoplay: {
+                delay: 600,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Останавливаем автоплей по умолчанию
+        swiperInstance.autoplay.stop();
+
+        // Запускаем автоплей при наведении
+        slider.addEventListener('mouseenter', () => {
+            swiperInstance.autoplay.start();
+        });
+
+        // Останавливаем автоплей, когда курсор покидает область слайдера
+        slider.addEventListener('mouseleave', () => {
+            swiperInstance.autoplay.stop();
+        });
+    });
 	
 	/********WINDOW SCROLL EVENTS********* */
 	const productPage = document.getElementById('product-page');

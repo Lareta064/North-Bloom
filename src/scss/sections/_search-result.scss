@@ -1,0 +1,10 @@
+.search-result--empty{
+	padding-top:220px;
+	text-align: center;
+}
+.visible-mobile{
+	display: none;
+	@media (max-width: 767px) {
+	display: block;
+	}
+}

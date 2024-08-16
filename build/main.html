@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--====favicon ======-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!--====убрать перевод цифр в номер телефона на ios  ======-->
+  <meta name="format-detection" content="telephone=no">
+  <!--======= swiper slider ======-->
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+  <!--============ fancybox =============-->
+  <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
+  <!--======= main styles ======-->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Главная</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Regular.woff2) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Medium.woff2) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Bold.woff2) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SuisseIntl-Regular';
+      src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto Serif';
+      src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!--====== HEADER=====-->
+    <header class="header header--special" id="header">
+      <!--==== HEADER SEARCH BLOCK ====-->
+      <div class="header-search-wrapper flx-center" id="search-form">
+        <div class="container">
+          <form class="search-form">
+            <div class="form-item form-item--border">
+              <div class="form-input">
+                <input type="search" name="search_input" placeholder="Что Вы ищите?">
+                <!--===== кнопка reset ====-->
+                <button class="btn-clear" type="reset">
+                  <svg class="svg-close">
+                    <use href="./img/sprite.svg#svg-close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="header-container d-flex">
+        <!--===LOGO====-->
+        <div class="header-left-col">
+          <a class="logo logo--white" href="index.html">
+            <svg class="svg-logo">
+              <use href="./img/sprite.svg#svg-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <!--=== MENU WRAPPER =====-->
+        <div class="header-menu-wrapper" id="menu">
+          <div class="header-menu">
+            <ul class="menu-list flx-center">
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для мужчин</a>
+                <div class="menu-list-child bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для женщин</a>
+                <div class="menu-list-child menu-list-child--right bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Женская Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Женская Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item">
+                <a href="stores.html">Где купить</a>
+              </li>
+              <!--====пункт виден в мобильном меню-->
+              <li class="menu-list-item d-none d-md-block">
+                <a href="#!">Оптовикам </a>
+              </li>
+            </ul>
+            <!--====блок для моб версии ====-->
+            <div class="header-menu-block d-none d-md-block">
+              <div class="social-block">
+                <a href="#!">
+                  <img src="./img/svg-social/vk2.svg" alt="vk">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/vc2.svg" alt="vc">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/dzen2.svg" alt="dzen">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/tg2.svg" alt="tg">
+                </a>
+              </div>
+              <p>&copy;NorthBloom  1997 - 2024 г.</p>
+            </div>
+          </div>
+        </div>
+        <!--=====right column====-->
+        <div class="header-right-col">
+          <button class="btn-toggle-search" id="search-btn">
+            <svg class="svg-search">
+              <use href="./img/sprite.svg#svg-search"></use>
+            </svg>
+          </button>
+          <!--====пункт виден на экранах от 1024 пикс ===-->
+          <a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
+          <!--=====mobile menu-toggle===-->
+          <button class="menu-toggle" type="button" id="menu-toggle">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-hero">
+        <div class="main-hero-slider swiper">
+          <div class="swiper-wrapper">
+            <!--==== single slide =====-->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide__img">
+                  <picture>
+                    <source srcset="./img/main-slider/slide-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" width="767">
+                    <source srcset="./img/main-slider/slide-w375.webp" media="(max-width: 767px)" width="767">
+                    <source srcset="./img/main-slider/slide@2x.webp" media="(min-resolution: 192dpi)" width="1920" height="1080">
+                    <img src="./img/main-slider/slide.webp" width="1920" height="1080" alt="img">
+                  </picture>
+                </div>
+                <!--===== slide text ====-->
+                <div class="hero-slide__text">
+                  <div class="h1-serif">Коллекция NorthBloom Зима 2024</div>
+                  <div class="center-group mt-24">
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для мужчин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для женщин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--==== single slide =====-->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide__img">
+                  <picture>
+                    <source srcset="./img/main-slider/slide3-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" width="767">
+                    <source srcset="./img/main-slider/slide3-w375.webp" media="(max-width: 767px)" width="767">
+                    <source srcset="./img/main-slider/slide3@2x.webp" media="(min-resolution: 192dpi)" width="1920" height="1080">
+                    <img src="./img/main-slider/slide3.webp" width="1920" height="1080" alt="img">
+                  </picture>
+                </div>
+                <!--===== slide text ====-->
+                <div class="hero-slide__text">
+                  <div class="h1-serif">Коллекция NorthBloom Осень 2024</div>
+                  <div class="center-group mt-24">
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для мужчин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для женщин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--==== single slide =====-->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide__img">
+                  <picture>
+                    <source srcset="./img/main-slider/slide2-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" width="767">
+                    <source srcset="./img/main-slider/slide2-w375.webp" media="(max-width: 767px)" width="767">
+                    <source srcset="./img/main-slider/slide2@2x.webp" media="(min-resolution: 192dpi)" width="1920" height="1080">
+                    <img src="./img/main-slider/slide2.webp" width="1920" height="1080" alt="img">
+                  </picture>
+                </div>
+                <!--===== slide text ====-->
+                <div class="hero-slide__text">
+                  <div class="h1-serif">Коллекция NorthBloom Весна 2024</div>
+                  <div class="center-group mt-24">
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для мужчин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для женщин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--==== single slide =====-->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide__img">
+                  <picture>
+                    <source srcset="./img/main-slider/slide4-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)" width="767">
+                    <source srcset="./img/main-slider/slide4-w375.webp" media="(max-width: 767px)" width="767">
+                    <source srcset="./img/main-slider/slide4@2x.webp" media="(min-resolution: 192dpi)" width="1920" height="1080">
+                    <img src="./img/main-slider/slide4.webp" width="1920" height="1080" alt="img">
+                  </picture>
+                </div>
+                <!--===== slide text ====-->
+                <div class="hero-slide__text">
+                  <div class="h1-serif">Коллекция NorthBloom Лето 2024</div>
+                  <div class="center-group mt-24">
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для мужчин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                    <a class="txt-24 chevron-link" href="catalogy.html">
+                      <span>Для женщин</span>
+                      <svg class="svg-chevron-right">
+                        <use href="./img/sprite.svg#svg-chevron-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-hero-pagination swiper-pagination"></div>
+          <div class="swiper-rect"></div>
+        </div>
+      </section>
+    </main>
+    <!--============FOOTER============-->
+    <footer class="footer">
+      <div class="container">
+        <div class="content-grid footer-top">
+          <div class="footer-logo">
+            <a class="logo" href="#!">
+              <svg class="svg-logo">
+                <use href="./img/sprite.svg#svg-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <!--========nav column========-->
+          <nav class="menu-nav">
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <div class="semi-16">Для мужчин</div>
+              <a href="#!">Весна 2024 Мужская коллекция</a>
+              <a href="#!">Зима 2024 Мужская коллекция</a>
+            </div>
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <div class="semi-16">Для женщин</div>
+              <a href="#!">Весна 2024 Женская коллекция</a>
+              <a href="#!">Зима 2024 Женская коллекция</a>
+            </div>
+          </nav>
+          <!--========nav column========-->
+          <nav class="menu-nav menu-nav--right">
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <a href="#!">О бренде</a>
+              <a href="#!">Вакансии</a>
+              <a href="#!">Контакты</a>
+              <a href="#!">Где купить</a>
+            </div>
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <a href="#!">Технологии и материалы</a>
+              <a href="#!">Таблица размеров</a>
+              <a href="#!">Уход за изделеем</a>
+            </div>
+          </nav>
+        </div>
+        <!--======FOOTER BOTTOM ROW====-->
+        <div class="footer-bottom d-flex">
+          <div class="footer-copiryght">
+            <p>&copy;NorthBloom  1997 - 2024 г.</p>
+          </div>
+          <div class="footer-bottom__right d-flex">
+            <!--======social=======-->
+            <div class="social-block">
+              <a href="#!">
+                <img src="./img/svg-social/vk2.svg" alt="vk">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/vc2.svg" alt="vc">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/dzen2.svg" alt="dzen">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/tg2.svg" alt="tg">
+              </a>
+            </div>
+            <!--=======btn======-->
+            <div class="footer-button">
+              <button class="btn btn--slim" type="button">Написать вопрос директору</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup-wrapper cooki-popup">
+      <!--===btn close popup ===-->
+      <button class="btn-close" type="button">
+        <svg class="svg-close">
+          <use href="./img/sprite.svg#svg-close"></use>
+        </svg>
+      </button>
+      <!--===text ===-->
+      <div class="txt-18">Мы используем cookie</div>
+      <p class="txt-14">Продолжая пользоваться сайтом, вы даёте Согласие на автоматический сбор и анализ ваших данных, необходимых для работы сайта и его улучшения, использование файлов cookie.</p>
+      <button class="mt-24 btn btn--medium w-100" type="button">Согласен</button>
+    </div>
+  </div>
+  <!--=============== jquery ==================-->
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <script src="./libs/jquery.lazy.min.js"></script>
+  <!--=============== swiper js ===============-->
+  <script src="./libs/swiper/swiper.js"></script>
+  <!--============fancybox====================-->
+  <script src="./libs/fancybox/fancybox.js"></script>
+  <!--=============== main js ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -28,12 +28,13 @@ section.catalogy
 		
 			+product('product')
 			.stretch-card
-				picture
-					source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
-					source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
-					source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
-						
-					img.img-cover.lazy(src="./img/hit.webp", alt="")
+				a(href="single-product.html")
+					picture
+						source(srcset="./img/hit-w375@2x.webp", media="(max-width: 767px) and (min-resolution: 192dpi)")
+						source(srcset="./img/hit-w375.webp", media="(max-width: 767px)")
+						source(srcset="./img/hit@2x.webp", media="(min-resolution: 192dpi)")
+							
+						img.img-cover.lazy(src="./img/hit.webp", alt="")
 			
 			+product('product')
 		
