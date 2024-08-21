@@ -6,16 +6,6 @@ block content
 		main.inner-main
 			section.inner-search-form
 				.container
-					form.search-form
-						.form-item.form-item--border
-							.form-input
-								input(type="search" name="search_input" placeholder="Что Вы ищите?")
-								//===== кнопка reset ====
-								button.btn-clear(type="reset")
-									svg.svg-close
-										use(href='./img/sprite.svg#svg-close')
-			section.search-result
-				.container
 					//====хлебные крошки===
 					.breadcrumbs
 						//===ссылки отображаются на десктоп версии и скрываются на < 1024px
@@ -27,9 +17,21 @@ block content
 								svg.svg-chevron-left
 									use(href='./img/sprite.svg#svg-chevron-left')
 								span Куртки
+					//=====форма поиска=====
+					form.search-form
+						.form-item.form-item--border
+							.form-input
+								input(type="search" name="search_input" placeholder="Что Вы ищите?")
+								//===== кнопка reset ====
+								button.btn-clear(type="reset")
+									svg.svg-close
+										use(href='./img/sprite.svg#svg-close')
+			section.search-result
+				.container
+					
 					//====сообщение, если  поиск не дал результатов ====
 					.search-result--empty
-						.txt-24.mb-16  К сожалению, запрашиваемой страницы на сайте нет.
+						.txt-24.mb-16  Этот поиск не дал результата
 						p Мы предлагаем вам посмотреть наши новые модели одежды для #[br.visible-mobile] #[a(href="index.html").blue-link мужчин] и #[a(href="index.html").blue-link женщин]
 							
 		include ../sections/_footer
