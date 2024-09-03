@@ -383,41 +383,86 @@ document.addEventListener("DOMContentLoaded", function (){
 			$headings.on('click', {_t:this}, this.headingClick);
 			$headings.filter('.' + o.defaultOpenClass).first().click();
 		},
-		headingClick: function (e) {
-			var $this = $(this),
-			_t = e.data._t,
-			o = _t.options,
-			$headings = _t.$el.children('.' + o.headClass),
-			$currentOpen = $headings.filter('.' + o.openClass);
-			if (!$this.hasClass(o.openClass)) {
-				if ($currentOpen.length && o.multiple === false) {
-					$currentOpen.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
-						if ($.isFunction(o.cbClose)) {
-							o.cbClose(e, $currentOpen);
-						}
-						$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
-							if ($.isFunction(o.cbOpen)) {
-								o.cbOpen(e, $this);
-							}
-						});
-					});
-					} else {
+		// headingClick: function (e) {
+		// 	var $this = $(this),
+		// 	_t = e.data._t,
+		// 	o = _t.options,
+		// 	$headings = _t.$el.children('.' + o.headClass),
+		// 	$currentOpen = $headings.filter('.' + o.openClass);
+		// 	if (!$this.hasClass(o.openClass)) {
+		// 		if ($currentOpen.length && o.multiple === false) {
+		// 			$currentOpen.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+		// 				if ($.isFunction(o.cbClose)) {
+		// 					o.cbClose(e, $currentOpen);
+		// 				}
+		// 				$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+		// 					if ($.isFunction(o.cbOpen)) {
+		// 						o.cbOpen(e, $this);
+		// 					}
+		// 				});
+		// 			});
+		// 			} else {
+		// 			$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+		// 				$this.removeClass(o.defaultOpenClass);
+		// 				if ($.isFunction(o.cbOpen)) {
+		// 					o.cbOpen(e, $this);
+		// 				}
+		// 			});
+		// 		}
+		// 		} else {
+		// 		$this.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+		// 			if ($.isFunction(o.cbClose)) {
+		// 				o.cbClose(e, $this);
+		// 			}
+		// 		});
+		// 	}
+		// }
+	
+	
+	headingClick: function (e) {
+    var $this = $(this),
+        _t = e.data._t,
+        o = _t.options,
+        $headings = _t.$el.children('.' + o.headClass),
+        $currentOpen = $headings.filter('.' + o.openClass),
+        $accordionGroup = _t.$el; // Ссылка на accordion-group
+    
+		// Проверяем, есть ли класс .accordion-group--open
+		var isGroupOpen = $accordionGroup.hasClass('accordion-group--open');
+
+		if (!$this.hasClass(o.openClass)) {
+			// Если класс .accordion-group--open есть, или multiple включен, не закрываем другие
+			if (!isGroupOpen && $currentOpen.length && o.multiple === false) {
+				$currentOpen.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+					if ($.isFunction(o.cbClose)) {
+						o.cbClose(e, $currentOpen);
+					}
 					$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
-						$this.removeClass(o.defaultOpenClass);
 						if ($.isFunction(o.cbOpen)) {
 							o.cbOpen(e, $this);
 						}
 					});
-				}
-				} else {
-				$this.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
-					if ($.isFunction(o.cbClose)) {
-						o.cbClose(e, $this);
+				});
+			} else {
+				$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+					$this.removeClass(o.defaultOpenClass);
+					if ($.isFunction(o.cbOpen)) {
+						o.cbOpen(e, $this);
 					}
 				});
 			}
+		} else {
+			$this.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+				if ($.isFunction(o.cbClose)) {
+					o.cbClose(e, $this);
+				}
+			});
 		}
+	}
+	
 	};
+
+
 	$.fn[pluginName] = function (options) {
 		return this.each(function () {
 			if (!$.data(this, 'plugin_' + pluginName)) {

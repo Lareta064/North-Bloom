@@ -1,567 +1,428 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--====favicon ======-->
-  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
-  <link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
-  <link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
-  <link rel="manifest" href="./img/favicon/site.webmanifest">
-  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="./img/favicon/favicon.ico">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-  <!--====убрать перевод цифр в номер телефона на ios  ======-->
-  <meta name="format-detection" content="telephone=no">
-  <!--======= swiper slider ======-->
-  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
-  <!--============ fancybox =============-->
-  <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
-  <!--======= main styles ======-->
-  <link rel="stylesheet" href="./css/main.css">
-  <title>Магазины</title>
-  <style>
-    @font-face {
-      font-family: 'Inter';
-      src: url(./fonts/Inter-Regular.woff2) format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      src: url(./fonts/Inter-Medium.woff2) format("woff2");
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      src: url(./fonts/Inter-Bold.woff2) format("woff2");
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'SuisseIntl-Regular';
-      src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Roboto Serif';
-      src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="page-wrapper page-wrapper--white">
-    <!--====== HEADER=====-->
-    <header class="header header--special" id="header">
-      <!--==== HEADER SEARCH BLOCK ====-->
-      <div class="header-search-wrapper flx-center" id="search-form">
-        <div class="container">
-          <form class="search-form">
-            <div class="form-item form-item--border">
-              <div class="form-input">
-                <input type="search" name="search_input" placeholder="Что Вы ищите?">
-                <!--===== кнопка reset ====-->
-                <button class="btn-clear" type="reset">
-                  <svg class="svg-close">
-                    <use href="./img/sprite.svg#svg-close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="header-container d-flex">
-        <!--===LOGO====-->
-        <div class="header-left-col">
-          <a class="logo logo--white" href="index.html">
-            <svg class="svg-logo">
-              <use href="./img/sprite.svg#svg-logo"></use>
-            </svg>
-          </a>
-        </div>
-        <!--=== MENU WRAPPER =====-->
-        <div class="header-menu-wrapper" id="menu">
-          <div class="header-menu">
-            <ul class="menu-list flx-center">
-              <li class="menu-list-item menu-item-submenu">
-                <a href="#!">Для мужчин</a>
-                <div class="menu-list-child bx-sh">
-                  <ul>
-                    <li>
-                      <a href="#!">Коллекция Мужcкая Весна 2024</a>
-                    </li>
-                    <li>
-                      <a href="#!">Коллекция Мужcкая Лето 2024</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-list-item menu-item-submenu">
-                <a href="#!">Для женщин</a>
-                <div class="menu-list-child menu-list-child--right bx-sh">
-                  <ul>
-                    <li>
-                      <a href="#!">Коллекция Женская Весна 2024</a>
-                    </li>
-                    <li>
-                      <a href="#!">Коллекция Женская Лето 2024</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-list-item">
-                <a href="stores.html">Где купить</a>
-              </li>
-              <!--====пункт виден в мобильном меню-->
-              <li class="menu-list-item d-none d-md-block">
-                <a href="#!">Оптовикам </a>
-              </li>
-            </ul>
-            <!--====блок для моб версии ====-->
-            <div class="header-menu-block d-none d-md-block">
-              <div class="social-block">
-                <a href="#!">
-                  <img src="./img/svg-social/vk2.svg" alt="vk">
-                </a>
-                <a href="#!">
-                  <img src="./img/svg-social/vc2.svg" alt="vc">
-                </a>
-                <a href="#!">
-                  <img src="./img/svg-social/dzen2.svg" alt="dzen">
-                </a>
-                <a href="#!">
-                  <img src="./img/svg-social/tg2.svg" alt="tg">
-                </a>
-              </div>
-              <p>&copy;NorthBloom  1997 - 2024 г.</p>
-            </div>
-          </div>
-        </div>
-        <!--=====right column====-->
-        <div class="header-right-col">
-          <button class="btn-toggle-search" id="search-btn">
-            <svg class="svg-search">
-              <use href="./img/sprite.svg#svg-search"></use>
-            </svg>
-          </button>
-          <!--====пункт виден на экранах от 1024 пикс ===-->
-          <a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
-          <!--=====mobile menu-toggle===-->
-          <button class="menu-toggle" type="button" id="menu-toggle">
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <main class="inner-main">
-      <section class="stores">
-        <div class="container">
-          <!--====хлебные крошки===-->
-          <div class="breadcrumbs">
-            <a href="index.html">Главная</a>
-            <a href="#!"> Где купить</a>
-            <!--===== этот пункт хлебных крошек отображается на экранах до 1024px-->
-            <p>
-              <a class="txt-24 chevron-link" href="index.html">
-                <svg class="svg-chevron-left">
-                  <use href="./img/sprite.svg#svg-chevron-left"></use>
-                </svg>
-                <span>Вернуться</span>
-              </a>
-            </p>
-          </div>
-          <div class="section-title section-title--center mb-32">
-            <h1 class="h1-serif">Где купить одежду NorthBloom</h1>
-          </div>
-          <div class="filters-block flx-center">
-            <div class="form-item filter-select">
-              <div class="dropdown">
-                <button class="dropdown__button" type="button">
-                  <span>Название города</span>
-                </button>
-                <div class="dropdown__list">
-                  <ul>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 1">Пример заполнения 1</li>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
-                  </ul>
-                </div>
-                <!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
-                <input class="dropdown__input-hidden" type="text" name="undefined" />
-              </div>
-            </div>
-            <div class="form-item filter-select">
-              <div class="dropdown">
-                <button class="dropdown__button" type="button">
-                  <span>Тип магазина</span>
-                </button>
-                <div class="dropdown__list">
-                  <ul>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 1">Пример заполнения 1</li>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
-                    <li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
-                  </ul>
-                </div>
-                <!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
-                <input class="dropdown__input-hidden" type="text" name="undefined" />
-              </div>
-            </div>
-            <div class="display-togggle flx-center toggle-group">
-              <div class="display-table toggle-item active" data-display="stories-tables">
-                <svg class="svg-bar">
-                  <use href="./img/sprite.svg#svg-bar"></use>
-                </svg>
-                <span>Список</span>
-              </div>
-              <div class="display-map toggle-item" id="loadMapButton" data-display="stories-map">
-                <svg class="svg-pin">
-                  <use href="./img/sprite.svg#svg-pin"></use>
-                </svg>
-                <span>На карте</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="stores-content mt-48">
-          <!--====== ОТОБРАЖЕНИЕ СПИСКОМ =====-->
-          <div class="stories-tables active" data-content="stories-tables">
-            <!--======блок для одного типа магазина ======-->
-            <div class="stores-content__block">
-              <h2 class="h2"> Фирменные магазины
-                <!--===== table =====-->
-              </h2>
-              <div class="stores-table">
-                <!--===== table head =====-->
-                <div class="stores-table__head stores-table__row">
-                  <!--===  дополн обертка content-grid  необходима, что бы у строк чередовать серый фон на 100vw -->
-                  <div class="content-grid">
-                    <div class="cell-title">
-                      <p>Магазин</p>
-                    </div>
-                    <div class="cell-address">
-                      <p>Адрес</p>
-                    </div>
-                    <div class="cell-contact">
-                      <p>Телефон</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="stores-table__body">
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <svg class="svg-fleur">
-                          <use href="./img/sprite.svg#svg-fleur"></use>
-                        </svg>
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Сенная</span>
-                          <span class="dot-item">м. Бульвар Адмирала Ушакова</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <svg class="svg-fleur">
-                          <use href="./img/sprite.svg#svg-fleur"></use>
-                        </svg>
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, м. Бутырская, Огородный пр., д.10</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Новокузнецкая</span>
-                          <span class="dot-item">м. Белорусский вокзал</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <svg class="svg-fleur">
-                          <use href="./img/sprite.svg#svg-fleur"></use>
-                        </svg>
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, Волоколамское шоссе,3</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Ховрино</span>
-                          <span class="dot-item">м. Речной порт</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <svg class="svg-fleur">
-                          <use href="./img/sprite.svg#svg-fleur"></use>
-                        </svg>
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Сенная</span>
-                          <span class="dot-item">м. Бульвар Адмирала Ушакова</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <svg class="svg-fleur">
-                          <use href="./img/sprite.svg#svg-fleur"></use>
-                        </svg>
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Сенная</span>
-                          <span class="dot-item">м. Бульвар Адмирала Ушакова</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--======блок для одного типа магазина ======-->
-            <div class="stores-content__block">
-              <h2 class="h2">Мультибрендовые магазин
-                <!--===== table =====-->
-              </h2>
-              <div class="stores-table">
-                <div class="stores-table__body">
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Сенная</span>
-                          <span class="dot-item">м. Бульвар Адмирала Ушакова</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, м. Бутырская, Огородный пр., д.10</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Новокузнецкая</span>
-                          <span class="dot-item">м. Белорусский вокзал</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, Волоколамское шоссе,3</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Ховрино</span>
-                          <span class="dot-item">м. Речной порт</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--===== table row =====-->
-                  <div class="stores-table__row">
-                    <div class="content-grid">
-                      <div class="cell-title">
-                        <p>Фирменный магазин "NorthBloom"</p>
-                      </div>
-                      <div class="cell-address">
-                        <p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
-                        <div class="cell-row">
-                          <span class="store-name">ТЦ “ПИК”</span>
-                          <span class="dot-item">м. Сенная</span>
-                          <span class="dot-item">м. Бульвар Адмирала Ушакова</span>
-                        </div>
-                      </div>
-                      <div class="cell-contact">
-                        <a href="tel:+78121232323">+7 (812) 123-23-23</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="stores-content-map" data-content="stories-map">
-            <div class="container">
-              <!--====== ОТОБРАЖЕНИЕ НА КАРТЕ =====-->
-              <div class="stories-map" id="map"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!--============FOOTER============-->
-    <footer class="footer">
-      <div class="container">
-        <div class="content-grid footer-top">
-          <div class="footer-logo">
-            <a class="logo" href="#!">
-              <svg class="svg-logo">
-                <use href="./img/sprite.svg#svg-logo"></use>
-              </svg>
-            </a>
-          </div>
-          <!--========nav column========-->
-          <nav class="menu-nav">
-            <!--=====block====-->
-            <div class="menu-nav-block">
-              <div class="semi-16">Для мужчин</div>
-              <a href="#!">Весна 2024 Мужская коллекция</a>
-              <a href="#!">Зима 2024 Мужская коллекция</a>
-            </div>
-            <!--=====block====-->
-            <div class="menu-nav-block">
-              <div class="semi-16">Для женщин</div>
-              <a href="#!">Весна 2024 Женская коллекция</a>
-              <a href="#!">Зима 2024 Женская коллекция</a>
-            </div>
-          </nav>
-          <!--========nav column========-->
-          <nav class="menu-nav menu-nav--right">
-            <!--=====block====-->
-            <div class="menu-nav-block">
-              <a href="#!">О бренде</a>
-              <a href="#!">Вакансии</a>
-              <a href="#!">Контакты</a>
-              <a href="#!">Где купить</a>
-            </div>
-            <!--=====block====-->
-            <div class="menu-nav-block">
-              <a href="#!">Технологии и материалы</a>
-              <a href="#!">Таблица размеров</a>
-              <a href="#!">Уход за изделеем</a>
-            </div>
-          </nav>
-        </div>
-        <!--======FOOTER BOTTOM ROW====-->
-        <div class="footer-bottom d-flex">
-          <div class="footer-copiryght">
-            <p>&copy;NorthBloom  1997 - 2024 г.</p>
-          </div>
-          <div class="footer-bottom__right d-flex">
-            <!--======social=======-->
-            <div class="social-block">
-              <a href="#!">
-                <img src="./img/svg-social/vk2.svg" alt="vk">
-              </a>
-              <a href="#!">
-                <img src="./img/svg-social/vc2.svg" alt="vc">
-              </a>
-              <a href="#!">
-                <img src="./img/svg-social/dzen2.svg" alt="dzen">
-              </a>
-              <a href="#!">
-                <img src="./img/svg-social/tg2.svg" alt="tg">
-              </a>
-            </div>
-            <!--=======btn======-->
-            <div class="footer-button">
-              <button class="btn btn--slim" type="button">Написать вопрос директору</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <!--=======отложенная загрузка карты===-->
-  <script>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--====favicon ======-->
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
+		<link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
+		<link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
+		<link rel="manifest" href="./img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="./img/favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<!--====убрать перевод цифр в номер телефона на ios  ======-->
+		<meta name="format-detection" content="telephone=no">
+		<!--======= swiper slider ======-->
+		<link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+		<!--============ fancybox =============-->
+		<link rel="stylesheet" href="./libs/fancybox/fancybox.css">
+		<!--======= main styles ======-->
+		<link rel="stylesheet" href="./css/main.css">
+		<title>Магазины</title>
+		<style>
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Regular.woff2) format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Medium.woff2) format("woff2");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Inter';
+				src: url(./fonts/Inter-Bold.woff2) format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'SuisseIntl-Regular';
+				src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Roboto Serif';
+				src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+				font-style: normal;
+				font-display: swap;
+			}		
+		</style>
+	</head>
+	<body>
+		<div class="page-wrapper page-wrapper--white">
+			<!--====== HEADER=====-->
+			<header class="header header--special" id="header">
+				<!--==== HEADER SEARCH BLOCK ====-->
+				<div class="header-search-wrapper flx-center" id="search-form">
+					<div class="container">
+						<form class="search-form">
+							<div class="form-item form-item--border">
+								<div class="form-input">
+									<input type="search" name="search_input" placeholder="Что Вы ищите?">
+									<!--===== кнопка reset ====-->
+									<button class="btn-clear" type="reset">
+										<svg class="svg-close">
+											<use href="./img/sprite.svg#svg-close"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="header-container d-flex">
+					<!--===LOGO====-->
+					<div class="header-left-col"><a class="logo logo--white" href="index.html">
+							<svg class="svg-logo">
+								<use href="./img/sprite.svg#svg-logo"></use>
+							</svg></a></div>
+					<!--=== MENU WRAPPER =====-->
+					<div class="header-menu-wrapper" id="menu">
+						<div class="header-menu">
+							<ul class="menu-list flx-center">
+								<li class="menu-list-item menu-item-submenu"> <a href="#!">Для мужчин</a>
+									<div class="menu-list-child bx-sh">
+										<ul>
+											<li><a href="#!">Коллекция Мужcкая Весна 2024</a></li>
+											<li><a href="#!">Коллекция Мужcкая Лето 2024</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-list-item menu-item-submenu"><a href="#!">Для женщин</a>
+									<div class="menu-list-child menu-list-child--right bx-sh">
+										<ul>
+											<li><a href="#!">Коллекция Женская Весна 2024</a></li>
+											<li><a href="#!">Коллекция Женская Лето 2024</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-list-item"><a href="stores.html">Где купить</a></li>
+								<!--====пункт виден в мобильном меню-->
+								<li class="menu-list-item d-none d-md-block"><a href="#!">Оптовикам	</a></li>
+							</ul>
+							<!--====блок для моб версии ====-->
+							<div class="header-menu-block d-none d-md-block">
+								<div class="social-block"><a href="#!"><img src="./img/svg-social/vk2.svg" alt="vk"></a><a href="#!"><img src="./img/svg-social/vc2.svg" alt="vc"></a><a href="#!"><img src="./img/svg-social/dzen2.svg" alt="dzen"></a><a href="#!"><img src="./img/svg-social/tg2.svg" alt="tg"></a></div>
+								<p>&copy;NorthBloom  1997 - 2024 г.</p>
+							</div>
+						</div>
+					</div>
+					<!--=====right column====-->
+					<div class="header-right-col">
+						<button class="btn-toggle-search" id="search-btn">
+							<svg class="svg-search">
+								<use href="./img/sprite.svg#svg-search"></use>
+							</svg>
+						</button>
+						<!--====пункт виден на экранах от 1024 пикс ===--><a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
+						<!--=====mobile menu-toggle===-->
+						<button class="menu-toggle" type="button" id="menu-toggle"><span></span></button>
+					</div>
+				</div>
+			</header>
+			<main class="inner-main">
+				<section class="stores">
+					<div class="container">
+						<!--====хлебные крошки===-->
+						<div class="breadcrumbs"><a href="index.html">Главная</a><a href="#!"> Где купить</a>
+							<!--===== этот пункт хлебных крошек отображается на экранах до 1024px-->
+							<p><a class="txt-24 chevron-link" href="index.html">
+									<svg class="svg-chevron-left">
+										<use href="./img/sprite.svg#svg-chevron-left"></use>
+									</svg><span>Вернуться</span></a></p>
+						</div>
+						<div class="section-title section-title--center mb-32">
+							<h1 class="h1-serif">Где купить одежду NorthBloom</h1>
+						</div>
+						<div class="filters-block flx-center">
+							<div class="form-item filter-select">
+								<div class="dropdown">
+									<button class="dropdown__button" type="button"><span>Название города</span></button>
+									<div class="dropdown__list">
+										<ul>
+											<li class="dropdown__list-item" data-value="Пример заполнения 1">Пример заполнения 1</li>
+											<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
+											<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
+											<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
+										</ul>
+									</div>
+									<!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
+									<input class="dropdown__input-hidden" type="text" name="undefined"/>
+								</div>
+							</div>
+							<div class="form-item filter-select">
+								<div class="dropdown">
+									<button class="dropdown__button" type="button"><span>Тип магазина</span></button>
+									<div class="dropdown__list">
+										<ul>
+											<li class="dropdown__list-item" data-value="Пример заполнения 1">Пример заполнения 1</li>
+											<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
+											<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
+											<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
+										</ul>
+									</div>
+									<!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
+									<input class="dropdown__input-hidden" type="text" name="undefined"/>
+								</div>
+							</div>
+							<div class="display-togggle flx-center toggle-group">
+								<div class="display-table toggle-item active" data-display="stories-tables">
+									<svg class="svg-bar">
+										<use href="./img/sprite.svg#svg-bar"></use>
+									</svg><span>Список</span>
+								</div>
+								<div class="display-map toggle-item" id="loadMapButton" data-display="stories-map">
+									<svg class="svg-pin">
+										<use href="./img/sprite.svg#svg-pin"></use>
+									</svg><span>На карте</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="stores-content mt-48">
+						<!--====== ОТОБРАЖЕНИЕ СПИСКОМ =====-->
+						<div class="stories-tables active" data-content="stories-tables">
+							<!--======блок для одного типа магазина ======-->
+							<div class="stores-content__block">
+								<h2 class="h2"> Фирменные магазины
+									<!--===== table =====-->
+								</h2>
+								<div class="stores-table">
+									<!--===== table head =====-->
+									<div class="stores-table__head stores-table__row">
+										<!--===  дополн обертка content-grid  необходима, что бы у строк чередовать серый фон на 100vw -->
+										<div class="content-grid">
+											<div class="cell-title">
+												<p>Магазин</p>
+											</div>
+											<div class="cell-address">
+												<p>Адрес</p>
+											</div>
+											<div class="cell-contact">
+												<p>Телефон</p>
+											</div>
+										</div>
+									</div>
+									<div class="stores-table__body">
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<svg class="svg-fleur">
+														<use href="./img/sprite.svg#svg-fleur"></use>
+													</svg>
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Сенная</span><span class="dot-item">м. Бульвар Адмирала Ушакова</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<svg class="svg-fleur">
+														<use href="./img/sprite.svg#svg-fleur"></use>
+													</svg>
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, м. Бутырская, Огородный пр., д.10</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Новокузнецкая</span><span class="dot-item">м. Белорусский вокзал</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<svg class="svg-fleur">
+														<use href="./img/sprite.svg#svg-fleur"></use>
+													</svg>
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, Волоколамское шоссе,3</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Ховрино</span><span class="dot-item">м. Речной порт</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<svg class="svg-fleur">
+														<use href="./img/sprite.svg#svg-fleur"></use>
+													</svg>
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Сенная</span><span class="dot-item">м. Бульвар Адмирала Ушакова</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<svg class="svg-fleur">
+														<use href="./img/sprite.svg#svg-fleur"></use>
+													</svg>
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Сенная</span><span class="dot-item">м. Бульвар Адмирала Ушакова</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--======блок для одного типа магазина ======-->
+							<div class="stores-content__block">
+								<h2 class="h2">Мультибрендовые магазин
+									<!--===== table =====-->
+								</h2>
+								<div class="stores-table">
+									<div class="stores-table__body">
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Сенная</span><span class="dot-item">м. Бульвар Адмирала Ушакова</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, м. Бутырская, Огородный пр., д.10</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Новокузнецкая</span><span class="dot-item">м. Белорусский вокзал</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, Волоколамское шоссе,3</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Ховрино</span><span class="dot-item">м. Речной порт</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+										<!--===== table row =====-->
+										<div class="stores-table__row">
+											<div class="content-grid">
+												<div class="cell-title">
+													<p>Фирменный магазин "NorthBloom"</p>
+												</div>
+												<div class="cell-address">
+													<p>г. Москва, ст.м. Бауманская, ул. Елоховская, д. 32</p>
+													<div class="cell-row"><span class="store-name">ТЦ “ПИК”</span><span class="dot-item">м. Сенная</span><span class="dot-item">м. Бульвар Адмирала Ушакова</span></div>
+												</div>
+												<div class="cell-contact"><a href="tel:+78121232323">+7 (812) 123-23-23</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="stores-content-map" data-content="stories-map">
+							<div class="container">
+								<!--====== ОТОБРАЖЕНИЕ НА КАРТЕ =====-->
+								<div class="stories-map" id="map"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<!--============FOOTER============-->
+			<footer class="footer">
+				<div class="container">
+					<div class="content-grid footer-top">
+						<div class="footer-logo"><a class="logo" href="#!">
+								<svg class="svg-logo">
+									<use href="./img/sprite.svg#svg-logo"></use>
+								</svg></a></div>
+						<!--========nav column========-->
+						<nav class="menu-nav">
+							<!--=====block====-->
+							<div class="menu-nav-block">
+								<div class="semi-16">Для мужчин</div><a href="#!">Весна 2024 Мужская коллекция</a><a href="#!">Зима 2024 Мужская коллекция</a>
+							</div>
+							<!--=====block====-->
+							<div class="menu-nav-block">
+								<div class="semi-16">Для женщин</div><a href="#!">Весна 2024  Женская коллекция</a><a href="#!">Зима 2024 Женская коллекция</a>
+							</div>
+						</nav>
+						<!--========nav column========-->
+						<nav class="menu-nav menu-nav--right">
+							<!--=====block====-->
+							<div class="menu-nav-block"><a href="#!">О бренде</a><a href="#!">Вакансии</a><a href="#!">Контакты</a><a href="#!">Где купить</a></div>
+							<!--=====block====-->
+							<div class="menu-nav-block"><a href="#!">Технологии и материалы</a><a href="#!">Таблица размеров</a><a href="#!">Уход за изделеем</a></div>
+						</nav>
+					</div>
+					<!--======FOOTER BOTTOM ROW====-->
+					<div class="footer-bottom d-flex">
+						<div class="footer-copiryght">
+							<p>&copy;NorthBloom  1997 - 2024 г.</p>
+						</div>
+						<div class="footer-bottom__right d-flex">
+							<!--======social=======-->
+							<div class="social-block"><a href="#!"><img src="./img/svg-social/vk2.svg" alt="vk"></a><a href="#!"><img src="./img/svg-social/vc2.svg" alt="vc"></a><a href="#!"><img src="./img/svg-social/dzen2.svg" alt="dzen"></a><a href="#!"><img src="./img/svg-social/tg2.svg" alt="tg"></a></div>
+							<!--=======btn======-->
+							<div class="footer-button">
+								<button class="btn btn--slim" type="button">Написать вопрос директору</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--=======отложенная загрузка карты===-->
+		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				document.getElementById('loadMapButton').addEventListener('click', function() {
 					const mapWrapper = document.getElementById('map');
@@ -581,15 +442,14 @@
 				});
 			});
 		</script>
-  <!--=============== jquery ==================-->
-  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
-  <script src="./libs/jquery.lazy.min.js"></script>
-  <!--=============== swiper js ===============-->
-  <script src="./libs/swiper/swiper.js"></script>
-  <!--============fancybox====================-->
-  <script src="./libs/fancybox/fancybox.js"></script>
-  <!--=============== main js ===================-->
-  <script src="./js/main.js"></script>
-</body>
-
+		<!--=============== jquery ==================-->
+		<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+		<script src="./libs/jquery.lazy.min.js"></script>
+		<!--=============== swiper js ===============-->
+		<script src="./libs/swiper/swiper.js"></script>
+		<!--============fancybox====================-->
+		<script src="./libs/fancybox/fancybox.js"></script>
+		<!--=============== main js ===================-->
+		<script src="./js/main.js"></script>
+	</body>
 </html>
