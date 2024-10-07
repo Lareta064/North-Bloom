@@ -1,505 +1,648 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!--====favicon ======-->
-		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
-		<link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
-		<link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
-		<link rel="manifest" href="./img/favicon/site.webmanifest">
-		<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="./img/favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
-		<!--====убрать перевод цифр в номер телефона на ios  ======-->
-		<meta name="format-detection" content="telephone=no">
-		<!--======= swiper slider ======-->
-		<link rel="stylesheet" href="./libs/swiper/swiper.min.css">
-		<!--============ fancybox =============-->
-		<link rel="stylesheet" href="./libs/fancybox/fancybox.css">
-		<!--======= main styles ======-->
-		<link rel="stylesheet" href="./css/main.css">
-		<title>Страница товара</title>
-		<style>
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Regular.woff2) format("woff2");
-				font-weight: 400;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Medium.woff2) format("woff2");
-				font-weight: 500;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
-				font-weight: 600;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Bold.woff2) format("woff2");
-				font-weight: 700;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'SuisseIntl-Regular';
-				src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Roboto Serif';
-				src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
-				font-style: normal;
-				font-display: swap;
-			}		
-		</style>
-	</head>
-	<body>
-		<div class="page-wrapper page-wrapper--white" id="product-page">
-			<!--====== HEADER=====-->
-			<header class="header header--special" id="header">
-				<!--==== HEADER SEARCH BLOCK ====-->
-				<div class="header-search-wrapper flx-center" id="search-form">
-					<div class="container">
-						<form class="search-form">
-							<div class="form-item form-item--border">
-								<div class="form-input">
-									<input type="search" name="search_input" placeholder="Что Вы ищите?">
-									<!--===== кнопка reset ====-->
-									<button class="btn-clear" type="reset">
-										<svg class="svg-close">
-											<use href="./img/sprite.svg#svg-close"></use>
-										</svg>
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="header-container d-flex">
-					<!--===LOGO====-->
-					<div class="header-left-col"><a class="logo logo--white" href="index.html">
-							<svg class="svg-logo">
-								<use href="./img/sprite.svg#svg-logo"></use>
-							</svg></a></div>
-					<!--=== MENU WRAPPER =====-->
-					<div class="header-menu-wrapper" id="menu">
-						<div class="header-menu">
-							<ul class="menu-list flx-center">
-								<li class="menu-list-item menu-item-submenu"> <a href="#!">Для мужчин</a>
-									<div class="menu-list-child bx-sh">
-										<ul>
-											<li><a href="#!">Коллекция Мужcкая Весна 2024</a></li>
-											<li><a href="#!">Коллекция Мужcкая Лето 2024</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="menu-list-item menu-item-submenu"><a href="#!">Для женщин</a>
-									<div class="menu-list-child menu-list-child--right bx-sh">
-										<ul>
-											<li><a href="#!">Коллекция Женская Весна 2024</a></li>
-											<li><a href="#!">Коллекция Женская Лето 2024</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="menu-list-item"><a href="stores.html">Где купить</a></li>
-								<!--====пункт виден в мобильном меню-->
-								<li class="menu-list-item d-none d-md-block"><a href="#!">Оптовикам	</a></li>
-							</ul>
-							<!--====блок для моб версии ====-->
-							<div class="header-menu-block d-none d-md-block">
-								<div class="social-block"><a href="#!"><img src="./img/svg-social/vk2.svg" alt="vk"></a><a href="#!"><img src="./img/svg-social/vc2.svg" alt="vc"></a><a href="#!"><img src="./img/svg-social/dzen2.svg" alt="dzen"></a><a href="#!"><img src="./img/svg-social/tg2.svg" alt="tg"></a></div>
-								<p>&copy;NorthBloom  1997 - 2024 г.</p>
-							</div>
-						</div>
-					</div>
-					<!--=====right column====-->
-					<div class="header-right-col">
-						<button class="btn-toggle-search" id="search-btn">
-							<svg class="svg-search">
-								<use href="./img/sprite.svg#svg-search"></use>
-							</svg>
-						</button>
-						<!--====пункт виден на экранах от 1024 пикс ===--><a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
-						<!--=====mobile menu-toggle===-->
-						<button class="menu-toggle" type="button" id="menu-toggle"><span></span></button>
-					</div>
-				</div>
-			</header>
-			<main class="inner-main pt-md-0">
-				<section class="single-product pt-md-0">
-					<!--=====slider на моб версии =======-->
-					<div class="single-product__gallery d-none d-sm-block">
-						<div class="swiper slider">
-							<div class="swiper-wrapper">
-								<!--====slide====-->
-								<div class="swiper-slide"><a class="swiper-gallery__img" href="./img/laura-w375@2x.webp" data-fancybox="gallery-mob"><img class="lazy" src="./img/laura-w375@2x.webp" width="450" height="640" alt="img"></a></div>
-								<!--====slide====-->
-								<div class="swiper-slide"><a class="swiper-gallery__img" href="./img/hit-w375@2x.webp" data-fancybox="gallery-mob"><img class="lazy" src="./img/hit-w375@2x.webp" width="450" height="640" alt="img"></a></div>
-								<!--====slide====-->
-								<div class="swiper-slide"><a class="swiper-gallery__img" href="./img/laura-w375@2x.webp" data-fancybox="gallery-mob"><img class="lazy" src="./img/laura-w375@2x.webp" width="450" height="640" alt="img"></a></div>
-								<!--====slide====-->
-								<div class="swiper-slide"><a class="swiper-gallery__img" href="./img/hit-w375@2x.webp" data-fancybox="gallery-mob"><img class="lazy" src="./img/hit-w375@2x.webp" width="450" height="640" alt="img"></a></div>
-							</div>
-							<!--==== pagination===-->
-							<div class="swiper-pagination slider-pagination"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="content-grid single-product-grid">
-							<!--=====галерея товаров на экранах от 768 версии =======-->
-							<div class="single-product__gallery content-grid d-grid d-sm-none">
-								<!--=====foto=====-->
-								<div class="product-foto product-foto--stretch"><a href="./img/laura@2x.webp" data-fancybox="gallery">
-										<picture>
-											<source srcset="./img/laura-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
-											<source srcset="./img/laura-w375.webp" media="(max-width: 767px)">
-											<source srcset="./img/laura@2x.webp" media="(min-resolution: 192dpi)"><img class="lazy" src="./img/laura.webp" width="924" alt="img">
-										</picture></a></div>
-								<!--=====foto=====-->
-								<div class="product-foto"><a href="./img/hit.webp" data-fancybox="gallery">
-										<picture>
-											<source srcset="./img/hit-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
-											<source srcset="./img/hit-w375.webp" media="(max-width: 767px)">
-											<source srcset="./img/hit@2x.webp" media="(min-resolution: 192dpi)"><img class="lazy" src="./img/hit.webp" width="450" alt="img">
-										</picture></a></div>
-								<!--=====foto=====-->
-								<div class="product-foto"><a href="./img/laura.webp" data-fancybox="gallery">
-										<picture>
-											<source srcset="./img/laura-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
-											<source srcset="./img/laura-w375.webp" media="(max-width: 767px)">
-											<source srcset="./img/laura@2x.webp" media="(min-resolution: 192dpi)"><img class="lazy" src="./img/laura.webp" width="450" alt="img">
-										</picture></a></div>
-								<!--=====foto=====-->
-								<div class="product-foto"><a href="./img/laura.webp" data-fancybox="gallery">
-										<picture>
-											<source srcset="./img/laura-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
-											<source srcset="./img/laura-w375.webp" media="(max-width: 767px)">
-											<source srcset="./img/laura@2x.webp" media="(min-resolution: 192dpi)"><img class="lazy" src="./img/laura.webp" width="450" alt="img">
-										</picture></a></div>
-								<!--=====foto=====-->
-								<div class="product-foto"><a href="./img/hit.webp" data-fancybox="gallery">
-										<picture>
-											<source srcset="./img/hit-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
-											<source srcset="./img/hit-w375.webp" media="(max-width: 767px)">
-											<source srcset="./img/hit@2x.webp" media="(min-resolution: 192dpi)"><img class="lazy" src="./img/hit.webp" width="450" alt="img">
-										</picture></a></div>
-							</div>
-							<!--====Правая колонка с описанием =====-->
-							<div class="single-product__info">
-								<!--===breadcrumbs====-->
-								<div class="breadcrumbs d-md-none">
-									<!--===ссылки отображаются на десктоп версии и скрываются на < 1024px--><a href="index.html">Главная</a><a href="catalogy.html">Весна 2024 для женщин</a><a href="#!">Пуховик</a>
-								</div>
-								<!--===content====-->
-								<div class="product-title mb-32">
-									<div class="title-24">Пуховик ЛАРС</div><span class="product-price">45 000 ₽</span>
-								</div>
-								<div class="product-colors-title">цвет: <span>красный</span></div>
-								<div class="product-colors mb-16"> 
-									<label class="fake-input-label">
-										<input type="radio" name="color-item" checked><span class="color-item" style="background:#2E394D"></span>
-									</label>
-									<label class="fake-input-label">
-										<input type="radio" name="color-item"><span class="color-item" style="background:#E3000F"></span>
-									</label>
-									<label class="fake-input-label">
-										<input type="radio" name="color-item"><span class="color-item" style="background:#93AB42"></span>
-									</label>
-								</div>
-								<!--====== спецификация =====-->
-								<div class="product-specifications mb-32">
-									<ul class="basic-list">
-										<li><span>Размер:</span>
-											<p>46 - 64</p>
-										</li>
-										<li><span>Вид ткани:</span>
-											<p>Сахара</p>
-										</li>
-										<li><span>Мех:</span>
-											<p>Искусственный мех</p>
-										</li>
-										<li><span>Длина изделия:</span>
-											<p>82</p>
-										</li>
-										<li><span>Температурный диапазон:</span>
-											<p>-5° -15°</p>
-										</li>
-									</ul>
-									<!--===== таблица размеров =====-->
-									<button class="link-text size-table-link" data-target="size-table">Таблица размеров</button>
-								</div>
-								<!--===== BUTTON =====-->
-								<div class="mb-60"><a class="btn w-100" href="stores.html">Где купить?</a></div>
-								<!--===== text======-->
-								<div class="product-description mb-32">
-									<div class="txt-20">Описание</div>
-									<p>Стильная куртка (с системой Climate-Comfort) имеет два наружных кармана с  открытыми молн иями. Два нижних кармана с клапанами на магнитах.  Клапана, при необходимости, убираются в карманы. Модель имеет съемный  капюшон. Внутренняя отделка капюшона выполнена из искусственного меха.  Мех можно отстегнуть. В поясничной области есть внутренняя кулиса.Модель  с системой климат-комфорта, сглаживает температурные колебания и  уменьшает парниковый эффект, что позволяет чувствовать себя комфортно в  любых условиях. Трикотажные манжеты в рукавах и регулируемый капюшон сохранит ваш  комфорт. Куртка имеет 3 внутренних кармана на молниях,один из которых  большой (планшет,документы, блокноты и т.д.) Светоотражающие элементы на  куртке сделают вас более заметными в темное время суток (ваша  безопасность...)</p>
-								</div>
-								<!--====== DETAILS LIST ====-->
-								<div class="product-details mb-48">
-									<div class="semi-16">Детали</div>
-									<ul class="circle-list">
-										<li>Влаго-ветро защитный капюшон</li>
-										<li>Ветрозащитная молния</li>
-										<li>Скрытый карман</li>
-										<li>Список 4</li>
-										<li>Список 5</li>
-									</ul>
-								</div>
-								<!--=========acordion========-->
-								<div class="accordion-group accordion-group--open">
-									<!--=======single item =====-->
-									<div class="accordion-header txt-20">Технологии и материалы</div>
-									<div class="accordion-body"><a class="link-text" href="#!">Climate-Comfort</a><a class="link-text" href="#!">Светоотражающие элементы (дизайн NorthBloom)</a><a class="link-text" href="#!">Local Thermo</a><a class="link-text" href="#!">Утеплитель Valtherm (Италия)</a><a class="link-text" href="#!">Молния YKK (Япония)</a><a class="link-text" href="#!">Air Breathing</a><a class="link-text" href="#!">Внутренний карман Big Box</a></div>
-									<!--=======single item =====	-->
-									<div class="accordion-header txt-20">Состав уход</div>
-									<div class="accordion-body">
-										<div class="care-instruction">
-											<ul>
-												<li><span>Верх:</span>
-													<p>Полиэстер 100%</p>
-												</li>
-												<li><span>Утеплитель:</span>
-													<p>Valtherm</p>
-												</li>
-												<li><span>Подкладка:</span>
-													<p>Шелк искусственный</p>
-												</li>
-												<li><span>Мех:</span>
-													<p>Искуственный</p>
-												</li>
-											</ul>
-										</div>
-										<div class="care-instruction care-instruction--column">
-											<ul>
-												<li><span>
-														<svg class="svg-hand-wash">
-															<use href="./img/sprite.svg#svg-hand-wash"></use>
-														</svg></span>
-													<p>Допускается ручная стирка при температуре 30°С</p>
-												</li>
-												<li><span>
-														<svg class="svg-not-bleach">
-															<use href="./img/sprite.svg#svg-not-bleach"></use>
-														</svg></span>
-													<p>Не отбеливать, не использовать моющие средства и порошки с хлором</p>
-												</li>
-												<li><span>
-														<svg class="svg-iron">
-															<use href="./img/sprite.svg#svg-iron"></use>
-														</svg></span>
-													<p>Гладить при температуре не выше 110°С</p>
-												</li>
-												<li><span>
-														<svg class="svg-dry">
-															<use href="./img/sprite.svg#svg-dry"></use>
-														</svg></span>
-													<p>Химическая чистка любыми растворителями запрещена</p>
-												</li>
-												<li><span>
-														<svg class="svg-machine-drying">
-															<use href="./img/sprite.svg#svg-machine-drying"></use>
-														</svg></span>
-													<p>Машинная сушка запрещена</p>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<!--============FOOTER============-->
-			<footer class="footer">
-				<div class="container">
-					<div class="content-grid footer-top">
-						<div class="footer-logo"><a class="logo" href="#!">
-								<svg class="svg-logo">
-									<use href="./img/sprite.svg#svg-logo"></use>
-								</svg></a></div>
-						<!--========nav column========-->
-						<nav class="menu-nav">
-							<!--=====block====-->
-							<div class="menu-nav-block">
-								<div class="semi-16">Для мужчин</div><a href="#!">Весна 2024 Мужская коллекция</a><a href="#!">Зима 2024 Мужская коллекция</a>
-							</div>
-							<!--=====block====-->
-							<div class="menu-nav-block">
-								<div class="semi-16">Для женщин</div><a href="#!">Весна 2024  Женская коллекция</a><a href="#!">Зима 2024 Женская коллекция</a>
-							</div>
-						</nav>
-						<!--========nav column========-->
-						<nav class="menu-nav menu-nav--right">
-							<!--=====block====-->
-							<div class="menu-nav-block"><a href="#!">О бренде</a><a href="#!">Вакансии</a><a href="#!">Контакты</a><a href="#!">Где купить</a></div>
-							<!--=====block====-->
-							<div class="menu-nav-block"><a href="#!">Технологии и материалы</a><a href="#!">Таблица размеров</a><a href="#!">Уход за изделеем</a></div>
-						</nav>
-					</div>
-					<!--======FOOTER BOTTOM ROW====-->
-					<div class="footer-bottom d-flex">
-						<div class="footer-copiryght">
-							<p>&copy;NorthBloom  1997 - 2024 г.</p>
-						</div>
-						<div class="footer-bottom__right d-flex">
-							<!--======social=======-->
-							<div class="social-block"><a href="#!"><img src="./img/svg-social/vk2.svg" alt="vk"></a><a href="#!"><img src="./img/svg-social/vc2.svg" alt="vc"></a><a href="#!"><img src="./img/svg-social/dzen2.svg" alt="dzen"></a><a href="#!"><img src="./img/svg-social/tg2.svg" alt="tg"></a></div>
-							<!--=======btn======-->
-							<div class="footer-button">
-								<button class="btn btn--slim" type="button">Написать вопрос директору</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!--=======SIZE TABLE MODAL (открывается по клику на элемент с data-target="size-table")======	-->
-			<div class="modal-wrapper size-table-wrapper modal-wrapper--scroll" data-modal="size-table">
-				<div class="modal-body">
-					<!--===btn close popup ===-->
-					<button class="btn-close" type="button" data-role="modal-close">
-						<svg class="svg-close">
-							<use href="./img/sprite.svg#svg-close"></use>
-						</svg>
-					</button>
-					<!--==== title-block ====	-->
-					<div class="section-title mb-48">
-						<div class="h1-serif">Таблицы размеров</div>
-						<p>Размерная сетка курток NorthBloom соответствует российским стандартным размерам одежды.</p>
-						<p>Предложенные таблицы помогут Вам подобрать куртку подходящего размера.</p>
-					</div>
-					<div class="h2 mb-24">Женщины</div>
-					<div class="size-table-inner scroll-wrapper">
-						<table class="size-table">
-							<thead>
-								<tr>
-									<th>Размер</th>
-									<th>Рост</th>
-									<th>Обхват груди</th>
-									<th>Обхват талии</th>
-									<th>Обхват бёдер</th>
-								</tr>
-							</thead>
-										<tbody>
-											<tr>
-												<td>44</td>
-												<td> 164 - 172</td>
-												<td>88</td>
-												<td>68</td>
-												<td>96</td>
-											</tr>
-											<tr>
-												<td>48</td>
-												<td> 164 - 172</td>
-												<td>92</td>
-												<td>72</td>
-												<td>100</td>
-											</tr>
-											<tr>
-												<td>52</td>
-												<td> 164 - 172</td>
-												<td>96</td>
-												<td>76</td>
-												<td>104</td>
-											</tr>
-											<tr>
-												<td>56</td>
-												<td> 164 - 172</td>
-												<td>100</td>
-												<td>80</td>
-												<td>108</td>
-											</tr>
-											<tr>
-												<td>60</td>
-												<td> 164 - 172</td>
-												<td>104</td>
-												<td>84</td>
-												<td>112</td>
-											</tr>
-											<tr>
-												<td>64</td>
-												<td> 164 - 172</td>
-												<td>108</td>
-												<td>88</td>
-												<td>116</td>
-											</tr>
-											<tr>
-												<td>68</td>
-												<td> 164 - 172</td>
-												<td>112</td>
-												<td>92</td>
-												<td>120</td>
-											</tr>
-											<tr>
-												<td>72</td>
-												<td> 164 - 172</td>
-												<td>116</td>
-												<td>96</td>
-												<td>124</td>
-											</tr>
-											<tr>
-												<td>76</td>
-												<td> 164 - 172</td>
-												<td>120</td>
-												<td>100</td>
-												<td>128</td>
-											</tr>
-											<tr>
-												<td>80</td>
-												<td> 164 - 172</td>
-												<td>124</td>
-												<td>104</td>
-												<td>132</td>
-											</tr>
-											<tr>
-												<td>84</td>
-												<td> 164 - 172</td>
-												<td>128</td>
-												<td>108</td>
-												<td>136</td>
-											</tr>
-											<tr>
-												<td>88</td>
-												<td> 164 - 172</td>
-												<td>132</td>
-												<td>112</td>
-												<td>140</td>
-											</tr>
-											<tr>
-												<td>92</td>
-												<td> 164 - 172</td>
-												<td>136</td>
-												<td>116</td>
-												<td>144</td>
-											</tr>
-										</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--=============== jquery ==================-->
-		<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
-		<script src="./libs/jquery.lazy.min.js"></script>
-		<!--=============== swiper js ===============-->
-		<script src="./libs/swiper/swiper.js"></script>
-		<!--============fancybox====================-->
-		<script src="./libs/fancybox/fancybox.js"></script>
-		<!--=============== main js ===================-->
-		<script src="./js/main.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--====favicon ======-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!--====убрать перевод цифр в номер телефона на ios  ======-->
+  <meta name="format-detection" content="telephone=no">
+  <!--======= swiper slider ======-->
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+  <!--============ fancybox =============-->
+  <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
+  <!--======= main styles ======-->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Страница товара</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Regular.woff2) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Medium.woff2) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Bold.woff2) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SuisseIntl-Regular';
+      src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto Serif';
+      src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper page-wrapper--white" id="product-page">
+    <!--====== HEADER=====-->
+    <header class="header header--special" id="header">
+      <!--==== HEADER SEARCH BLOCK ====-->
+      <div class="header-search-wrapper flx-center" id="search-form">
+        <div class="container">
+          <form class="search-form">
+            <div class="form-item form-item--border">
+              <div class="form-input">
+                <input type="search" name="search_input" placeholder="Что Вы ищите?">
+                <!--===== кнопка reset ====-->
+                <button class="btn-clear" type="reset">
+                  <svg class="svg-close">
+                    <use href="./img/sprite.svg#svg-close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="header-container d-flex">
+        <!--===LOGO====-->
+        <div class="header-left-col">
+          <a class="logo logo--white" href="index.html">
+            <svg class="svg-logo">
+              <use href="./img/sprite.svg#svg-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <!--=== MENU WRAPPER =====-->
+        <div class="header-menu-wrapper" id="menu">
+          <div class="header-menu">
+            <ul class="menu-list flx-center">
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для мужчин</a>
+                <div class="menu-list-child bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для женщин</a>
+                <div class="menu-list-child menu-list-child--right bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Женская Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Женская Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item">
+                <a href="stores.html">Где купить</a>
+              </li>
+              <!--====пункт виден в мобильном меню-->
+              <li class="menu-list-item d-none d-md-block">
+                <a href="#!">Оптовикам </a>
+              </li>
+            </ul>
+            <!--====блок для моб версии ====-->
+            <div class="header-menu-block d-none d-md-block">
+              <div class="social-block">
+                <a href="#!">
+                  <img src="./img/svg-social/vk2.svg" alt="vk">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/vc2.svg" alt="vc">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/dzen2.svg" alt="dzen">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/tg2.svg" alt="tg">
+                </a>
+              </div>
+              <p>&copy;NorthBloom  1997 - 2024 г.</p>
+            </div>
+          </div>
+        </div>
+        <!--=====right column====-->
+        <div class="header-right-col">
+          <button class="btn-toggle-search" id="search-btn">
+            <svg class="svg-search">
+              <use href="./img/sprite.svg#svg-search"></use>
+            </svg>
+          </button>
+          <!--====пункт виден на экранах от 1024 пикс ===-->
+          <a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
+          <!--=====mobile menu-toggle===-->
+          <button class="menu-toggle" type="button" id="menu-toggle">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="inner-main pt-md-0">
+      <section class="single-product pt-md-0">
+        <!--=====slider на моб версии =======-->
+        <div class="single-product__gallery d-none d-sm-block">
+          <div class="swiper slider">
+            <div class="swiper-wrapper">
+              <!--====slide====-->
+              <div class="swiper-slide">
+                <a class="swiper-gallery__img" href="./img/laura-w375@2x.webp" data-fancybox="gallery-mob">
+                  <img class="lazy" src="./img/laura-w375@2x.webp" width="450" height="640" alt="img">
+                </a>
+              </div>
+              <!--====slide====-->
+              <div class="swiper-slide">
+                <a class="swiper-gallery__img" href="./img/hit-w375@2x.webp" data-fancybox="gallery-mob">
+                  <img class="lazy" src="./img/hit-w375@2x.webp" width="450" height="640" alt="img">
+                </a>
+              </div>
+              <!--====slide====-->
+              <div class="swiper-slide">
+                <a class="swiper-gallery__img" href="./img/laura-w375@2x.webp" data-fancybox="gallery-mob">
+                  <img class="lazy" src="./img/laura-w375@2x.webp" width="450" height="640" alt="img">
+                </a>
+              </div>
+              <!--====slide====-->
+              <div class="swiper-slide">
+                <a class="swiper-gallery__img" href="./img/hit-w375@2x.webp" data-fancybox="gallery-mob">
+                  <img class="lazy" src="./img/hit-w375@2x.webp" width="450" height="640" alt="img">
+                </a>
+              </div>
+            </div>
+            <!--==== pagination===-->
+            <div class="swiper-pagination slider-pagination"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="content-grid single-product-grid">
+            <!--=====галерея товаров на экранах от 768 версии =======-->
+            <div class="single-product__gallery content-grid d-grid d-sm-none">
+              <!--=====foto=====-->
+              <div class="product-foto product-foto--stretch">
+                <a href="./img/laura@2x.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="./img/laura-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
+                    <source srcset="./img/laura-w375.webp" media="(max-width: 767px)">
+                    <source srcset="./img/laura@2x.webp" media="(min-resolution: 192dpi)">
+                    <img class="lazy" src="./img/laura.webp" width="924" alt="img">
+                  </picture>
+                </a>
+              </div>
+              <!--=====foto=====-->
+              <div class="product-foto">
+                <a href="./img/hit.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="./img/hit-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
+                    <source srcset="./img/hit-w375.webp" media="(max-width: 767px)">
+                    <source srcset="./img/hit@2x.webp" media="(min-resolution: 192dpi)">
+                    <img class="lazy" src="./img/hit.webp" width="450" alt="img">
+                  </picture>
+                </a>
+              </div>
+              <!--=====foto=====-->
+              <div class="product-foto">
+                <a href="./img/laura.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="./img/laura-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
+                    <source srcset="./img/laura-w375.webp" media="(max-width: 767px)">
+                    <source srcset="./img/laura@2x.webp" media="(min-resolution: 192dpi)">
+                    <img class="lazy" src="./img/laura.webp" width="450" alt="img">
+                  </picture>
+                </a>
+              </div>
+              <!--=====foto=====-->
+              <div class="product-foto">
+                <a href="./img/laura.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="./img/laura-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
+                    <source srcset="./img/laura-w375.webp" media="(max-width: 767px)">
+                    <source srcset="./img/laura@2x.webp" media="(min-resolution: 192dpi)">
+                    <img class="lazy" src="./img/laura.webp" width="450" alt="img">
+                  </picture>
+                </a>
+              </div>
+              <!--=====foto=====-->
+              <div class="product-foto">
+                <a href="./img/hit.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="./img/hit-w375@2x.webp" media="(max-width: 767px) and (min-resolution: 192dpi)">
+                    <source srcset="./img/hit-w375.webp" media="(max-width: 767px)">
+                    <source srcset="./img/hit@2x.webp" media="(min-resolution: 192dpi)">
+                    <img class="lazy" src="./img/hit.webp" width="450" alt="img">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <!--====Правая колонка с описанием =====-->
+            <div class="single-product__info">
+              <!--===breadcrumbs====-->
+              <div class="breadcrumbs d-md-none">
+                <!--===ссылки отображаются на десктоп версии и скрываются на < 1024px-->
+                <a href="index.html">Главная</a>
+                <a href="catalogy.html">Весна 2024 для женщин</a>
+                <a href="#!">Пуховик</a>
+              </div>
+              <!--===content====-->
+              <div class="product-title mb-32">
+                <div class="title-24">Пуховик ЛАРС</div>
+                <span class="product-price">45 000 ₽</span>
+              </div>
+              <div class="product-colors-title">цвет: <span>красный</span>
+              </div>
+              <div class="product-colors mb-16">
+                <label class="fake-input-label">
+                  <input type="radio" name="color-item" checked>
+                  <span class="color-item" style="background:#2E394D"></span>
+                </label>
+                <label class="fake-input-label">
+                  <input type="radio" name="color-item">
+                  <span class="color-item" style="background:#E3000F"></span>
+                </label>
+                <label class="fake-input-label">
+                  <input type="radio" name="color-item">
+                  <span class="color-item" style="background:#93AB42"></span>
+                </label>
+              </div>
+              <!--====== спецификация =====-->
+              <div class="product-specifications mb-32">
+                <ul class="basic-list">
+                  <li>
+                    <span>Размер:</span>
+                    <p>46 - 64</p>
+                  </li>
+                  <li>
+                    <span>Вид ткани:</span>
+                    <p>Сахара</p>
+                  </li>
+                  <li>
+                    <span>Мех:</span>
+                    <p>Искусственный мех</p>
+                  </li>
+                  <li>
+                    <span>Длина изделия:</span>
+                    <p>82</p>
+                  </li>
+                  <li>
+                    <span>Температурный диапазон:</span>
+                    <p>-5° -15°</p>
+                  </li>
+                </ul>
+                <!--===== таблица размеров =====-->
+                <button class="link-text size-table-link" data-target="size-table">Таблица размеров</button>
+              </div>
+              <!--===== BUTTON =====-->
+              <div class="mb-60">
+                <a class="btn w-100" href="stores.html">Где купить?</a>
+              </div>
+              <!--===== text======-->
+              <div class="product-description mb-32">
+                <div class="txt-20">Описание</div>
+                <p>Стильная куртка (с системой Climate-Comfort) имеет два наружных кармана с открытыми молн иями. Два нижних кармана с клапанами на магнитах. Клапана, при необходимости, убираются в карманы. Модель имеет съемный капюшон. Внутренняя отделка капюшона выполнена из искусственного меха. Мех можно отстегнуть. В поясничной области есть внутренняя кулиса.Модель с системой климат-комфорта, сглаживает температурные колебания и уменьшает парниковый эффект, что позволяет чувствовать себя комфортно в любых условиях. Трикотажные манжеты в рукавах и регулируемый капюшон сохранит ваш комфорт. Куртка имеет 3 внутренних кармана на молниях,один из которых большой (планшет,документы, блокноты и т.д.) Светоотражающие элементы на куртке сделают вас более заметными в темное время суток (ваша безопасность...)</p>
+              </div>
+              <!--====== DETAILS LIST ====-->
+              <div class="product-details mb-48">
+                <div class="semi-16">Детали</div>
+                <ul class="circle-list">
+                  <li>Влаго-ветро защитный капюшон</li>
+                  <li>Ветрозащитная молния</li>
+                  <li>Скрытый карман</li>
+                  <li>Список 4</li>
+                  <li>Список 5</li>
+                </ul>
+              </div>
+              <!--=========acordion========-->
+              <div class="accordion-group accordion-group--open">
+                <!--=======single item =====-->
+                <div class="accordion-header txt-20">Технологии и материалы</div>
+                <div class="accordion-body">
+                  <a class="link-text" href="#!">Climate-Comfort</a>
+                  <a class="link-text" href="#!">Светоотражающие элементы (дизайн NorthBloom)</a>
+                  <a class="link-text" href="#!">Local Thermo</a>
+                  <a class="link-text" href="#!">Утеплитель Valtherm (Италия)</a>
+                  <a class="link-text" href="#!">Молния YKK (Япония)</a>
+                  <a class="link-text" href="#!">Air Breathing</a>
+                  <a class="link-text" href="#!">Внутренний карман Big Box</a>
+                </div>
+                <!--=======single item =====	-->
+                <div class="accordion-header txt-20">Состав уход</div>
+                <div class="accordion-body">
+                  <div class="care-instruction">
+                    <ul>
+                      <li>
+                        <span>Верх:</span>
+                        <p>Полиэстер 100%</p>
+                      </li>
+                      <li>
+                        <span>Утеплитель:</span>
+                        <p>Valtherm</p>
+                      </li>
+                      <li>
+                        <span>Подкладка:</span>
+                        <p>Шелк искусственный</p>
+                      </li>
+                      <li>
+                        <span>Мех:</span>
+                        <p>Искуственный</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="care-instruction care-instruction--column">
+                    <ul>
+                      <li>
+                        <span>
+                          <svg class="svg-hand-wash">
+                            <use href="./img/sprite.svg#svg-hand-wash"></use>
+                          </svg>
+                        </span>
+                        <p>Допускается ручная стирка при температуре 30°С</p>
+                      </li>
+                      <li>
+                        <span>
+                          <svg class="svg-not-bleach">
+                            <use href="./img/sprite.svg#svg-not-bleach"></use>
+                          </svg>
+                        </span>
+                        <p>Не отбеливать, не использовать моющие средства и порошки с хлором</p>
+                      </li>
+                      <li>
+                        <span>
+                          <svg class="svg-iron">
+                            <use href="./img/sprite.svg#svg-iron"></use>
+                          </svg>
+                        </span>
+                        <p>Гладить при температуре не выше 110°С</p>
+                      </li>
+                      <li>
+                        <span>
+                          <svg class="svg-dry">
+                            <use href="./img/sprite.svg#svg-dry"></use>
+                          </svg>
+                        </span>
+                        <p>Химическая чистка любыми растворителями запрещена</p>
+                      </li>
+                      <li>
+                        <span>
+                          <svg class="svg-machine-drying">
+                            <use href="./img/sprite.svg#svg-machine-drying"></use>
+                          </svg>
+                        </span>
+                        <p>Машинная сушка запрещена</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--============FOOTER============-->
+    <footer class="footer">
+      <div class="container">
+        <div class="content-grid footer-top">
+          <div class="footer-logo">
+            <a class="logo" href="#!">
+              <svg class="svg-logo">
+                <use href="./img/sprite.svg#svg-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <!--========nav column========-->
+          <nav class="menu-nav">
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <div class="semi-16">Для мужчин</div>
+              <a href="#!">Весна 2024 Мужская коллекция</a>
+              <a href="#!">Зима 2024 Мужская коллекция</a>
+            </div>
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <div class="semi-16">Для женщин</div>
+              <a href="#!">Весна 2024 Женская коллекция</a>
+              <a href="#!">Зима 2024 Женская коллекция</a>
+            </div>
+          </nav>
+          <!--========nav column========-->
+          <nav class="menu-nav menu-nav--right">
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <a href="#!">О бренде</a>
+              <a href="#!">Вакансии</a>
+              <a href="#!">Контакты</a>
+              <a href="#!">Где купить</a>
+            </div>
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <a href="#!">Технологии и материалы</a>
+              <a href="#!">Таблица размеров</a>
+              <a href="#!">Уход за изделеем</a>
+            </div>
+          </nav>
+        </div>
+        <!--======FOOTER BOTTOM ROW====-->
+        <div class="footer-bottom d-flex">
+          <div class="footer-copiryght">
+            <p>&copy;NorthBloom  1997 - 2024 г.</p>
+          </div>
+          <div class="footer-bottom__right d-flex">
+            <!--======social=======-->
+            <div class="social-block">
+              <a href="#!">
+                <img src="./img/svg-social/vk2.svg" alt="vk">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/vc2.svg" alt="vc">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/dzen2.svg" alt="dzen">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/tg2.svg" alt="tg">
+              </a>
+            </div>
+            <!--=======btn======-->
+            <div class="footer-button">
+              <button class="btn btn--slim" type="button">Написать вопрос директору</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=======SIZE TABLE MODAL (открывается по клику на элемент с data-target="size-table")======	-->
+    <div class="modal-wrapper size-table-wrapper modal-wrapper--scroll" data-modal="size-table">
+      <div class="modal-body">
+        <!--===btn close popup ===-->
+        <button class="btn-close" type="button" data-role="modal-close">
+          <svg class="svg-close">
+            <use href="./img/sprite.svg#svg-close"></use>
+          </svg>
+        </button>
+        <!--==== title-block ====	-->
+        <div class="section-title mb-48">
+          <div class="h1-serif">Таблицы размеров</div>
+          <p>Размерная сетка курток NorthBloom соответствует российским стандартным размерам одежды.</p>
+          <p>Предложенные таблицы помогут Вам подобрать куртку подходящего размера.</p>
+        </div>
+        <div class="h2 mb-24">Женщины</div>
+        <div class="size-table-inner scroll-wrapper">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Размер</th>
+                <th>Рост</th>
+                <th>Обхват груди</th>
+                <th>Обхват талии</th>
+                <th>Обхват бёдер</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>44</td>
+                <td> 164 - 172</td>
+                <td>88</td>
+                <td>68</td>
+                <td>96</td>
+              </tr>
+              <tr>
+                <td>48</td>
+                <td> 164 - 172</td>
+                <td>92</td>
+                <td>72</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>52</td>
+                <td> 164 - 172</td>
+                <td>96</td>
+                <td>76</td>
+                <td>104</td>
+              </tr>
+              <tr>
+                <td>56</td>
+                <td> 164 - 172</td>
+                <td>100</td>
+                <td>80</td>
+                <td>108</td>
+              </tr>
+              <tr>
+                <td>60</td>
+                <td> 164 - 172</td>
+                <td>104</td>
+                <td>84</td>
+                <td>112</td>
+              </tr>
+              <tr>
+                <td>64</td>
+                <td> 164 - 172</td>
+                <td>108</td>
+                <td>88</td>
+                <td>116</td>
+              </tr>
+              <tr>
+                <td>68</td>
+                <td> 164 - 172</td>
+                <td>112</td>
+                <td>92</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>72</td>
+                <td> 164 - 172</td>
+                <td>116</td>
+                <td>96</td>
+                <td>124</td>
+              </tr>
+              <tr>
+                <td>76</td>
+                <td> 164 - 172</td>
+                <td>120</td>
+                <td>100</td>
+                <td>128</td>
+              </tr>
+              <tr>
+                <td>80</td>
+                <td> 164 - 172</td>
+                <td>124</td>
+                <td>104</td>
+                <td>132</td>
+              </tr>
+              <tr>
+                <td>84</td>
+                <td> 164 - 172</td>
+                <td>128</td>
+                <td>108</td>
+                <td>136</td>
+              </tr>
+              <tr>
+                <td>88</td>
+                <td> 164 - 172</td>
+                <td>132</td>
+                <td>112</td>
+                <td>140</td>
+              </tr>
+              <tr>
+                <td>92</td>
+                <td> 164 - 172</td>
+                <td>136</td>
+                <td>116</td>
+                <td>144</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=============== jquery ==================-->
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <script src="./libs/jquery.lazy.min.js"></script>
+  <!--=============== swiper js ===============-->
+  <script src="./libs/swiper/swiper.js"></script>
+  <!--============fancybox====================-->
+  <script src="./libs/fancybox/fancybox.js"></script>
+  <!--=============== main js ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

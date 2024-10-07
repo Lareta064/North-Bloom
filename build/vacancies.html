@@ -1,336 +1,416 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!--====favicon ======-->
-		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
-		<link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
-		<link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
-		<link rel="manifest" href="./img/favicon/site.webmanifest">
-		<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="./img/favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
-		<!--====убрать перевод цифр в номер телефона на ios  ======-->
-		<meta name="format-detection" content="telephone=no">
-		<!--======= swiper slider ======-->
-		<link rel="stylesheet" href="./libs/swiper/swiper.min.css">
-		<!--============ fancybox =============-->
-		<link rel="stylesheet" href="./libs/fancybox/fancybox.css">
-		<!--======= main styles ======-->
-		<link rel="stylesheet" href="./css/main.css">
-		<title>Вакансии</title>
-		<style>
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Regular.woff2) format("woff2");
-				font-weight: 400;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Medium.woff2) format("woff2");
-				font-weight: 500;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
-				font-weight: 600;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Inter';
-				src: url(./fonts/Inter-Bold.woff2) format("woff2");
-				font-weight: 700;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'SuisseIntl-Regular';
-				src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Roboto Serif';
-				src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
-				font-style: normal;
-				font-display: swap;
-			}		
-		</style>
-	</head>
-	<body>
-		<div class="page-wrapper page-wrapper--white">
-			<!--====== HEADER=====-->
-			<header class="header header--special" id="header">
-				<!--==== HEADER SEARCH BLOCK ====-->
-				<div class="header-search-wrapper flx-center" id="search-form">
-					<div class="container">
-						<form class="search-form">
-							<div class="form-item form-item--border">
-								<div class="form-input">
-									<input type="search" name="search_input" placeholder="Что Вы ищите?">
-									<!--===== кнопка reset ====-->
-									<button class="btn-clear" type="reset">
-										<svg class="svg-close">
-											<use href="./img/sprite.svg#svg-close"></use>
-										</svg>
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="header-container d-flex">
-					<!--===LOGO====-->
-					<div class="header-left-col"><a class="logo logo--white" href="index.html">
-							<svg class="svg-logo">
-								<use href="./img/sprite.svg#svg-logo"></use>
-							</svg></a></div>
-					<!--=== MENU WRAPPER =====-->
-					<div class="header-menu-wrapper" id="menu">
-						<div class="header-menu">
-							<ul class="menu-list flx-center">
-								<li class="menu-list-item menu-item-submenu"> <a href="#!">Для мужчин</a>
-									<div class="menu-list-child bx-sh">
-										<ul>
-											<li><a href="#!">Коллекция Мужcкая Весна 2024</a></li>
-											<li><a href="#!">Коллекция Мужcкая Лето 2024</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="menu-list-item menu-item-submenu"><a href="#!">Для женщин</a>
-									<div class="menu-list-child menu-list-child--right bx-sh">
-										<ul>
-											<li><a href="#!">Коллекция Женская Весна 2024</a></li>
-											<li><a href="#!">Коллекция Женская Лето 2024</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="menu-list-item"><a href="stores.html">Где купить</a></li>
-								<!--====пункт виден в мобильном меню-->
-								<li class="menu-list-item d-none d-md-block"><a href="#!">Оптовикам	</a></li>
-							</ul>
-							<!--====блок для моб версии ====-->
-							<div class="header-menu-block d-none d-md-block">
-								<div class="social-block"><a href="#!"><img src="./img/svg-social/vk2.svg" alt="vk"></a><a href="#!"><img src="./img/svg-social/vc2.svg" alt="vc"></a><a href="#!"><img src="./img/svg-social/dzen2.svg" alt="dzen"></a><a href="#!"><img src="./img/svg-social/tg2.svg" alt="tg"></a></div>
-								<p>&copy;NorthBloom  1997 - 2024 г.</p>
-							</div>
-						</div>
-					</div>
-					<!--=====right column====-->
-					<div class="header-right-col">
-						<button class="btn-toggle-search" id="search-btn">
-							<svg class="svg-search">
-								<use href="./img/sprite.svg#svg-search"></use>
-							</svg>
-						</button>
-						<!--====пункт виден на экранах от 1024 пикс ===--><a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
-						<!--=====mobile menu-toggle===-->
-						<button class="menu-toggle" type="button" id="menu-toggle"><span></span></button>
-					</div>
-				</div>
-			</header>
-			<main class="inner-main">
-				<section class="vacacies">
-					<div class="container">
-						<!--====хлебные крошки===-->
-						<div class="breadcrumbs">
-							<!--===ссылки отображаются на десктоп версии и скрываются на < 1024px--><a href="index.html">Главная</a><a href="#!">о компании</a><a href="#!">вакансии</a>
-							<!--===== этот пункт хлебных крошек отображается на экранах до 1024px-->
-							<p><a class="txt-24 chevron-link" href="index.html">
-									<svg class="svg-chevron-left">
-										<use href="./img/sprite.svg#svg-chevron-left"></use>
-									</svg><span>Вернуться</span></a></p>
-						</div>
-						<!--====заголовок===-->
-						<div class="section-title">
-							<h1 class="h1-serif">Вакансии</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-						<!--====content grig ====-->
-						<div class="vacancies-content content-grid">
-							<!--=========acordion========-->
-							<div class="vacancies-accordion">
-								<div class="accordion-group">
-									<!--=======single item =====-->
-									<div class="accordion-header txt-20">Технолог швейного производства</div>
-									<!--===== для текста, который набирается из админки и стилизуется не по классам, а по тегам,  надо добавить родителю класс  .custom-text В данном случае он добавлен диву  с классом .accordion-body ======-->
-									<div class="accordion-body custom-text">
-										<p>Технолог швейных изделий – это специалист, который отвечает за создание новых моделей одежды и подготовку их к массовому производству.  В его обязанности входит разработка конструкции новых моделей, подбор  тканей и фурнитуры, расчёт норм материалов и времени производства.</p>
-										<p>Требуемый опыт работы: более 6 лет</p>
-										<p>Полная занятость, полный день</p>
-										<h3>Требования к кандидату ​​​​​​:</h3>
-										<ul>
-											<li>Опыт работы на швейном производстве в качестве технолога.</li>
-											<li>Конструкторский САПР, умение работать с компьютерными программами, которые используются в швейном производстве.</li>
-											<li>Знание  технологий по производству швейных изделий и умение работать с  различными материалами, знание особенностей тканей и конструкций  изделий.</li>
-											<li>Коммуникабельность и умение сотрудничать с  нашими конструкторами и технологами других производств с целью поиска  оптимальных решений.</li>
-											<li>Организационные навыки и умение планировать свою работу.</li>
-										</ul>
-										<h3>Условия ​​​​​​:</h3>
-										<ul>
-											<li>Предлагаем теплую атмосферу молодой компании, гибких процессов и прозрачности;</li>
-											<li>Собираем сильную команду профессионалов;</li>
-											<li>Обращаемся на «ты» вне зависимости от должности и возраста - без чинов и иерархий;</li>
-											<li>Ответственно подходим ко всему в компании - «это моё дело» и «мне не всё равно»</li>
-											<li>Работа в график 5/2 , район станции метро Пионерская</li>
-										</ul>
-										<button class="btn-accent w-100" data-target="modal-vacancy">Откликнуться </button>
-									</div>
-									<!--=======single item =====-->
-									<div class="accordion-header txt-20">Менеджер</div>
-									<div class="accordion-body custom-text">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!</p>
-										<button class="btn-accent w-100" data-target="modal-vacancy"> Откликнуться </button>
-									</div>
-									<!--=======single item =====-->
-									<div class="accordion-header txt-20">Швея</div>
-									<div class="accordion-body custom-text">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!</p>
-										<button class="btn-accent w-100" data-target="modal-vacancy"> Откликнуться </button>
-									</div>
-									<!--=======single item =====-->
-									<div class="accordion-header txt-20">Продавец</div>
-									<div class="accordion-body custom-text">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!</p>
-										<button class="btn-accent w-100" data-target="modal-vacancy"> Откликнуться</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<!--============FOOTER============-->
-			<footer class="footer">
-				<div class="container">
-					<div class="content-grid footer-top">
-						<div class="footer-logo"><a class="logo" href="#!">
-								<svg class="svg-logo">
-									<use href="./img/sprite.svg#svg-logo"></use>
-								</svg></a></div>
-						<!--========nav column========-->
-						<nav class="menu-nav">
-							<!--=====block====-->
-							<div class="menu-nav-block">
-								<div class="semi-16">Для мужчин</div><a href="#!">Весна 2024 Мужская коллекция</a><a href="#!">Зима 2024 Мужская коллекция</a>
-							</div>
-							<!--=====block====-->
-							<div class="menu-nav-block">
-								<div class="semi-16">Для женщин</div><a href="#!">Весна 2024  Женская коллекция</a><a href="#!">Зима 2024 Женская коллекция</a>
-							</div>
-						</nav>
-						<!--========nav column========-->
-						<nav class="menu-nav menu-nav--right">
-							<!--=====block====-->
-							<div class="menu-nav-block"><a href="#!">О бренде</a><a href="#!">Вакансии</a><a href="#!">Контакты</a><a href="#!">Где купить</a></div>
-							<!--=====block====-->
-							<div class="menu-nav-block"><a href="#!">Технологии и материалы</a><a href="#!">Таблица размеров</a><a href="#!">Уход за изделеем</a></div>
-						</nav>
-					</div>
-					<!--======FOOTER BOTTOM ROW====-->
-					<div class="footer-bottom d-flex">
-						<div class="footer-copiryght">
-							<p>&copy;NorthBloom  1997 - 2024 г.</p>
-						</div>
-						<div class="footer-bottom__right d-flex">
-							<!--======social=======-->
-							<div class="social-block"><a href="#!"><img src="./img/svg-social/vk2.svg" alt="vk"></a><a href="#!"><img src="./img/svg-social/vc2.svg" alt="vc"></a><a href="#!"><img src="./img/svg-social/dzen2.svg" alt="dzen"></a><a href="#!"><img src="./img/svg-social/tg2.svg" alt="tg"></a></div>
-							<!--=======btn======-->
-							<div class="footer-button">
-								<button class="btn btn--slim" type="button">Написать вопрос директору</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!--=========MODAL VACANCY FORM (открывается по клику на элемент с data-target="modal-vacancy")======-->
-			<!--=====Окно отображается добавлением через скрипт класса active. Скрипт прописан для компонентов с атрибутом  data-modal ===-->
-			<div class="modal-wrapper" data-modal="modal-vacancy">
-				<div class="modal-body bg-grey form-wrapper form-wrapper--large">
-					<!--===btn close popup ===-->
-					<button class="btn-close" type="button" data-role="modal-close">
-						<svg class="svg-close">
-							<use href="./img/sprite.svg#svg-close"></use>
-						</svg>
-					</button>
-					<div class="txt-center mb-48">
-						<div class="h2">Технолог швейного производства</div>
-					</div>
-					<form class="form-light contact-form" action="" enctype="multipart/form-data">
-						<div class="form-item">
-							<label>Введите Имя Фамилию Отчество</label>
-							<div class="form-input">
-								<input type="text" name="name" placeholder="Пример заполнения"/>
-							</div>
-						</div>
-						<div class="form-column-2">
-							<!--====== у невалидного поля внутри form-item  появляется див с классом tooltip , и так же самому инпуту добавляется класс error, при котором у него появляется красный бордер ====-->
-							<div class="form-item">
-								<!--======Если к классу tooltip добавить класс tooltip--right, то расположение подсказки будет с правой стороны от иконки======-->
-								<div class="tooltip">
-									<div class="tooltip-icon">
-										<svg class="svg-info">
-											<use href="./img/sprite.svg#svg-info"></use>
-										</svg>
-									</div>
-									<div class="tooltip-box">
-										<p>Текст ошибки в несколько строк, например, неправильный ввод E-mail.</p>
-									</div>
-								</div>
-								<label>Введите Телефон</label>
-								<div class="form-input">
-									<input class="error" type="text" name="phone" placeholder="Пример заполнения"/>
-								</div>
-							</div>
-							<div class="form-item">
-								<label>Введите Email</label>
-								<div class="form-input">
-									<input type="text" name="email" placeholder="Пример заполнения"/>
-								</div>
-							</div>
-						</div>
-						<div class="form-item">
-							<label>Комментарии</label>
-							<textarea name="message" placeholder="Пример заполнения"></textarea>
-						</div>
-						<!--===кастомный инпут выбора файла, есть к нему скрипт в файле main.js====-->
-						<div class="form-item">
-							<div class="custom-file-input">
-								<input class="file-input" id="file-input" type="file">
-								<label class="file-label" for="file-input"><span class="file-text">Прикрепить файл</span>
-									<svg class="svg-paper">
-										<use href="./img/sprite.svg#svg-paper"></use>
-									</svg>
-								</label>
-							</div>
-						</div>
-						<div class="form-btn">
-							<button class="btn-accent w-100" type="submit">Отправить</button>
-						</div>
-						<div class="form-item txt-center">
-							<div class="txt-14 txt-center">Нажимая кнопку «Зарегистрироваться», вы принимаете <br> условия пользовательского соглашения</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!--=============== jquery ==================-->
-		<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
-		<script src="./libs/jquery.lazy.min.js"></script>
-		<!--=============== swiper js ===============-->
-		<script src="./libs/swiper/swiper.js"></script>
-		<!--============fancybox====================-->
-		<script src="./libs/fancybox/fancybox.js"></script>
-		<!--=============== main js ===================-->
-		<script src="./js/main.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--====favicon ======-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./img/favicon/favicon-32x32.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./img/favicon/favicon-16x16.webp">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!--====убрать перевод цифр в номер телефона на ios  ======-->
+  <meta name="format-detection" content="telephone=no">
+  <!--======= swiper slider ======-->
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+  <!--============ fancybox =============-->
+  <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
+  <!--======= main styles ======-->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Вакансии</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Regular.woff2) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Medium.woff2) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-SemiBold.woff2) format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url(./fonts/Inter-Bold.woff2) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SuisseIntl-Regular';
+      src: url(./fonts/SuisseIntl-Regular.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Roboto Serif';
+      src: url(./fonts/RobotoSerif_SemiExpanded-Medium.woff2) format("woff2");
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper page-wrapper--white">
+    <!--====== HEADER=====-->
+    <header class="header header--special" id="header">
+      <!--==== HEADER SEARCH BLOCK ====-->
+      <div class="header-search-wrapper flx-center" id="search-form">
+        <div class="container">
+          <form class="search-form">
+            <div class="form-item form-item--border">
+              <div class="form-input">
+                <input type="search" name="search_input" placeholder="Что Вы ищите?">
+                <!--===== кнопка reset ====-->
+                <button class="btn-clear" type="reset">
+                  <svg class="svg-close">
+                    <use href="./img/sprite.svg#svg-close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="header-container d-flex">
+        <!--===LOGO====-->
+        <div class="header-left-col">
+          <a class="logo logo--white" href="index.html">
+            <svg class="svg-logo">
+              <use href="./img/sprite.svg#svg-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <!--=== MENU WRAPPER =====-->
+        <div class="header-menu-wrapper" id="menu">
+          <div class="header-menu">
+            <ul class="menu-list flx-center">
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для мужчин</a>
+                <div class="menu-list-child bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Мужcкая Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item menu-item-submenu">
+                <a href="#!">Для женщин</a>
+                <div class="menu-list-child menu-list-child--right bx-sh">
+                  <ul>
+                    <li>
+                      <a href="#!">Коллекция Женская Весна 2024</a>
+                    </li>
+                    <li>
+                      <a href="#!">Коллекция Женская Лето 2024</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list-item">
+                <a href="stores.html">Где купить</a>
+              </li>
+              <!--====пункт виден в мобильном меню-->
+              <li class="menu-list-item d-none d-md-block">
+                <a href="#!">Оптовикам </a>
+              </li>
+            </ul>
+            <!--====блок для моб версии ====-->
+            <div class="header-menu-block d-none d-md-block">
+              <div class="social-block">
+                <a href="#!">
+                  <img src="./img/svg-social/vk2.svg" alt="vk">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/vc2.svg" alt="vc">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/dzen2.svg" alt="dzen">
+                </a>
+                <a href="#!">
+                  <img src="./img/svg-social/tg2.svg" alt="tg">
+                </a>
+              </div>
+              <p>&copy;NorthBloom  1997 - 2024 г.</p>
+            </div>
+          </div>
+        </div>
+        <!--=====right column====-->
+        <div class="header-right-col">
+          <button class="btn-toggle-search" id="search-btn">
+            <svg class="svg-search">
+              <use href="./img/sprite.svg#svg-search"></use>
+            </svg>
+          </button>
+          <!--====пункт виден на экранах от 1024 пикс ===-->
+          <a class="link-item d-inline d-md-none" href="#!">Оптовикам</a>
+          <!--=====mobile menu-toggle===-->
+          <button class="menu-toggle" type="button" id="menu-toggle">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="inner-main">
+      <section class="vacacies">
+        <div class="container">
+          <!--====хлебные крошки===-->
+          <div class="breadcrumbs">
+            <!--===ссылки отображаются на десктоп версии и скрываются на < 1024px-->
+            <a href="index.html">Главная</a>
+            <a href="#!">о компании</a>
+            <a href="#!">вакансии</a>
+            <!--===== этот пункт хлебных крошек отображается на экранах до 1024px-->
+            <p>
+              <a class="txt-24 chevron-link" href="index.html">
+                <svg class="svg-chevron-left">
+                  <use href="./img/sprite.svg#svg-chevron-left"></use>
+                </svg>
+                <span>Вернуться</span>
+              </a>
+            </p>
+          </div>
+          <!--====заголовок===-->
+          <div class="section-title">
+            <h1 class="h1-serif">Вакансии</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <!--====content grig ====-->
+          <div class="vacancies-content content-grid">
+            <!--=========acordion========-->
+            <div class="vacancies-accordion">
+              <div class="accordion-group">
+                <!--=======single item =====-->
+                <div class="accordion-header txt-20">Технолог швейного производства</div>
+                <!--===== для текста, который набирается из админки и стилизуется не по классам, а по тегам,  надо добавить родителю класс  .custom-text В данном случае он добавлен диву  с классом .accordion-body ======-->
+                <div class="accordion-body custom-text">
+                  <p>Технолог швейных изделий – это специалист, который отвечает за создание новых моделей одежды и подготовку их к массовому производству. В его обязанности входит разработка конструкции новых моделей, подбор тканей и фурнитуры, расчёт норм материалов и времени производства.</p>
+                  <p>Требуемый опыт работы: более 6 лет</p>
+                  <p>Полная занятость, полный день</p>
+                  <h3>Требования к кандидату ​​​​​​:</h3>
+                  <ul>
+                    <li>Опыт работы на швейном производстве в качестве технолога.</li>
+                    <li>Конструкторский САПР, умение работать с компьютерными программами, которые используются в швейном производстве.</li>
+                    <li>Знание технологий по производству швейных изделий и умение работать с различными материалами, знание особенностей тканей и конструкций изделий.</li>
+                    <li>Коммуникабельность и умение сотрудничать с нашими конструкторами и технологами других производств с целью поиска оптимальных решений.</li>
+                    <li>Организационные навыки и умение планировать свою работу.</li>
+                  </ul>
+                  <h3>Условия ​​​​​​:</h3>
+                  <ul>
+                    <li>Предлагаем теплую атмосферу молодой компании, гибких процессов и прозрачности;</li>
+                    <li>Собираем сильную команду профессионалов;</li>
+                    <li>Обращаемся на «ты» вне зависимости от должности и возраста - без чинов и иерархий;</li>
+                    <li>Ответственно подходим ко всему в компании - «это моё дело» и «мне не всё равно»</li>
+                    <li>Работа в график 5/2 , район станции метро Пионерская</li>
+                  </ul>
+                  <button class="btn-accent w-100" data-target="modal-vacancy">Откликнуться </button>
+                </div>
+                <!--=======single item =====-->
+                <div class="accordion-header txt-20">Менеджер</div>
+                <div class="accordion-body custom-text">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!</p>
+                  <button class="btn-accent w-100" data-target="modal-vacancy"> Откликнуться </button>
+                </div>
+                <!--=======single item =====-->
+                <div class="accordion-header txt-20">Швея</div>
+                <div class="accordion-body custom-text">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!</p>
+                  <button class="btn-accent w-100" data-target="modal-vacancy"> Откликнуться </button>
+                </div>
+                <!--=======single item =====-->
+                <div class="accordion-header txt-20">Продавец</div>
+                <div class="accordion-body custom-text">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nostrum error hic illum eius consequatur molestiae repellat fugiat quae porro cum excepturi nulla fugit, vero suscipit minus exercitationem quam veritatis!</p>
+                  <button class="btn-accent w-100" data-target="modal-vacancy"> Откликнуться</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--============FOOTER============-->
+    <footer class="footer">
+      <div class="container">
+        <div class="content-grid footer-top">
+          <div class="footer-logo">
+            <a class="logo" href="#!">
+              <svg class="svg-logo">
+                <use href="./img/sprite.svg#svg-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <!--========nav column========-->
+          <nav class="menu-nav">
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <div class="semi-16">Для мужчин</div>
+              <a href="#!">Весна 2024 Мужская коллекция</a>
+              <a href="#!">Зима 2024 Мужская коллекция</a>
+            </div>
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <div class="semi-16">Для женщин</div>
+              <a href="#!">Весна 2024 Женская коллекция</a>
+              <a href="#!">Зима 2024 Женская коллекция</a>
+            </div>
+          </nav>
+          <!--========nav column========-->
+          <nav class="menu-nav menu-nav--right">
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <a href="#!">О бренде</a>
+              <a href="#!">Вакансии</a>
+              <a href="#!">Контакты</a>
+              <a href="#!">Где купить</a>
+            </div>
+            <!--=====block====-->
+            <div class="menu-nav-block">
+              <a href="#!">Технологии и материалы</a>
+              <a href="#!">Таблица размеров</a>
+              <a href="#!">Уход за изделеем</a>
+            </div>
+          </nav>
+        </div>
+        <!--======FOOTER BOTTOM ROW====-->
+        <div class="footer-bottom d-flex">
+          <div class="footer-copiryght">
+            <p>&copy;NorthBloom  1997 - 2024 г.</p>
+          </div>
+          <div class="footer-bottom__right d-flex">
+            <!--======social=======-->
+            <div class="social-block">
+              <a href="#!">
+                <img src="./img/svg-social/vk2.svg" alt="vk">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/vc2.svg" alt="vc">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/dzen2.svg" alt="dzen">
+              </a>
+              <a href="#!">
+                <img src="./img/svg-social/tg2.svg" alt="tg">
+              </a>
+            </div>
+            <!--=======btn======-->
+            <div class="footer-button">
+              <button class="btn btn--slim" type="button">Написать вопрос директору</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=========MODAL VACANCY FORM (открывается по клику на элемент с data-target="modal-vacancy")======-->
+    <!--=====Окно отображается добавлением через скрипт класса active. Скрипт прописан для компонентов с атрибутом  data-modal ===-->
+    <div class="modal-wrapper" data-modal="modal-vacancy">
+      <div class="modal-body bg-grey form-wrapper form-wrapper--large">
+        <!--===btn close popup ===-->
+        <button class="btn-close" type="button" data-role="modal-close">
+          <svg class="svg-close">
+            <use href="./img/sprite.svg#svg-close"></use>
+          </svg>
+        </button>
+        <div class="txt-center mb-48">
+          <div class="h2">Технолог швейного производства</div>
+        </div>
+        <form class="form-light contact-form" action="" enctype="multipart/form-data">
+          <div class="form-item">
+            <label>Введите Имя Фамилию Отчество</label>
+            <div class="form-input">
+              <input type="text" name="name" placeholder="Пример заполнения" />
+            </div>
+          </div>
+          <div class="form-column-2">
+            <!--====== у невалидного поля внутри form-item  появляется див с классом tooltip , и так же самому инпуту добавляется класс error, при котором у него появляется красный бордер ====-->
+            <div class="form-item">
+              <!--======Если к классу tooltip добавить класс tooltip--right, то расположение подсказки будет с правой стороны от иконки======-->
+              <div class="tooltip">
+                <div class="tooltip-icon">
+                  <svg class="svg-info">
+                    <use href="./img/sprite.svg#svg-info"></use>
+                  </svg>
+                </div>
+                <div class="tooltip-box">
+                  <p>Текст ошибки в несколько строк, например, неправильный ввод E-mail.</p>
+                </div>
+              </div>
+              <label>Введите Телефон</label>
+              <div class="form-input">
+                <input class="error" type="text" name="phone" placeholder="Пример заполнения" />
+              </div>
+            </div>
+            <div class="form-item">
+              <label>Введите Email</label>
+              <div class="form-input">
+                <input type="text" name="email" placeholder="Пример заполнения" />
+              </div>
+            </div>
+          </div>
+          <div class="form-item">
+            <label>Комментарии</label>
+            <textarea name="message" placeholder="Пример заполнения"></textarea>
+          </div>
+          <!--===кастомный инпут выбора файла, есть к нему скрипт в файле main.js====-->
+          <div class="form-item">
+            <div class="custom-file-input">
+              <input class="file-input" id="file-input" type="file">
+              <label class="file-label" for="file-input">
+                <span class="file-text">Прикрепить файл</span>
+                <svg class="svg-paper">
+                  <use href="./img/sprite.svg#svg-paper"></use>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="form-btn">
+            <button class="btn-accent w-100" type="submit">Отправить</button>
+          </div>
+          <div class="form-item txt-center">
+            <div class="txt-14 txt-center">Нажимая кнопку «Зарегистрироваться», вы принимаете
+              <br> условия пользовательского соглашения
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--=============== jquery ==================-->
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <script src="./libs/jquery.lazy.min.js"></script>
+  <!--=============== swiper js ===============-->
+  <script src="./libs/swiper/swiper.js"></script>
+  <!--============fancybox====================-->
+  <script src="./libs/fancybox/fancybox.js"></script>
+  <!--=============== main js ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

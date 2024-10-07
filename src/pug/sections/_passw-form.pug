@@ -1,0 +1,19 @@
+.form-wrapper.mx-auto.pt-128
+	//====title group====
+	.title-group.txt-center
+		h1.title Запрос пароля
+		
+	
+	//====form====	
+	form.passw-form(action="" method="method")
+		+form-item("Email", "email")
+		
+		.form-btn
+			button(type="submit").btn-accent.w-100 Выслать контрольную строку
+		.txt-center
+			a(href="authorization.html").txt-accent.link-item Авторизироваться
+		.form-item
+			.txt-18 Если вы забыли пароль, введите  E-Mail.<br> Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
+
+
+		
